@@ -1,5 +1,7 @@
 # List of my Linux apps (or general apps)
-## Author: @Inmemorialake
+Author: @Inmemorialake
+
+---
 
 1. App name: **AnyDesk**
     - Description: Remote desktop connection client
@@ -108,6 +110,17 @@
 
 36. App name: **OpenSSH**
     - Description: Secure connectivity tool that enables remote system administration via SSH
+
+37. App name: **Texlive**
+    - Description: Comprehensive TeX document production system
+
+38. App name: **Pandoc**
+    - Description: Universal document converter
+
+39. App name: **Hollywood**
+    - Description: A terminal-based visual experience that simulates a Hollywood-style hacker interface
+
+---
 
 # Template to add an app
 1. App name: **App name**
