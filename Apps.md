@@ -120,6 +120,24 @@ Author: @Inmemorialake
 39. App name: **Hollywood**
     - Description: A terminal-based visual experience that simulates a Hollywood-style hacker interface
 
+40. App name: **fastfetch**
+    - Description: A command-line utility that displays system information in a visually appealing way
+
+41. App name: **Neofetch**
+    - Description: A command-line utility that displays system information and distribution logo in the terminal
+
+42. App name: **Snapper**
+    - Description: A tool for managing and visualizing Btrfs snapshots
+
+43. App name: **grub-btrfs**
+    - Description: A tool for integrating Btrfs snapshots with the GRUB bootloader
+
+44. App name: **Btrfs Assistant**
+    - Description: A graphical tool for managing Btrfs filesystems and snapshots
+
+45. App name: **snap-pac**
+    - Description: A tool for managing Snap packages on Arch Linux
+    
 ---
 
 # Template to add an app
