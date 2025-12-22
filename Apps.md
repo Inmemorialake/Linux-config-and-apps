@@ -1,196 +1,233 @@
-# List of my Linux apps (or general apps)
+# List of my apps (explicitly excluding system packages or utilities)
 
 Author: @Inmemorialake
 
 ---
 
-1. App name: **AnyDesk**
+* App name: **AnyDesk**
 
-   - Description: Remote desktop connection client
+  * Description: Remote desktop connection client
 
-2. App name: **Pamac**
+* App name: **Pamac**
 
-   - Description: Graphical package manager for Arch-based distributions
+  * Description: Graphical package manager for Arch-based distributions
 
-3. App name: **Brave**
+* App name: **Brave**
 
-   - Description: Web browser focused on privacy and ad blocking
+  * Description: Web browser focused on privacy and ad blocking
+  * It must be configuresd after installation.
 
-4. App name: **Cmake**
+* App name: **Btrfs Assistant**
 
-   - Description: Build automation tool
+  * Description: Graphical tool for managing Btrfs filesystems and snapshots
+  * It must be configured after installation.
 
-5. App name: **Discord**
+* App name: **Cmake**
 
-   - Description: Communication platform for communities and interest groups
+  * Description: Build automation tool
 
-6. App name: **Docker**
+* App name: **Discord**
 
-   - Description: Containerization platform for developing, shipping, and running applications
+  * Description: Communication platform for communities and interest groups
+  * It must be configured after installation.
 
-7. App name: **Dolphin**
+* App name: **Docker**
 
-   - Description: File manager for KDE desktop environments
+  * Description: Containerization platform for developing, shipping, and running applications
 
-8. App name: **Easy Effects**
+* App name: **Docker Compose**
 
-   - Description: Application to enhance audio and video on Linux
+  * Description: Tool for defining and running multi-container Docker applications
 
-9. App name: **Elisa**
+* App name: **Dolphin**
 
-   - Description: Music player for KDE desktop environments
+  * Description: File manager for KDE desktop environments
 
-10. App name: **Fish**
+* App name: **Easy Effects**
 
-    - Description: User-friendly command shell with advanced features
+  * Description: Application to enhance audio and video on Linux
+  * It must be configured after installation.
 
-11. App name: **Firefox**
+* App name: **Elisa**
 
-    - Description: Open-source web browser focused on privacy
+  * Description: Music player for KDE desktop environments
 
-12. App name: **KDE Partition Manager**
+* App name: **Filelight**
 
-    - Description: Tool for managing disk partitions on Linux
+  * Description: Disk usage analyzer for KDE desktop environments
 
-13. App name: **Gwenview**
+* App name: **Fish**
 
-    - Description: Image viewer for KDE desktop environments
+  * Description: User-friendly command shell with advanced features
 
-14. App name: **Htop**
+* App name: **Firefox**
 
-    - Description: Interactive system monitor for Unix
+  * Description: Open-source web browser focused on privacy
+  * It must be configured after installation.
 
-15. App name: **IntelliJ IDEA**
+* App name: **KDE Partition Manager**
 
-    - Description: Integrated development environment (IDE) for Java and other programming languages
+  * Description: Tool for managing disk partitions on Linux
 
-16. App name: **Kamoso**
+* App name: **Gwenview**
 
-    - Description: Application for taking photos and videos using the webcam
+  * Description: Image viewer for KDE desktop environments
 
-17. App name: **Kate**
+* App name: **Htop**
 
-    - Description: Advanced text editor for KDE desktop environments
+  * Description: Interactive system monitor for Unix
 
-18. App name: **KDE Connect**
+* App name: **Jetbrains Toolbox**
 
-    - Description: Integration between mobile devices and Linux for file sharing and notifications
+  * Description: Tool for managing JetBrains IDEs
+  * It must be configured after installation.
 
-19. App name: **Kdenlive**
+* App name: **Kamoso**
 
-    - Description: Non-linear video editor for KDE desktop environments
+  * Description: Application for taking photos and videos using the webcam
 
-20. App name: **Konsole**
+* App name: **Kate**
 
-    - Description: Terminal emulator for KDE desktop environments
+  * Description: Advanced text editor for KDE desktop environments
 
-21. App name: **Krita**
+* App name: **KDE Connect**
 
-    - Description: Digital painting and art creation application for KDE desktop environments
+  * Description: Integration between mobile devices and Linux for file sharing and notifications
+  * It must be configured after installation.
 
-22. App name: **OBS Studio**
+* App name: **Kdenlive**
 
-    - Description: Open-source software for recording and live streaming
+  * Description: Non-linear video editor for KDE desktop environments
 
-23. App name: **Okular**
+* App name: **Konsole**
 
-    - Description: Universal document viewer for KDE desktop environments
+  * Description: Terminal emulator for KDE desktop environments
 
-24. App name: **OnlyOffice**
+* App name: **Krita**
 
-    - Description: Open-source office suite for editing documents, spreadsheets, and presentations
+  * Description: Digital painting and art creation application for KDE desktop environments
 
-25. App name: **Opera**
+* App name: **OBS Studio**
 
-    - Description: Web browser with advanced features and privacy focus, my personal preference
+  * Description: Open-source software for recording and live streaming
 
-26. App name: **Raspberry Pi Imager**
+* App name: **Obsidian**
 
-    - Description: Official tool to create operating system images for Raspberry Pi
+  * Description: Knowledge base and note-taking application
+  * It must be configured after installation.
 
-27. App name: **VLC**
+* App name: **Okular**
 
-    - Description: Open-source, cross-platform media player
+  * Description: Universal document viewer for KDE desktop environments
 
-28. App name: **Quick Share**
+* App name: **OneDrive(Abraunegg)**
 
-    - Description: Tool for quick and easy file sharing
+  * Description: Client for Microsoft's OneDrive cloud storage service in Linux
+  * It must be configured after installation.
 
-29. App name: **Spectacle**
+* App name: **OnlyOffice**
 
-    - Description: Screenshot tool for KDE desktop environments
+  * Description: Open-source office suite for editing documents, spreadsheets, and presentations
+  * It must be configured after installation.
 
-30. App name: **TIDAL Hi-Fi**
+* App name: **Opera**
 
-    - Description: High-fidelity music streaming service
+  * Description: Web browser with advanced features and privacy focus, my personal preference
+    * It must be configured after installation.
 
-31. App name: **Ventoy**
+* App name: **Raspberry Pi Imager**
 
-    - Description: Tool to create multiboot USB drives
+  * Description: Official tool to create operating system images for Raspberry Pi
 
-32. App name: **Visual Studio Code**
+* App name: **VLC**
 
-    - Description: Lightweight and powerful source code editor with support for multiple languages and extensions
+  * Description: Open-source, cross-platform media player
 
-33. App name: **WhatsApp**
+* App name: **Quick Share**
 
-    - Description: Instant messaging and voice/video call app, personal preference: Whatsdesk
+  * Description: Tool for quick and easy file sharing
+  * It must be configured after installation.
 
-34. App name: **Zoom**
+* App name: **Snapper**
 
-    - Description: Video conferencing and online meeting platform
+  * Description: A tool for managing and visualizing Btrfs snapshots
+  * It must be configured after installation.
 
-35. App name: **Tailscale**
+* App name: **Spectacle**
 
-    - Description: Virtual private network (VPN) service that makes connecting devices securely and easily
+  * Description: Screenshot tool for KDE desktop environments
 
-36. App name: **OpenSSH**
+* App name: **Sublime Text**
 
-    - Description: Secure connectivity tool that enables remote system administration via SSH
+  * Description: A sophisticated text editor for code, markup, and prose
 
-37. App name: **Texlive**
+* App name: **TIDAL Hi-Fi**
 
-    - Description: Comprehensive TeX document production system
+  * Description: High-fidelity music streaming service
+  * It must be configured after installation.
 
-38. App name: **Pandoc**
+* App name: **Ventoy**
 
-    - Description: Universal document converter
+  * Description: Tool to create multiboot USB drives
 
-39. App name: **Hollywood**
+* App name: **Visual Studio Code**
 
-    - Description: A terminal-based visual experience that simulates a Hollywood-style hacker interface
+  * Description: Lightweight and powerful source code editor with support for multiple languages and extensions
+  * It must be configured after installation.
 
-40. App name: **fastfetch**
+* App name: **WhatsApp**
 
-    - Description: A command-line utility that displays system information in a visually appealing way
+  * Description: Instant messaging and voice/video call app, personal preference: Whatsdesk
+  * It must be configured after installation.
 
-41. App name: **Neofetch**
+* App name: **Zoom**
 
-    - Description: A command-line utility that displays system information and distribution logo in the terminal
+  * Description: Video conferencing and online meeting platform
+  * It must be configured after installation.
 
-42. App name: **Snapper**
+* App name: **Tailscale**
 
-    - Description: A tool for managing and visualizing Btrfs snapshots
+  * Description: Virtual private network (VPN) service that makes connecting devices securely and easily
+  * It must be configured after installation.
 
-43. App name: **grub-btrfs**
+* App name: **Pandoc**
 
-    - Description: A tool for integrating Btrfs snapshots with the GRUB bootloader
+  * Description: Universal document converter
 
-44. App name: **Btrfs Assistant**
+* App name: **Hollywood**
 
-    - Description: A graphical tool for managing Btrfs filesystems and snapshots
+  * Description: A terminal-based visual experience that simulates a Hollywood-style hacker interface
 
-45. App name: **snap-pac**
+* App name: **fastfetch**
 
-    - Description: A tool for managing Snap packages on Arch Linux
+  * Description: A command-line utility that displays system information in a visually appealing way
+  * It must be configured after installation.
 
-46. App name: **htop**
+* App name: **Neofetch**
 
-    - Description: Interactive process viewer for Unix systems
+  * Description: A command-line utility that displays system information and distribution logo in the terminal
+
+* App name: **grub-btrfs**
+
+  * Description: A tool for integrating Btrfs snapshots with the GRUB bootloader
+  * It must be configured after installation.
+
+* App name: **htop**
+
+  * Description: Interactive process viewer for Unix systems
+
+* App name: **sl**
+
+  * Description: A fun command that displays an animated steam locomotive in the terminal when you mistype "ls"
+
+* App name: **pipes**
+
+  * Description: A command that displays animated ASCII art of pipes in the terminal
 
 ---
 
 ## Template to add an app
 
-1. App name: **App name**
-   - Description: Brief description of the app
+* App name: **App name**
+  * Description: Brief description of the app
+  * Additional notes or configuration instructions if needed
