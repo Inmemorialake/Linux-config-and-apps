@@ -392,3 +392,84 @@ nvidia-smi
 ```
 
 This command should show you the NVIDIA GPU usage and confirm that the drivers are working properly.
+
+#### 4.4 Install KDE Plasma Desktop Environment
+
+Install KDE Plasma and SDDM display manager (remember, this is my choice, you can choose another DE and DM if you want, also, this is a minimal installation of KDE Plasma, you can install more packages if you want):
+
+##### 4.4.1 Install SDDM and configure it
+
+```bash
+sudo pacman -S sddm
+sudo systemctl enable sddm.service
+reboot
+```
+
+Now you should see the SDDM login screen after rebooting, in case you don't see it, you can try to enable it again but using wayland by default:
+
+```bash
+sudo nano /etc/sddm.conf
+# Add the following lines
+[General]
+DisplayServer=wayland
+
+[Wayland]
+CompositorCommand=kwin_wayland
+```
+
+Then enable SDDM again and reboot:
+
+```bash
+sudo systemctl enable sddm.service
+sudo systemctl status sddm
+reboot
+```
+
+This should solve the problem if SDDM was not starting correctly.
+
+##### 4.4.2 Install KDE Plasma and essential applications
+
+Move to a TTY (for example, Ctrl + Alt + F2), log in with your user, and install KDE Plasma and essential applications:
+
+```bash
+sudo pacman -S plasma-desktop # Minimal Plasma installation
+sudo pacman -S dolphin konsole kate spectacle kdeconnect # Essential KDE applications
+sudo pacman -S plasma-pa plasma-nm powerdevil # Essential Plasma components
+sudo pacman -S ksystemlog kcalc filelight partitionmanager # Additional useful KDE applications
+reboot
+```
+
+After rebooting, you should be greeted by the SDDM login screen. Log in to your new KDE Plasma desktop environment.
+
+#### 4.5 Additional Configurations
+
+From here, you can proceed to customize your KDE Plasma environment, install additional applications, and configure system settings according to your preferences.
+
+##### 4.5.1 Git Configuration
+
+If you use Git, you can set up your user information:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+Now you can start using Git with your configured identity, in case you need to set up your github keys(I use tokens(classic ones) for authentication), you can generate the token from your github account settings and then use it when prompted for a password during git operations. To avoid entering the token every time, you can use a credential helper like `git-credential-manager` and the `git-credential-libsecret` to store your credentials securely, in my case i use `git-credential-libsecret` and kwallet integration (because I use KDE Plasma).
+
+```bash
+sudo pacman -S kwalletmanager libsecret # Assure you have these packages installed
+git config --global credential.helper /usr/lib/git-core/git-credential-libsecret # Configure git to use libsecret
+git config --global --get credential.helper # Verify the configuration
+```
+
+Now Git will use the libsecret helper to store your credentials securely in your KDE wallet.
+
+If you don't understand why I needed to set this up, it's because I use GitHub for version control and I wanted a secure way to manage my credentials without having to enter them every time I interact with remote repositories.
+
+Documentation for `GCM` can be found [in the git-credential-manager repository](https://github.com/git-ecosystem/git-credential-manager/tree/main).
+
+## Conclusion
+
+This installation guide provides a comprehensive overview of setting up my system from scratch. Feel free to adapt the steps to suit your specific needs and preferences. Enjoy your new Arch Linux system with KDE Plasma!
+
+In a personal note, this installation process took me several attempts to perfect, I like the challenge of setting up my system exactly how I want it, and I hope this guide helps others who wish to do the same. Happy computing!
