@@ -28,9 +28,12 @@ Arch Linux (base)
 │
 ├── Network: NetworkManager
 │
-└── Userland:
-    ├── fish
-    ├── starship (nuevo)
-    ├── terminal (a decidir)
-    └── dotfiles versionados
+│── Package Manager: Pacman + Paru (AUR helper)
+│
+│── Shell: Fish
+│
+│── Terminal Emulator: Konsole
+│
+│── Varios other tools and applications
+
 ```
