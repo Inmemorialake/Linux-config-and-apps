@@ -156,7 +156,7 @@ Edit the mirrorlist to prioritize faster mirrors. You can use `reflector` to do 
 First, install reflector if it's not already available:
 
 ```bash
-pacman -Sy reflector
+pacman -S reflector
 ```
 
 Then, run the following command to update the mirrorlist (replace `YOUR_COUNTRY` with your actual country):
@@ -217,7 +217,7 @@ Create the locale.conf file, and set the LANG variable accordingly:
 ```bash
 nano /etc/locale.conf
 # Add the following line
-LANG=en_US.UTF-8
+LANG=es_CO.UTF-8 # or the locale you want
 ```
 
 If you set the console keyboard layout, make the changes persistent in vconsole.conf:
@@ -297,6 +297,10 @@ Create a new user account and set a password:
 ```bash
 useradd -m -G wheel username  # Replace "username" with your desired username
 passwd username
+pacman -S sudo
+EDITOR=nano visudo
+# descomentar:
+%wheel ALL=(ALL:ALL) ALL
 ```
 
 #### 4.3 Set Up Nvidia Drivers (if applicable)
@@ -327,12 +331,6 @@ Now is **very important** the mkinitcpio, in to the line MODULES=() you have to 
 MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
 ```
 
-Then regenerate the initramfs:
-
-```bash
-sudo mkinitcpio -P
-```
-
 Now we have to enable the **nvidia-drm kms**:
 
 ```bash
@@ -347,18 +345,6 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=7 nvidia-drm.modeset=1"
 
 (Here you can also add other parameters you want, like `quiet` to reduce boot messages, splash to show a splash screen during boot or use a different loglevel; even delete them or make it a minor number to reduce verbose).
 
-Then update GRUB configuration:
-
-```bash
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-and redo the mkinitcpio:
-
-```bash
-sudo mkinitcpio -P
-```
-
 In my case, **I want Nvidia to be used only when I use `prime-run`**, so I configured it that way.
 
 ```bash
@@ -367,15 +353,10 @@ sudo nano /etc/modprobe.d/nvidia-power.conf
 options nvidia NVreg_DynamicPowerManagement=0x02
 ```
 
-Regenerate the initramfs again:
+Regenerate the initramfs and update GRUB:
 
 ```bash
 sudo mkinitcpio -P
-```
-
-Just in case, also the grub configuration:
-
-```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -401,14 +382,8 @@ Install KDE Plasma and SDDM display manager (remember, this is my choice, you ca
 
 ```bash
 sudo pacman -S sddm
-sudo systemctl enable sddm.service
-reboot
-```
-
-Now you should see the SDDM login screen after rebooting, in case you don't see it, you can try to enable it again but using wayland by default:
-
-```bash
 sudo nano /etc/sddm.conf
+
 # Add the following lines
 [General]
 DisplayServer=wayland
@@ -417,15 +392,15 @@ DisplayServer=wayland
 CompositorCommand=kwin_wayland
 ```
 
-Then enable SDDM again and reboot:
+This configuration sets SDDM to use Wayland with the KWin compositor and is necessary for KDE Plasma on Wayland(who is now the default session in KDE Plasma).
+
+Then enable SDDM to start at boot:
 
 ```bash
 sudo systemctl enable sddm.service
 sudo systemctl status sddm
 reboot
 ```
-
-This should solve the problem if SDDM was not starting correctly.
 
 ##### 4.4.2 Install KDE Plasma and essential applications
 
@@ -468,8 +443,27 @@ If you don't understand why I needed to set this up, it's because I use GitHub f
 
 Documentation for `GCM` can be found [in the git-credential-manager repository](https://github.com/git-ecosystem/git-credential-manager/tree/main).
 
+##### 4.5.2 OS-prober (if dual booting)
+
+If you are dual-booting with another operating system, you may want to enable `os-prober` to detect other OS installations during GRUB configuration.
+
+```bash
+sudo pacman -S os-prober
+sudo nano /etc/default/grub
+# Uncomment or add the following line
+GRUB_DISABLE_OS_PROBER=false
+# Then update GRUB configuration
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ## Conclusion
 
 This installation guide provides a comprehensive overview of setting up my system from scratch. Feel free to adapt the steps to suit your specific needs and preferences. Enjoy your new Arch Linux system with KDE Plasma!
 
 In a personal note, this installation process took me several attempts to perfect, I like the challenge of setting up my system exactly how I want it, and I hope this guide helps others who wish to do the same. Happy computing!
+
+## Notes
+
+- btrfs subvolumes and snapshots setup will be covered in a separate document.
+- If you encounter any issues during the installation or configuration process, refer to the [Arch Wiki](https://wiki.archlinux.org/) for troubleshooting and additional information.
+- If you want to improve your battery life, consider installing `power-profiles-daemon` and configuring it according to your needs, also the KDE Powerdevil settings can help you manage power consumption effectively.
