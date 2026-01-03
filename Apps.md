@@ -8,15 +8,6 @@ Author: @Inmemorialake
 
   * Description: Remote desktop connection client
 
-* App name: **Pamac**
-
-  * Description: Graphical package manager for Arch-based distributions
-
-* App name: **Brave**
-
-  * Description: Web browser focused on privacy and ad blocking
-  * It must be configuresd after installation.
-
 * App name: **Btrfs Assistant**
 
   * Description: Graphical tool for managing Btrfs filesystems and snapshots
@@ -60,11 +51,6 @@ Author: @Inmemorialake
 
   * Description: User-friendly command shell with advanced features
 
-* App name: **Firefox**
-
-  * Description: Open-source web browser focused on privacy
-  * It must be configured after installation.
-
 * App name: **KDE Partition Manager**
 
   * Description: Tool for managing disk partitions on Linux
@@ -85,10 +71,6 @@ Author: @Inmemorialake
 * App name: **Kamoso**
 
   * Description: Application for taking photos and videos using the webcam
-
-* App name: **Kate**
-
-  * Description: Advanced text editor for KDE desktop environments
 
 * App name: **KDE Connect**
 
