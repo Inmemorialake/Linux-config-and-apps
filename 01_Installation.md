@@ -127,13 +127,49 @@ mkswap /dev/nvme0n1p2                  # Format Swap Partition
 mkfs.btrfs /dev/nvme0n1p3               # Format Root Partition
 ```
 
-#### 1.8 Mount the Filesystems
+#### 1.8 Create Btrfs Subvolumes
 
-Mount the root partition:
+Mount the root partition temporarily:
 
 ```bash
 mount /dev/nvme0n1p3 /mnt
 ```
+
+Create the Btrfs subvolumes:
+
+```bash
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@var_log
+btrfs subvolume create /mnt/@var_cache
+btrfs subvolume create /mnt/@snapshots
+btrfs subvolume create /mnt/@tmp
+```
+
+Unmount the root partition:
+
+```bash
+umount /mnt
+```
+
+Mount the root subvolume:
+
+```bash
+mount -o subvol=@ /dev/nvme0n1p3 /mnt
+```
+
+Now create the necessary directories for the other subvolumes and mount them:
+
+```bash
+mkdir -p /mnt/{home,.snapshots,var/log,var/cache,tmp}
+mount -o subvol=@home /dev/nvme0n1p3 /mnt/home
+mount -o subvol=@snapshots /dev/nvme0n1p3 /mnt/.snapshots
+mount -o subvol=@var_log /dev/nvme0n1p3 /mnt/var/log
+mount -o subvol=@var_cache /dev/nvme0n1p3 /mnt/var/cache
+mount -o subvol=@tmp /dev/nvme0n1p3 /mnt/tmp
+```
+
+#### 1.9 Mount the other Filesystems
 
 Mount the EFI System Partition:
 
@@ -172,7 +208,7 @@ Replace `YOUR_COUNTRY` with your actual country.
 Install the base system and essential packages:
 
 ```bash
-pacstrap /mnt base base-devel linux linux-firmware intel-ucode networkmanager nano git btrfs-progs grub
+pacstrap /mnt base base-devel linux linux-firmware intel-ucode networkmanager nano git btrfs-progs grub efibootmgr
 ```
 
 This command installs the base system along with additional packages like `networkmanager`, `nano`, `git`, `btrfs-progs`, and `grub`, this is my selection of packages, you can modify it as you want, but these are the ones i feel comfortable with.
@@ -265,7 +301,26 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 In this case, I am using UEFI boot mode. If you are using BIOS, the installation command will be different, also im using GRUB as bootloader, you can choose another one if you want.
 
-#### 3.9 Reboot
+#### 3.9 Enable Multilib (if needed)
+
+If you plan to use 32-bit applications on your 64-bit system, enable the multilib repository:
+
+```bash
+nano /etc/pacman.conf
+# Uncomment the following lines
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
+Then update the package database:
+
+```bash
+pacman -Sy # Update package database, this is a partial upgrade, so be careful and only do it when you have enabled multilib or made changes to pacman.conf
+```
+
+Here you have enabled the multilib repository, but in this file you can enable other repositories if you want and make other changes to pacman.conf according to your needs (in my case I touched the miscelaneos section, I activated the colors for pacman and ILoveCandy, because I like it).
+
+#### 3.10 Reboot
 
 Now, the installation is complete. Exit the chroot environment, unmount the partitions(optional), and reboot:
 
@@ -325,9 +380,11 @@ options nvidia NVreg_PreserveVideoMemoryAllocations=1
 options nvidia_drm modeset=1
 ```
 
-Now is **very important** the mkinitcpio, in to the line MODULES=() you have to add the following modules:
+Now is **very important** the mkinitcpio:
 
 ```bash
+sudo nano /etc/mkinitcpio.conf
+# In the MODULES section, add the following modules:
 MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
 ```
 
