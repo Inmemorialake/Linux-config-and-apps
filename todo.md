@@ -52,17 +52,17 @@ btrfs filesystem usage /
 
 ### 2.1 Política clara
 
-* [ ] Definir qué es un snapshot **normal**
-* [ ] Definir qué es un snapshot **importante**
-* [ ] Definir cuándo se crean manualmente
+* [x] Definir qué es un snapshot **normal**
+* [x] Definir qué es un snapshot **importante**
+* [x] Definir cuándo se crean manualmente
 
 ---
 
 ### 2.2 Limpieza automática (verificar)
 
 * [ ] Confirmar que `snapper-cleanup.timer` borra snapshots
-* [ ] Verificar límites reales (`NUMBER_LIMIT`, `IMPORTANT`)
-* [ ] Forzar limpieza de prueba
+* [x] Verificar límites reales (`NUMBER_LIMIT`, `IMPORTANT`)
+* [x] Forzar limpieza de prueba
 
 ```bash
 sudo snapper cleanup number
@@ -72,9 +72,9 @@ sudo snapper cleanup number
 
 ### 2.3 Rollback consciente
 
-* [ ] Documentar rollback desde GRUB
-* [ ] Documentar rollback desde CLI
-* [ ] Advertencias claras (qué se pierde, qué no)
+* [x] Documentar rollback desde GRUB
+* [x] Documentar rollback desde CLI
+* [x] Advertencias claras (qué se pierde, qué no)
 
 ---
 
