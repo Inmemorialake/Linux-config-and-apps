@@ -139,7 +139,97 @@ sudo snapper cleanup number
 
 ---
 
-## 5️⃣ Seguridad básica (sin paranoia)
+## 🛠️ 5️⃣ Mantenimiento del sistema (CORE – SECCIÓN NUEVA)
+
+> Esta sección define **qué se mantiene, cómo y con qué frecuencia**.
+> Es el “manual operativo” del sistema.
+
+---
+
+### 5.1 Flujo de actualización del sistema
+
+* [ ] Documentar política de actualización (cuándo sí / cuándo no)
+* [ ] Checklist pre-update
+* [ ] Checklist post-update
+* [ ] Reglas de reboot (kernel, mesa, nvidia)
+
+Scripts asociados:
+
+* [ ] `sys-update`
+* [ ] `system-pre-upgrade`
+* [ ] `system-post-upgrade`
+
+---
+
+### 5.2 Gestión de paquetes y limpieza
+
+* [ ] Política de limpieza de caché (`paccache`)
+* [ ] Revisión de paquetes huérfanos
+* [ ] Verificación de paquetes rotos
+
+Scripts asociados:
+
+* [ ] `pkg-clean-cache`
+* [ ] `pkg-check-orphans`
+* [ ] `pkg-health`
+
+Automatización:
+
+* [ ] Timer para caché (seguro)
+* [ ] Huérfanos **manual**
+
+---
+
+### 5.3 Logs y uso de disco
+
+* [ ] Revisar uso de journald
+* [ ] Limitar tamaño máximo de logs
+* [ ] Documentar limpieza manual
+
+Scripts asociados:
+
+* [ ] `log-usage`
+* [ ] `log-vacuum`
+
+---
+
+### 5.4 Servicios y timers (systemd)
+
+* [ ] Revisar servicios fallidos
+* [ ] Auditar timers activos
+* [ ] Desactivar servicios innecesarios
+
+Scripts asociados:
+
+* [ ] `system-health`
+* [ ] `timer-audit`
+
+---
+
+### 5.5 Diagnóstico y emergencia
+
+* [ ] Checklist cuando algo falla
+* [ ] Cuándo hacer rollback
+* [ ] Cuándo reparar
+* [ ] Cuándo reinstalar
+
+Scripts asociados:
+
+* [ ] `emergency-info`
+* [ ] `boot-diagnose`
+
+---
+
+### 5.6 Calendario de mantenimiento
+
+* [ ] Tareas por actualización
+* [ ] Tareas mensuales
+* [ ] Tareas trimestrales
+* [ ] Qué **NO** hacer si todo funciona
+
+---
+
+## 6️⃣ Seguridad básica (sin paranoia)
 
 * [ ] firewall (ufw o firewalld)
 * [ ] revisar servicios activos
@@ -147,7 +237,7 @@ sudo snapper cleanup number
 
 ---
 
-## 6️⃣ Ergonomía y calidad de vida
+## 7️⃣ Ergonomía y calidad de vida
 
 * [ ] aliases útiles
 * [ ] prompt informativo
@@ -156,7 +246,7 @@ sudo snapper cleanup number
 
 ---
 
-## 7️⃣ Rice (ÚLTIMO)
+## 8️⃣ Rice (ÚLTIMO)
 
 * [ ] Tema KDE
 * [ ] Iconos
@@ -167,7 +257,7 @@ sudo snapper cleanup number
 
 ---
 
-## 8️⃣ Documentación final
+## 9️⃣ Documentación final
 
 * [ ] Guía de instalación ✔️
 * [ ] Guía Btrfs + Snapper ✔️
