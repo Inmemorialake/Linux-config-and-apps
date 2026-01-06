@@ -17,8 +17,8 @@
 
 ### 1.1 Scrub periódico
 
-* [ ] Habilitar scrub automático
-* [ ] Verificar estado con `btrfs scrub status`
+* [x] Habilitar scrub automático
+* [x] Verificar estado con `btrfs scrub status`
 
 ```bash
 sudo systemctl enable --now btrfs-scrub@-.timer
@@ -39,7 +39,7 @@ sudo btrfs balance start -dusage=75 -musage=75 /
 
 ### 1.3 Verificación de espacio
 
-* [ ] Comando estándar para revisar uso
+* [x] Comando estándar para revisar uso
 * [ ] Documentarlo
 
 ```bash
