@@ -129,6 +129,14 @@ EMPTY_PRE_POST_MIN_AGE="3600"
 
 With this configuration, Snapper will create and manage snapshots for the root subvolume, while adhering to the specified limits and cleanup policies.
 
+To activate Snapper's automatic snapshot cleanup service, I enable and start the `snapper-cleanup.timer` systemd timer:
+
+```bash
+sudo systemctl enable --now snapper-cleanup.timer
+```
+
+### Creating and managing snapshots
+
 To create a snapshot using Snapper, I can use the following command:
 
 ```bash
