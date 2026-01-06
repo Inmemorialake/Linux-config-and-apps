@@ -156,6 +156,8 @@ sudo snapper -c root rollback <snapshot_number>
 
 ## Grub integration
 
+### Setting up GRUB for Btrfs snapshots
+
 To enable rollback from GRUB, I need to install the `grub-btrfs` package:
 
 ```bash
@@ -174,7 +176,16 @@ Now I can update the GRUB configuration to include the Btrfs snapshots:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+### Using snapshots from GRUB
+
 With this setup, I can now select a Btrfs snapshot from the GRUB menu during boot, allowing me to roll back to a previous system state if needed.
+When I boot into a snapshot from GRUB, I can then use Snapper to perform a rollback to that snapshot, ensuring that my system is restored to the desired state.
+
+```bash
+sudo snapper rollback
+```
+
+Then I reboot the system to apply the changes.
 
 ## Package snapshots
 
