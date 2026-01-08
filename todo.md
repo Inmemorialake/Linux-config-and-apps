@@ -149,15 +149,12 @@ sudo snapper cleanup number
 ### 5.1 Flujo de actualización del sistema
 
 * [ ] Documentar política de actualización (cuándo sí / cuándo no)
-* [ ] Checklist pre-update
-* [ ] Checklist post-update
-* [ ] Reglas de reboot (kernel, mesa, nvidia)
+* [ ] Comando/script estándar para actualizar
 
 Scripts asociados:
 
 * [ ] `sys-update`
-* [ ] `system-pre-upgrade`
-* [ ] `system-post-upgrade`
+* [ ] `sys-full-update`
 
 ---
 
