@@ -71,3 +71,49 @@ Set up regular checks for disk health using SMART tools and monitor disk space u
 * `disk-health-check`: Monitors disk health using SMART.
 * `disk-space-monitor`: Monitors disk space usage and alerts when thresholds are reached.
 * `disk-cleanup`: Cleans up unnecessary files to free disk space.
+
+## Scripts and Commands
+
+The Scripts and commands mentioned above should be created into executable files or shell scripts, it will be placed in a dedicated scripts direcotory `~/.local/bin/` for easy access and to mantain organization.
+
+The scripts directory should be added to the user's PATH environment variable to allow execution from any location in the terminal.
+
+Its arqitecture should be as follows:
+
+```bash
+~/.local/bin/
+│
+├── sys/                        # System updates & global health
+│   ├── sys-update              # Standard system update (pacman -Syu)
+│   ├── sys-full-update         # Full update (keyrings, mirrors, AUR, etc.)
+│   └── system-health           # Failed services, degraded state, boot issues
+│
+├── pkg/                        # Package management & integrity
+│   ├── pkg-clean-cache         # paccache cleanup (defined retention policy)
+│   ├── pkg-check-orphans       # Detect orphaned packages
+│   └── pkg-health              # Verify installed packages integrity
+│
+├── keyring/                    # Keyring management
+│   ├── keyring-check           # Verify keyring status and validity
+│   └── keyring-update          # Update and reinitialize keyrings if needed
+│
+├── log/                        # Journald & logs
+│   ├── log-usage               # Inspect journald disk usage
+│   └── log-vacuum              # Cleanup logs based on size/time policy
+│
+├── systemd/                    # systemd services & timers
+│   ├── system-health           # Audit failed or unhealthy services
+│   └── timer-audit             # Review active systemd timers
+│
+├── btrfs/                      # Btrfs maintenance (no snapshots/scrub)
+│   ├── btrfs-maintain          # Routine Btrfs maintenance checks
+│   ├── btrfs-check             # Read-only filesystem integrity check
+│   └── btrfs-disk-usage        # Detailed Btrfs space and metadata usage
+│
+├── disk/                       # Disk health & space
+│   ├── disk-health-check       # SMART status and disk health
+│   ├── disk-space-monitor      # Monitor disk usage and thresholds
+│   └── disk-cleanup            # Cleanup unnecessary files safely
+│
+└── README.md                   # (Optional) Scripts overview & usage policy
+```
