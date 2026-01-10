@@ -24,7 +24,6 @@ Review orphaned packages regularly and verify the integrity of installed package
 * `pkg-clean-cache`: Cleans package cache based on defined policy.
 * `pkg-check-orphans`: Checks for orphaned packages.
 * `pkg-clean-orphans`: Removes orphaned packages.
-* `pkg-health`: Verifies the integrity of installed packages.
 
 ## Keyrings Check
 
@@ -63,6 +62,7 @@ Establish a routine for Btrfs maintenance, this excludes snapshots, scrub and bt
   * **requires pre and post snapshots**.
 * `btrfs-check`: Checks Btrfs filesystem integrity.
 * `btrfs-disk-usage`: Reviews Btrfs disk usage statistics.
+* `btrfs-scrub-status`: Checks the status of Btrfs scrubbing.
 
 ## Disk Health and Space
 
@@ -93,8 +93,7 @@ Its arqitecture should be as follows:
 ├── pkg/                        # Package management & integrity
 │   ├── pkg-clean-cache         # paccache cleanup (defined retention policy)
 │   ├── pkg-check-orphans       # Detect orphaned packages
-│   ├── pkg-clean-orphans       # Remove orphaned packages
-│   └── pkg-health              # Verify installed packages integrity
+│   └── pkg-clean-orphans       # Remove orphaned packages
 │
 ├── keyring/                    # Keyring management
 │   ├── keyring-check           # Verify keyring status and validity
