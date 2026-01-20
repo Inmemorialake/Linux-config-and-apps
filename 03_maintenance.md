@@ -96,7 +96,6 @@ Its arqitecture should be as follows:
 │   └── pkg-clean-orphans       # Remove orphaned packages
 │
 ├── keyring/                    # Keyring management
-│   ├── keyring-check           # Verify keyring status and validity
 │   └── keyring-update          # Update and reinitialize keyrings if needed
 │
 ├── log/                        # Journald & logs
@@ -109,7 +108,6 @@ Its arqitecture should be as follows:
 │
 ├── btrfs/                      # Btrfs maintenance (no snapshots/scrub)
 │   ├── btrfs-maintain          # Routine Btrfs maintenance checks
-│   ├── btrfs-check             # Read-only filesystem integrity check
 │   └── btrfs-disk-usage        # Detailed Btrfs space and metadata usage
 │
 ├── disk/                       # Disk health & space

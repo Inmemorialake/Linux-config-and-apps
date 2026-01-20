@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación controlada
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+SCRIPT_NAME="$(basename "$0")"
+
+# Política (luego puedes mover esto a ~/.config/sys-maint/logging.conf)
+MAX_SIZE="500M"
+MAX_TIME="30d"
+
+DRY_RUN=false
+AUTO_YES=false
+
+# ─────────────────────────────────────────────────────────────
+# Logging helpers
+# ─────────────────────────────────────────────────────────────
+info()  { echo "ℹ️  [$SCRIPT_NAME] $*"; }
+warn()  { echo "⚠️  [$SCRIPT_NAME] $*"; }
+error() { echo "❌ [$SCRIPT_NAME] $*" >&2; }
+
+usage() {
+  cat <<EOF
+Uso: log-vacuum [opciones]
+
+Opciones:
+  --dry-run     Muestra qué se haría sin borrar nada
+  --yes         No pide confirmación
+  -h, --help    Muestra esta ayuda
+EOF
+}
+
+# ─────────────────────────────────────────────────────────────
+# Parse de argumentos
+# ─────────────────────────────────────────────────────────────
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --dry-run) DRY_RUN=true ;;
+    --yes)     AUTO_YES=true ;;
+    -h|--help) usage; exit 0 ;;
+    *) error "Opción desconocida: $1"; exit 1 ;;
+  esac
+  shift
+done
+
+# ─────────────────────────────────────────────────────────────
+# Ejecución
+# ─────────────────────────────────────────────────────────────
+info "Uso actual de journald:"
+journalctl --disk-usage
+echo
+
+info "Política de limpieza:"
+echo "  • Retención temporal : $MAX_TIME"
+echo "  • Tamaño máximo      : $MAX_SIZE"
+echo
+
+if [[ "$DRY_RUN" == true ]]; then
+  warn "Modo DRY-RUN activado: no se eliminará nada"
+else
+  if [[ "$AUTO_YES" == false ]]; then
+    read -rp "¿Deseas continuar con la limpieza de logs? [y/N]: " ans
+    [[ "$ans" =~ ^[Yy]$ ]] || {
+      warn "Operación cancelada por el usuario"
+      exit 0
+    }
+  fi
+fi
+
+if [[ "$DRY_RUN" == true ]]; then
+  info "[DRY-RUN] journalctl --vacuum-time=$MAX_TIME"
+  info "[DRY-RUN] journalctl --vacuum-size=$MAX_SIZE"
+else
+  info "Limpiando logs por tiempo…"
+  journalctl --vacuum-time="$MAX_TIME"
+
+  info "Limpiando logs por tamaño…"
+  journalctl --vacuum-size="$MAX_SIZE"
+fi
+
+echo
+info "Uso de journald después de la operación:"
+journalctl --disk-usage
+
+info "log-vacuum finalizado correctamente"

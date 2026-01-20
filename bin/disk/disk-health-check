@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+echo "🩺 DISK HEALTH CHECK (SMART)"
+echo "============================"
+echo
+
+DISKS=$(lsblk -dn -o NAME,TYPE | awk '$2=="disk"{print "/dev/"$1}')
+
+for disk in $DISKS; do
+  echo "🔍 Checking $disk"
+  echo "----------------------------"
+
+  smartctl -H "$disk" || true
+  echo
+  echo "📊 Critical SMART attributes:"
+  smartctl -A "$disk" | egrep "Reallocated|Pending|Uncorrect|Temperature" || true
+
+  echo
+  echo "============================"
+  echo
+done
+
+echo "✔ Disk health check completed"

@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+SCRIPT_NAME="$(basename "$0")"
+
+AUTO_YES=false
+DRY_RUN=false
+
+info()  { echo "ℹ️  [$SCRIPT_NAME] $*"; }
+warn()  { echo "⚠️  [$SCRIPT_NAME] $*"; }
+error() { echo "❌ [$SCRIPT_NAME] $*" >&2; }
+
+usage() {
+  cat <<EOF
+Uso: keyring-update [opciones]
+
+Opciones:
+  --dry-run     Muestra qué se haría sin ejecutar cambios
+  --yes         No pide confirmación
+  -h, --help    Muestra esta ayuda
+EOF
+}
+
+# Parse argumentos
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --dry-run) DRY_RUN=true ;;
+    --yes)     AUTO_YES=true ;;
+    -h|--help) usage; exit 0 ;;
+    *) error "Opción desconocida: $1"; exit 1 ;;
+  esac
+  shift
+done
+
+info "Este proceso actualizará y reparará los keyrings de Arch"
+echo
+
+if [[ "$DRY_RUN" == true ]]; then
+  warn "Modo DRY-RUN activado"
+else
+  if [[ "$AUTO_YES" == false ]]; then
+    read -rp "¿Deseas continuar? [y/N]: " ans
+    [[ "$ans" =~ ^[Yy]$ ]] || {
+      warn "Operación cancelada"
+      exit 0
+    }
+  fi
+fi
+
+echo
+
+# 1. Sincronizar repositorios
+if [[ "$DRY_RUN" == true ]]; then
+  info "[DRY-RUN] pacman -Sy"
+else
+  info "Sincronizando repositorios…"
+  pacman -Sy
+fi
+
+# 2. Reinstalar keyring
+if [[ "$DRY_RUN" == true ]]; then
+  info "[DRY-RUN] pacman -S --noconfirm archlinux-keyring"
+else
+  info "Actualizando archlinux-keyring…"
+  pacman -S --noconfirm archlinux-keyring
+fi
+
+# 3. Inicializar y poblar keyring (seguro aunque ya exista)
+if [[ "$DRY_RUN" == true ]]; then
+  info "[DRY-RUN] pacman-key --init"
+  info "[DRY-RUN] pacman-key --populate archlinux"
+else
+  info "Inicializando keyring…"
+  pacman-key --init
+
+  info "Poblando keyring oficial…"
+  pacman-key --populate archlinux
+fi
+
+echo
+info "keyring-update finalizado correctamente"

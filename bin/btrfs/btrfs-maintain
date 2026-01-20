@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación controlada
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+MOUNTPOINT="/"
+
+if [[ $EUID -ne 0 ]]; then
+  echo "❌ Este script requiere root (usa sudo)"
+  exit 1
+fi
+
+echo "🛠 BTRFS MAINTENANCE"
+echo "==================="
+echo "Mount point: $MOUNTPOINT"
+echo
+
+if ! findmnt -n -t btrfs "$MOUNTPOINT" &>/dev/null; then
+  echo "❌ $MOUNTPOINT is not a Btrfs filesystem"
+  exit 1
+fi
+
+# 1. Filesystem stats
+echo "📊 Filesystem stats:"
+btrfs filesystem df "$MOUNTPOINT"
+echo
+
+# 2. Light balance (safe thresholds)
+echo "⚖ Running light balance (safe mode)"
+btrfs balance start -dusage=75 -musage=75 "$MOUNTPOINT"
+echo "✅ Balance completed"
+echo
+
+# 3. Defragment important dirs (NOT entire FS)
+echo "🧩 Defragmenting selected directories"
+btrfs filesystem defragment -r -clzo \
+  /var/log \
+  /var/cache \
+  /home || true
+
+echo
+echo "✔ Btrfs maintenance completed"

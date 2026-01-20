@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación controlada
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+MOUNTPOINT="/"
+
+echo "📊 BTRFS DISK USAGE"
+echo "=================="
+echo "Mount point: $MOUNTPOINT"
+echo
+
+if ! findmnt -n -t btrfs "$MOUNTPOINT" &>/dev/null; then
+  echo "❌ $MOUNTPOINT is not a Btrfs filesystem"
+  exit 1
+fi
+
+echo "🔹 Filesystem usage:"
+btrfs filesystem usage "$MOUNTPOINT"
+
+echo
+echo "✔ Btrfs disk usage check completed"

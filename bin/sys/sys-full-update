@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación controlada
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+REAL_USER="${SUDO_USER:-}"
+
+echo "🚀 FULL SYSTEM UPDATE"
+echo "===================="
+echo
+
+# 1. Keyrings
+echo "🔑 Updating keyrings"
+pacman -Sy --needed archlinux-keyring
+pacman-key --populate archlinux
+pacman-key --refresh-keys
+echo "✅ Keyrings OK"
+echo
+
+# 2. Mirrors (reflector)
+if command -v reflector &>/dev/null; then
+  echo "🌍 Updating mirrors"
+  reflector --country Colombia --latest 10 --protocol https --sort rate \
+    --save /etc/pacman.d/mirrorlist
+  echo "✅ Mirrors updated"
+else
+  echo "⚠ reflector not installed, skipping mirrors"
+fi
+echo
+
+# 3. Full system update (official repos)
+echo "📦 Running pacman -Syu"
+pacman -Syu
+echo "✅ System updated"
+echo
+
+# 4. AUR (paru, non-root)
+if [[ -n "$REAL_USER" ]] && command -v paru &>/dev/null; then
+  echo "🧱 Updating AUR packages (paru)"
+  sudo -u "$REAL_USER" paru -Syu --devel
+  echo "✅ AUR updated"
+else
+  echo "⚠ paru not available or REAL_USER undefined, skipping AUR"
+fi
+
+echo
+echo "✔ Full system update completed"

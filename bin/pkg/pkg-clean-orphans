@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "//--- Orphaned package cleanup ---//"
+
+orphans=$(pacman -Qtdq 2>/dev/null || true)
+
+if [[ -z "$orphans" ]]; then
+  echo "✔ No orphaned packages to remove"
+  exit 0
+fi
+
+echo "⚠ The following orphaned packages will be REMOVED:"
+echo
+
+while read -r pkg; do
+  echo "  • $pkg"
+done <<< "$orphans"
+
+echo
+read -rp "Proceed with removal? [y/N]: " confirm
+
+if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+  echo "✖ Aborted by user"
+  exit 0
+fi
+
+echo
+echo "🧹 Removing orphaned packages..."
+sudo pacman -Rns $orphans
+
+echo
+echo "✔ Orphaned packages successfully removed"
