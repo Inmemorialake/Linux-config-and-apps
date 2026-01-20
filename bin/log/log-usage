@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+SCRIPT_NAME="$(basename "$0")"
+
+info()  { echo "ℹ️  $*"; }
+warn()  { echo "⚠️  $*"; }
+error() { echo "❌ $*" >&2; }
+
+info "Revisando uso de journald…"
+echo
+
+# Uso total
+journalctl --disk-usage || {
+  error "No se pudo obtener el uso de journald"
+  exit 1
+}
+
+echo
+
+# Límites configurados
+info "Configuración relevante de journald:"
+grep -E '^(SystemMaxUse|RuntimeMaxUse|SystemKeepFree|RuntimeKeepFree)' \
+  /etc/systemd/journald.conf 2>/dev/null || \
+  warn "No hay límites explícitos configurados (valores por defecto en uso)"
+
+echo
+
+# Rango temporal de logs
+info "Rango temporal de logs:"
+journalctl --list-boots | head -n 1
+journalctl --list-boots | tail -n 1
+
+echo
+info "log-usage finalizado correctamente"

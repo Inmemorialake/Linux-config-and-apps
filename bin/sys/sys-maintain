@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "🛠 SYSTEM MAINTENANCE"
+echo "===================="
+echo "Started at: $(date)"
+echo 
+echo 
+
+# ---- SYSTEMD ----
+echo "🔧 Checking systemd services"
+system-health || true
+echo 
+echo 
+timer-audit || true
+echo 
+echo 
+echo 
+
+# ---- LOGS ----
+echo "📜 Logs status"
+log-usage
+echo 
+echo 
+echo 
+
+# ---- DISK ----
+echo "💽 Disk space"
+disk-space-monitor
+echo 
+echo 
+echo 
+
+# ---- PACKAGES ----
+echo "📦 Orphaned packages"
+pkg-check-orphans || true
+echo 
+echo 
+echo 
+
+# ---- BTRFS ----
+if findmnt -n -t btrfs / &>/dev/null; then
+  echo "📊 Btrfs usage"
+  btrfs-disk-usage
+fi
+echo 
+echo 
+echo 
+
+# ---- CLEANUP (safe) ----
+echo "🧹 Cleanup phase"
+pkg-clean-cache
+disk-cleanup || true
+echo 
+echo 
+echo 
+
+echo "✔ System maintenance completed"
+echo "Finished at: $(date)"

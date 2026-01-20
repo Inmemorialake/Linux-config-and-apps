@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "//--- Orphaned package cleanup ---//"
+
+orphans=$(pacman -Qtdq 2>/dev/null || true)
+
+if [[ -z "$orphans" ]]; then
+  echo "✔ No orphaned packages found"
+  exit 0
+fi
+
+echo "⚠ Orphaned packages detected:"
+echo
+
+while read -r pkg; do
+  echo "  • $pkg"
+done <<< "$orphans"
+
+exit 1

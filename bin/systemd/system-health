@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "🩺 SYSTEM HEALTH CHECK"
+echo "======================"
+echo
+
+# 1. Failed services
+echo "🔴 Failed services:"
+FAILED_SERVICES=$(systemctl --failed --no-legend || true)
+
+if [[ -z "$FAILED_SERVICES" ]]; then
+  echo "✅ No failed services"
+else
+  echo "$FAILED_SERVICES"
+fi
+
+echo
+echo "----------------------"
+echo
+
+# 2. Units not running properly
+echo "🟠 Units in bad state (not active/running):"
+systemctl list-units --state=failed,activating,deactivating --no-legend || echo "✅ All units stable"
+
+echo
+echo "----------------------"
+echo
+
+# 3. System journal errors (last boot)
+echo "📜 Critical logs from current boot:"
+journalctl -p 3 -b --no-pager || echo "✅ No critical errors"
+
+echo
+echo "----------------------"
+echo
+
+# 4. Summary
+echo "📊 Summary:"
+systemctl is-system-running --quiet \
+  && echo "✅ System state: running" \
+  || echo "⚠️ System state: degraded"
+
+echo
+echo "✔ System health check completed"

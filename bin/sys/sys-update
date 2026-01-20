@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+
+# ── Colors ─────────────────────────────────────────────
+INFO="\033[1;34m"
+WARN="\033[1;33m"
+SUCCESS="\033[1;32m"
+RESET="\033[0m"
+
+# ── Helpers ────────────────────────────────────────────
+header() {
+  echo -e "${INFO}//--- Performing basic system update ---//${RESET}"
+}
+
+pre_checks() {
+  echo -e "${WARN}:: This will run 'pacman -Syu'${RESET}"
+  echo -e "${WARN}:: Do NOT use this for major upgrades${RESET}"
+  echo
+}
+
+run_update() {
+  sudo pacman -Syu
+}
+
+post_message() {
+  echo
+  echo -e "${SUCCESS}✔ System update finished${RESET}"
+  echo "Reboot only if kernel or critical components were updated."
+}
+
+main() {
+  header
+  pre_checks
+  run_update
+  post_message
+}
+
+main
