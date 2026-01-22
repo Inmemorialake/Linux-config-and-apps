@@ -40,7 +40,7 @@ sudo btrfs balance start -dusage=75 -musage=75 /
 ### 1.3 Verificación de espacio
 
 * [x] Comando estándar para revisar uso
-* [ ] Documentarlo
+* [x] Documentarlo
 
 ```bash
 btrfs filesystem usage /
@@ -60,7 +60,7 @@ btrfs filesystem usage /
 
 ### 2.2 Limpieza automática (verificar)
 
-* [ ] Confirmar que `snapper-cleanup.timer` borra snapshots
+* [x] Confirmar que `snapper-cleanup.timer` borra snapshots
 * [x] Verificar límites reales (`NUMBER_LIMIT`, `IMPORTANT`)
 * [x] Forzar limpieza de prueba
 
@@ -82,9 +82,9 @@ sudo snapper cleanup number
 
 ### 3.1 Infraestructura de scripts
 
-* [ ] Elegir ubicación (`~/.local/bin` o `/usr/local/bin`)
-* [ ] Asegurar que esté en `$PATH`
-* [ ] Convención de nombres clara
+* [x] Elegir ubicación (`~/.local/bin` o `/usr/local/bin`)
+* [x] Asegurar que esté en `$PATH`
+* [x] Convención de nombres clara
 
 ---
 
