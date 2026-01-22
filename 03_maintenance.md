@@ -1,119 +1,271 @@
-# System maintenance
+# System Maintenance Plan
 
-Create a comprehensive maintenance plan for the system, covering updates, package management, logs, services, Btrfs maintenance, and disk health.
-Create also bassic scripts/commands and specific ones to automate and facilitate these tasks.
+This document defines a **comprehensive system maintenance plan** aligned with the final scripts architecture shown below. It preserves the original guidelines (updates, packages, logs, systemd, Btrfs, and disks) while reorganizing them in a **coherent, modular, and automatable** way, using `Linux-config-and-apps/bin/` as the single *source of truth*.
 
-## Updates Policy
+---
 
-Create a first command/script to update the system, and document when to use it.
+## Plan objectives
 
-Create a second command/script to update the system at a bigger scale (keyrings, mirrors, AUR, etc), and document when to use it.
+* Keep the system **up to date, stable, and reproducible**.
+* Minimize risk during large or sensitive updates.
+* Detect issues early (broken packages, failing services, disk degradation).
+* Centralize all logic in **version-controlled scripts** that are easy to audit and execute.
 
-### Commands/Scripts for Updates
+---
 
-* `sys-update`: Standard system update command/script.
-* `sys-full-update`: Full system update command/script for major updates.
+## Update policy
 
-## Package Management and Cleanup
+Two clearly differentiated update levels are defined, each with a specific purpose.
 
-Define a cache cleanup policy using `paccache`.
-Review orphaned packages regularly and verify the integrity of installed packages.
+### 1. Standard update
 
-### Commands/Scripts for Package Management and Cleanup
+Intended for daily usage.
 
-* `pkg-clean-cache`: Cleans package cache based on defined policy.
-* `pkg-check-orphans`: Checks for orphaned packages.
-* `pkg-clean-orphans`: Removes orphaned packages.
+* Updates official repositories.
+* Does not explicitly touch mirrors or keyrings.
+* Low risk.
 
-## Keyrings Check
+**When to use:**
 
-Create a command/script to check and update keyrings as needed.
+* Daily or frequent use.
+* Before installing new software.
 
-### Commands/Scripts for Keyrings
+**Script:**
 
-* `keyring-check`: Checks and updates keyrings.
-* `keyring-update`: Updates keyrings if necessary.
+* `sys/sys-update`
 
-## Logs and Disk Usage
+---
 
-Monitor journald usage and set maximum log sizes. Document manual log cleanup procedures.
+### 2. Full (major) update
 
-### Commands/Scripts to Manage Logs
+Intended for deeper system changes.
 
-* `log-usage`: Reviews journald log usage.
-* `log-vacuum`: Cleans up logs to free disk space.
+Includes:
 
-## Services and Timers (systemd)
+* Keyring refresh.
+* Mirror list update.
+* AUR updates (via `paru`).
 
-Audit failed services and active timers. Disable unnecessary services to optimize system performance.
+**When to use:**
 
-### Commands/Scripts for Services and Timers
+* Every few weeks.
+* Before or after major upgrades.
+* When signature or package validation issues appear.
 
-* `system-health`: Checks the health of system services.
-* `timer-audit`: Audits active systemd timers.
+**Script:**
 
-## Btrfs Maintenance
+* `sys/sys-full-update`
 
-Establish a routine for Btrfs maintenance, this excludes snapshots, scrub and btrfs-grub because I have it automaticed.
+---
 
-### Commands/Scripts for Btrfs Maintenance
+### Periodic orchestration
 
-* `btrfs-maintain`: Performs routine Btrfs maintenance tasks.
-  * **requires pre and post snapshots**.
-* `btrfs-check`: Checks Btrfs filesystem integrity.
-* `btrfs-disk-usage`: Reviews Btrfs disk usage statistics.
-* `btrfs-scrub-status`: Checks the status of Btrfs scrubbing.
+Used for global, non-interactive maintenance.
 
-## Disk Health and Space
+* Runs safe system checks.
+* Does not perform destructive actions without confirmation.
 
-Set up regular checks for disk health using SMART tools and monitor disk space usage to prevent issues.
+**Script:**
 
-### Commands/Scripts for Disk Health and Space
+* `sys/sys-maintain`
 
-* `disk-health-check`: Monitors disk health using SMART.
-* `disk-space-monitor`: Monitors disk space usage and alerts when thresholds are reached.
-* `disk-cleanup`: Cleans up unnecessary files to free disk space.
-  * Requires pre and post snapshots.
+---
 
-## Scripts and Commands
+## Package management and cleanup
 
-The Scripts and commands mentioned above should be created into executable files or shell scripts, it will be placed in a dedicated scripts direcotory `~/.local/bin/` for easy access and to mantain organization.
+### Cache policy
 
-The scripts directory should be added to the user's PATH environment variable to allow execution from any location in the terminal.
+* `paccache` is used with a defined retention policy (e.g., keep the last 2–3 versions).
+* Prevents uncontrolled cache growth.
 
-Its arqitecture should be as follows:
+### Orphaned packages
+
+* Reviewed periodically.
+* Removal is **explicit and separated** from detection.
+
+### Package integrity
+
+* Installed files are checked to detect corruption or inconsistencies.
+
+### Associated scripts
+
+* `pkg/pkg-clean-cache`
+* `pkg/pkg-check-orphans`
+* `pkg/pkg-clean-orphans`
+
+---
+
+## Keyring management
+
+Keyrings are critical to avoid signature errors during upgrades.
+
+* Refresh is performed in a controlled manner.
+* Integrated into full system updates.
+
+### Associated scripts for keyring
+
+* `keyring/keyring-update`
+
+---
+
+## Logs and disk usage (journald)
+
+### Objectives
+
+* Prevent uncontrolled log growth.
+* Maintain visibility into real disk usage.
+
+### Policy
+
+* Periodic inspection of log size.
+* Manual or automated cleanup by size or time.
+
+### Associated scripts for logs
+
+* `log/log-usage`
+* `log/log-vacuum`
+
+---
+
+## Services and timers (systemd)
+
+### Services
+
+* Audit failed services.
+* Identify problematic or unnecessary units.
+
+### Timers
+
+* Review active timers.
+* Detect redundant or misconfigured scheduled tasks.
+
+### Associated scripts for systemd
+
+* `systemd/system-health`
+* `systemd/timer-audit`
+
+---
+
+## Btrfs maintenance
+
+> **Note:** Snapshots, scrub, and `btrfs-grub` are automated and **explicitly excluded** from this plan.
+
+### Objectives for Btrfs
+
+* Monitor real data and metadata usage.
+* Perform safe maintenance actions only.
+
+### Associated scripts for Btrfs
+
+* `btrfs/btrfs-maintain`
+
+  * **Requires pre- and post-snapshots**.
+* `btrfs/btrfs-disk-usage`
+
+---
+
+## Disk health and space
+
+### Disk health (SMART)
+
+* Periodic SMART status checks.
+* Early detection of physical disk failures.
+
+### Disk space
+
+* Monitor usage thresholds.
+* Alert when critical limits are reached.
+
+### Cleanup
+
+* Safe cleanup of unnecessary files.
+* **Requires pre- and post-snapshots**.
+
+### Associated scripts for disk health and space
+
+* `disk/disk-health-check`
+* `disk/disk-space-monitor`
+* `disk/disk-cleanup`
+
+---
+
+## Scripts architecture
+
+All scripts live in a version-controlled repository with a clear structure:
 
 ```bash
-~/.local/bin/
+Linux-config-and-apps/
 │
-├── sys/                        # System updates & global health
-│   ├── sys-update              # Standard system update (pacman -Syu)
-│   └── sys-full-update         # Full update (keyrings, mirrors, AUR, etc.)
+├── bin/                            # User-installed system scripts (source of truth)
+│   ├── sys/
+│   ├── pkg/
+│   ├── keyring/
+│   ├── log/
+│   ├── systemd/
+│   ├── btrfs/
+│   └── disk/
 │
-├── pkg/                        # Package management & integrity
-│   ├── pkg-clean-cache         # paccache cleanup (defined retention policy)
-│   ├── pkg-check-orphans       # Detect orphaned packages
-│   └── pkg-clean-orphans       # Remove orphaned packages
+├── install.sh                      # Installer (creates symlinks into ~/.local/bin)
+└── .gitignore
+```
+
+### Principles
+
+* `bin/` is the **single source of truth**.
+* `install.sh` creates symlinks into `~/.local/bin/`.
+* `~/.local/bin` is included in the user `PATH`.
+* No critical script lives outside the repository.
+
+---
+
+## Expected outcome
+
+With this structure:
+
+* Maintenance becomes **predictable and reproducible**.
+* Each action has a clear, isolated script.
+* The system remains healthy with minimal friction.
+* Everything is auditable, versionable, and extensible.
+
+---
+
+## Fina Script Arquitecture Diagram
+
+```bash
+Linux-config-and-apps/
 │
-├── keyring/                    # Keyring management
-│   └── keyring-update          # Update and reinitialize keyrings if needed
+├── bin/                            # User-installed system scripts (source of truth)
 │
-├── log/                        # Journald & logs
-│   ├── log-usage               # Inspect journald disk usage
-│   └── log-vacuum              # Cleanup logs based on size/time policy
+│   ├── sys/                        # System updates & global maintenance
+│   │   ├── sys-update              # Standard system update (pacman -Syu)
+│   │   ├── sys-full-update         # Full system update (keyrings, mirrors, AUR via paru)
+│   │   └── sys-maintain            # Periodic system-wide maintenance orchestrator
+│   │
+│   ├── pkg/                        # Package management & integrity
+│   │   ├── pkg-clean-cache         # Clean pacman cache (paccache retention policy)
+│   │   ├── pkg-check-orphans       # Detect orphaned packages
+│   │   └── pkg-clean-orphans       # Remove orphaned packages safely
+│   │
+│   ├── keyring/                    # Pacman keyring management
+│   │   └── keyring-update          # Update / refresh archlinux-keyring
+│   │
+│   ├── log/                        # Journald & log management
+│   │   ├── log-usage               # Inspect journald disk usage
+│   │   └── log-vacuum              # Cleanup logs by size/time policy
+│   │
+│   ├── systemd/                    # systemd services & timers
+│   │   ├── system-health           # Audit failed or unhealthy services
+│   │   └── timer-audit             # Review active systemd timers
+│   │
+│   ├── btrfs/                      # Btrfs maintenance (no snapshots / scrub)
+│   │   ├── btrfs-maintain          # Routine safe Btrfs maintenance
+│   │   └── btrfs-disk-usage        # Detailed Btrfs space & metadata usage
+│   │
+│   └── disk/                       # Disk health & space monitoring
+│       ├── disk-health-check       # SMART status & disk health
+│       ├── disk-space-monitor      # Monitor disk usage & thresholds
+│       └── disk-cleanup            # Safe disk cleanup (cache, trash, logs)
 │
-├── systemd/                    # systemd services & timers
-│   ├── system-health           # Audit failed or unhealthy services
-│   └── timer-audit             # Review active systemd timers
-│
-├── btrfs/                      # Btrfs maintenance (no snapshots/scrub)
-│   ├── btrfs-maintain          # Routine Btrfs maintenance checks
-│   └── btrfs-disk-usage        # Detailed Btrfs space and metadata usage
-│
-├── disk/                       # Disk health & space
-│   ├── disk-health-check       # SMART status and disk health
-│   ├── disk-space-monitor      # Monitor disk usage and thresholds
-│   └── disk-cleanup            # Cleanup unnecessary files safely
-│
-└── README.md                   # (Optional) Scripts overview & usage policy
+├── install.sh                      # Installer (creates symlinks into ~/.local/bin)
+└── .gitignore
 ```
