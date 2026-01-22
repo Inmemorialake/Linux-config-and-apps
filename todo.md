@@ -28,8 +28,8 @@ sudo systemctl enable --now btrfs-scrub@-.timer
 
 ### 1.2 Balance (manual, documentado)
 
-* [ ] Documentar cuándo hacer balance
-* [ ] Crear comando/script para balance seguro
+* [x] Documentar cuándo hacer balance
+* [x] Crear comando/script para balance seguro
 
 ```bash
 sudo btrfs balance start -dusage=75 -musage=75 /
