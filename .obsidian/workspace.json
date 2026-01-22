@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_maintenance.md",
+                "file": "todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_maintenance"
+              "title": "todo"
             }
           }
         ]
@@ -186,12 +186,12 @@
   },
   "active": "49f65cf00f1367e1",
   "lastOpenFiles": [
+    "03_maintenance.md",
     "05_rice.md",
     "04_Terminal.md",
     "todo.md",
     "architecture.md",
     "Terminal.md",
-    "03_maintenance.md",
     "02_Btrfs_and_snapshots.md"
   ]
 }
