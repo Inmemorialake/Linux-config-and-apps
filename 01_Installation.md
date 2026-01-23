@@ -513,6 +513,17 @@ GRUB_DISABLE_OS_PROBER=false
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+##### 4.5.3 AUR Helper Installation (optional)
+
+In my case, I use `paru` as my AUR helper. To install it, follow these steps:
+
+```bash
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
 ## Conclusion
 
 This installation guide provides a comprehensive overview of setting up my system from scratch. Feel free to adapt the steps to suit your specific needs and preferences. Enjoy your new Arch Linux system with KDE Plasma!
