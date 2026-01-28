@@ -229,7 +229,7 @@ With this structure:
 
 ---
 
-## Fina Script Arquitecture Diagram
+## Final Script Architecture Diagram
 
 ```bash
 Linux-config-and-apps/
@@ -244,6 +244,7 @@ Linux-config-and-apps/
 │   ├── pkg/                        # Package management & integrity
 │   │   ├── pkg-clean-cache         # Clean pacman cache (paccache retention policy)
 │   │   ├── pkg-check-orphans       # Detect orphaned packages
+│   │   ├── mirrors-update          # Update mirror list safely
 │   │   └── pkg-clean-orphans       # Remove orphaned packages safely
 │   │
 │   ├── keyring/                    # Pacman keyring management
