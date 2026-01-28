@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+INFO="\033[1;34m"
+WARN="\033[1;33m"
+SUCCESS="\033[1;32m"
+RESET="\033[0m"
+
+header() {
+  echo -e "${INFO}//--- Updating mirrorlist ---//${RESET}"
+}
+
+update_mirrors() {
+  sudo reflector --country colombia --latest 10  --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
+}
+
+main() {
+  header
+  update_mirrors
+  echo -e "${SUCCESS}✔ Mirrorlist updated successfully${RESET}"
+}
+
+main
