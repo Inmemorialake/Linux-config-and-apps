@@ -206,29 +206,137 @@ ssh-copy-id user@remote-server
 
 ---
 
-### Samba (Optional)
+## Samba (Optional)
 
-If you share files with Windows devices on your local network.
+Samba allows sharing files with Windows and Linux devices using the SMB/CIFS protocol.  
+In this configuration, Samba is **disabled by default** and only enabled temporarily when file sharing is required.
+
+### Usage Model
+
+- **Client mode (default)**:  
+  This system connects to external Samba servers (NAS, Windows PCs, other Linux machines).
+  - No UFW rules required
+  - Outgoing connections are allowed by default
+  - Samba services do not need to be running
+
+- **Server mode (optional, temporary)**:  
+  This system shares files with other devices on the local network.
+  - Requires explicit UFW rules
+  - Services should be started only when needed
+  - Access is restricted to the local network (LAN-only)
+
+### Client Mode (Default — No Firewall Changes Required)
+
+When connecting **to** a remote Samba server, this system acts as a client.
+
+- All connections are **outgoing**
+- `ufw default allow outgoing` already permits this traffic
+- No Samba-related firewall rules are necessary
+
+**Examples**:
+
+- Connecting to a NAS
+- Accessing a Windows shared folder
+- Mounting a remote SMB share with `mount.cifs`
+- Browsing SMB shares via Dolphin
+
+[x]Works with UFW enabled  
+[x]Works without any Samba UFW rules  
+[x]Secure by default
+
+### Server Mode (Optional — LAN Only)
+
+Enable this section **only when this system needs to share files** with other devices.
+
+#### UFW Configuration (Local Network Only)
+
+Determine your local subnet first:
 
 ```bash
-sudo ufw allow Samba comment "Windows file sharing"
+ip route | grep default
 ```
 
-**Ports used**:
+Example subnet:
 
-- 137/udp - NetBIOS Name Service
-- 138/udp - NetBIOS Datagram Service
-- 139/tcp - NetBIOS Session Service
-- 445/tcp - Microsoft-DS (SMB over TCP)
+```text
+192.168.0.0/24
+```
 
-**Security warning**:
+Allow Samba **only from the local network**:
 
-- Only enable if you actually use Samba
-- Consider limiting to local network only:
+```bash
+sudo ufw allow from 192.168.0.0/24 to any app Samba comment "Samba (LAN only)"
+```
 
-  ```bash
-  sudo ufw allow from 192.168.1.0/24 to any app Samba
-  ```
+#### Services Management
+
+Start Samba services only when required:
+
+```bash
+sudo systemctl start smb nmb
+```
+
+Stop them when file sharing is no longer needed:
+
+```bash
+sudo systemctl stop smb nmb
+```
+
+#### Verification
+
+```bash
+# Verify firewall rules
+sudo ufw status | grep Samba
+
+# Verify services
+systemctl status smb nmb
+```
+
+From another device on the same network:
+
+- Access `\\hostname` or `\\IP`
+- Verify read/write access as configured
+
+#### Additional Hardening (Recommended)
+
+Restrict Samba at the application level as well.
+
+Edit `/etc/samba/smb.conf`:
+
+```ini
+[global]
+   interfaces = lo wlan0
+   bind interfaces only = yes
+   hosts allow = 192.168.0.0/24
+```
+
+This provides defense-in-depth:
+
+- UFW filters incoming network traffic
+- Samba rejects unauthorized hosts at the application level
+
+### Cleanup (Return to Secure Default State)
+
+After finishing file sharing:
+
+```bash
+sudo systemctl stop smb nmb
+sudo ufw delete allow from 192.168.0.0/24 to any app Samba
+```
+
+This restores the system to its default, secure posture:
+
+- No Samba services running
+- No Samba ports exposed
+- Outgoing SMB connections remain unaffected
+
+### Security Notes
+
+- Samba should **never** be exposed to the internet
+- Always restrict access to trusted networks only
+- Prefer temporary activation over permanent exposure
+- Use strong user authentication and avoid guest shares unless necessary
+- Combine UFW rules with Samba internal restrictions for best security
 
 ---
 
@@ -565,76 +673,6 @@ systemctl status ufw
 
 # View logs
 journalctl -u ufw
-```
-
----
-
-## Automated Setup Script
-
-For reproducibility, I created a setup script in my repository:
-
-**Location**: `bin/sys/firewall-setup`
-
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
-
-echo "🔥 FIREWALL SETUP"
-echo "================="
-
-# Install UFW
-sudo pacman -S --needed ufw
-
-# Reset and configure
-sudo ufw --force reset
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-
-# Service-specific rules
-sudo ufw allow 1714:1764/udp comment "KDE Connect"
-sudo ufw allow 1714:1764/tcp comment "KDE Connect"
-sudo ufw allow from 172.17.0.0/16 comment "Docker"
-sudo ufw allow from 172.18.0.0/16 comment "Docker custom"
-sudo ufw allow in on docker0 comment "Docker interface"
-sudo ufw allow in on tailscale0 comment "Tailscale"
-sudo ufw allow out on tailscale0 comment "Tailscale"
-
-# Disable logging
-sudo ufw logging off
-
-# Enable
-sudo ufw --force enable
-sudo systemctl enable --now ufw
-
-echo "✅ Firewall configured successfully"
-sudo ufw status verbose
-```
-
-**Usage**:
-
-```bash
-firewall-setup
-```
-
----
-
-## Integration with Other Security Tools
-
-### fail2ban (Optional)
-
-fail2ban can work alongside UFW to ban IPs after failed login attempts:
-
-```bash
-# Install
-sudo pacman -S fail2ban
-
-# Configure
-sudo nano /etc/fail2ban/jail.local
-
-# Content:
-[sshd]
-enabled = true
-banaction = ufw
 ```
 
 ---
