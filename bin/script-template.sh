@@ -3,11 +3,16 @@ set -Eeuo pipefail
 IFS=$'\n\t'
 
 # ─────────────────────────────────────────────────────────────
-# Auto-elevación controlada
+# Template de script estándar para Linux-config-and-apps
 # ─────────────────────────────────────────────────────────────
-if [[ $EUID -ne 0 ]]; then
-  exec sudo "$0" "$@"
-fi
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación (solo si se necesita root)
+# ─────────────────────────────────────────────────────────────
+# Descomentar si el script requiere permisos de root:
+# if [[ $EUID -ne 0 ]]; then
+#   exec sudo "$0" "$@"
+# fi
 
 # ─────────────────────────────────────────────────────────────
 # Colores estandarizados
@@ -24,12 +29,12 @@ readonly RESET="\033[0m"
 # ─────────────────────────────────────────────────────────────
 readonly SCRIPT_NAME="$(basename "$0")"
 
-# Política (luego puedes mover esto a ~/.config/sys-maint/logging.conf)
-MAX_SIZE="500M"
-MAX_TIME="30d"
-
+# Variables específicas del script
 DRY_RUN=false
 AUTO_YES=false
+
+# Si el script se ejecuta con sudo, preservar el usuario real:
+# readonly REAL_USER="${SUDO_USER:-}"
 
 # ─────────────────────────────────────────────────────────────
 # Funciones de logging
@@ -40,7 +45,7 @@ error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
 success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
 # ─────────────────────────────────────────────────────────────
-# Función header
+# Función header para títulos centrados
 # ─────────────────────────────────────────────────────────────
 header() {
   local title="$1"
@@ -65,10 +70,19 @@ usage() {
   cat <<EOF
 Uso: $SCRIPT_NAME [opciones]
 
+Descripción:
+  Descripción breve de lo que hace el script
+
 Opciones:
-  --dry-run     Muestra qué se haría sin borrar nada
+  --dry-run     Muestra qué se haría sin ejecutar cambios
   --yes         No pide confirmación
   -h, --help    Muestra esta ayuda
+
+Ejemplos:
+  $SCRIPT_NAME              # Ejecución normal con confirmación
+  $SCRIPT_NAME --dry-run    # Ver qué se haría sin ejecutar
+  $SCRIPT_NAME --yes        # Ejecución automática sin confirmación
+
 EOF
 }
 
@@ -78,61 +92,69 @@ EOF
 parse_args() {
   while [[ $# -gt 0 ]]; do
     case "$1" in
-      --dry-run) DRY_RUN=true ;;
-      --yes)     AUTO_YES=true ;;
-      -h|--help) usage; exit 0 ;;
-      *) error "Opción desconocida: $1"; exit 1 ;;
+      --dry-run)
+        DRY_RUN=true
+        ;;
+      --yes)
+        AUTO_YES=true
+        ;;
+      -h|--help)
+        usage
+        exit 0
+        ;;
+      *)
+        error "Opción desconocida: $1"
+        usage
+        exit 1
+        ;;
     esac
     shift
   done
 }
 
 # ─────────────────────────────────────────────────────────────
-# Función principal
+# Función principal del script
 # ─────────────────────────────────────────────────────────────
 main() {
   parse_args "$@"
   
-  header "Limpieza de logs del sistema" "🧹"
+  # Mostrar título
+  header "Título del Script" "🚀"
   
-  info "Uso actual de journald:"
-  journalctl --disk-usage
-  echo
-  
-  info "Política de limpieza:"
-  echo "  • Retención temporal : $MAX_TIME"
-  echo "  • Tamaño máximo      : $MAX_SIZE"
-  echo
-  
+  # Verificaciones previas
   if [[ "$DRY_RUN" == true ]]; then
-    warn "Modo DRY-RUN activado: no se eliminará nada"
-  else
-    if [[ "$AUTO_YES" == false ]]; then
-      read -rp "¿Deseas continuar con la limpieza de logs? [y/N]: " respuesta
-      [[ "$respuesta" =~ ^[Yy]$ ]] || {
-        warn "Operación cancelada por el usuario"
-        exit 0
-      }
+    warn "Modo DRY-RUN activado: no se ejecutarán cambios"
+  fi
+  
+  # Pedir confirmación si es necesario
+  if [[ "$AUTO_YES" == false ]] && [[ "$DRY_RUN" == false ]]; then
+    read -rp "¿Deseas continuar? [y/N]: " respuesta
+    if [[ ! "$respuesta" =~ ^[Yy]$ ]]; then
+      warn "Operación cancelada por el usuario"
+      exit 0
     fi
   fi
   
+  echo
+  
+  # ===== Lógica del script aquí =====
+  info "Iniciando proceso..."
+  
+  # Ejemplo de ejecución condicional
   if [[ "$DRY_RUN" == true ]]; then
-    info "[DRY-RUN] journalctl --vacuum-time=$MAX_TIME"
-    info "[DRY-RUN] journalctl --vacuum-size=$MAX_SIZE"
+    info "[DRY-RUN] Comando que se ejecutaría"
   else
-    info "Limpiando logs por tiempo…"
-    journalctl --vacuum-time="$MAX_TIME"
-    
-    info "Limpiando logs por tamaño…"
-    journalctl --vacuum-size="$MAX_SIZE"
+    info "Ejecutando comando..."
+    # Comando real aquí
   fi
   
   echo
-  info "Uso de journald después de la operación:"
-  journalctl --disk-usage
   
-  echo
+  # Mensaje de finalización
   success "$SCRIPT_NAME finalizado correctamente"
 }
 
+# ─────────────────────────────────────────────────────────────
+# Ejecutar función principal
+# ─────────────────────────────────────────────────────────────
 main "$@"

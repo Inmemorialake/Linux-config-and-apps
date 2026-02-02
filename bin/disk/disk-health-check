@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
 # ─────────────────────────────────────────────────────────────
 # Auto-elevación
@@ -8,24 +9,72 @@ if [[ $EUID -ne 0 ]]; then
   exec sudo "$0" "$@"
 fi
 
-echo "🩺 DISK HEALTH CHECK (SMART)"
-echo "============================"
-echo
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-DISKS=$(lsblk -dn -o NAME,TYPE | awk '$2=="disk"{print "/dev/"$1}')
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
 
-for disk in $DISKS; do
-  echo "🔍 Checking $disk"
-  echo "----------------------------"
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-  smartctl -H "$disk" || true
-  echo
-  echo "📊 Critical SMART attributes:"
-  smartctl -A "$disk" | egrep "Reallocated|Pending|Uncorrect|Temperature" || true
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-  echo
-  echo "============================"
-  echo
-done
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Verificación de salud del disco (SMART)" "🩺"
+  
+  local disks
+  disks=$(lsblk -dn -o NAME,TYPE | awk '$2=="disk"{print "/dev/"$1}')
+  
+  for disk in $disks; do
+    info "🔍 Verificando $disk"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    
+    smartctl -H "$disk" || true
+    echo
+    info "📊 Atributos SMART críticos:"
+    smartctl -A "$disk" | grep -E "Reallocated|Pending|Uncorrect|Temperature" || true
+    
+    echo
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo
+  done
+  
+  success "$SCRIPT_NAME finalizado correctamente"
+}
 
-echo "✔ Disk health check completed"
+main

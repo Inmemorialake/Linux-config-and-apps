@@ -1,59 +1,103 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
-echo "🛠 SYSTEM MAINTENANCE"
-echo "===================="
-echo "Started at: $(date)"
-echo 
-echo 
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-# ---- SYSTEMD ----
-echo "🔧 Checking systemd services"
-system-health || true
-echo 
-echo 
-timer-audit || true
-echo 
-echo 
-echo 
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
 
-# ---- LOGS ----
-echo "📜 Logs status"
-log-usage
-echo 
-echo 
-echo 
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-# ---- DISK ----
-echo "💽 Disk space"
-disk-space-monitor
-echo 
-echo 
-echo 
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-# ---- PACKAGES ----
-echo "📦 Orphaned packages"
-pkg-check-orphans || true
-echo 
-echo 
-echo 
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Mantenimiento del sistema" "🛠"
+  
+  info "Iniciado: $(date)"
+  echo
+  echo
+  
+  # ---- SYSTEMD ----
+  info "🔧 Verificando servicios systemd"
+  system-health || true
+  echo
+  echo
+  timer-audit || true
+  echo
+  echo
+  
+  # ---- LOGS ----
+  info "📜 Estado de logs"
+  log-usage
+  echo
+  echo
+  
+  # ---- DISCO ----
+  info "💽 Espacio en disco"
+  disk-space-monitor
+  echo
+  echo
+  
+  # ---- PAQUETES ----
+  info "📦 Paquetes huérfanos"
+  pkg-check-orphans || true
+  echo
+  echo
+  
+  # ---- BTRFS ----
+  if findmnt -n -t btrfs / &>/dev/null; then
+    info "📊 Uso de Btrfs"
+    btrfs-disk-usage
+  fi
+  echo
+  echo
+  
+  # ---- LIMPIEZA (segura) ----
+  info "🧹 Fase de limpieza"
+  pkg-clean-cache
+  disk-cleanup || true
+  echo
+  echo
+  
+  success "$SCRIPT_NAME finalizado correctamente"
+  info "Finalizado: $(date)"
+}
 
-# ---- BTRFS ----
-if findmnt -n -t btrfs / &>/dev/null; then
-  echo "📊 Btrfs usage"
-  btrfs-disk-usage
-fi
-echo 
-echo 
-echo 
-
-# ---- CLEANUP (safe) ----
-echo "🧹 Cleanup phase"
-pkg-clean-cache
-disk-cleanup || true
-echo 
-echo 
-echo 
-
-echo "✔ System maintenance completed"
-echo "Finished at: $(date)"
+main
