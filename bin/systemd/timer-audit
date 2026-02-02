@@ -1,41 +1,89 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
-echo "⏱ SYSTEMD TIMER AUDIT"
-echo "====================="
-echo
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-# 1. Active timers
-echo "📌 Active timers:"
-systemctl list-timers --all --no-pager
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
 
-echo
-echo "---------------------"
-echo
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-# 2. Timers that missed executions
-echo "⚠️ Timers that may have missed runs:"
-systemctl list-timers --all --no-legend \
-  | awk '$1 == "n/a" || $2 == "n/a" {print $0}' \
-  || echo "✅ No missed timers"
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-echo
-echo "---------------------"
-echo
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Auditoría de timers de systemd" "⏱"
+  
+  # 1. Timers activos
+  info "📌 Timers activos:"
+  systemctl list-timers --all --no-pager
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 2. Timers que perdieron ejecuciones
+  info "⚠️  Timers que podrían haber perdido ejecuciones:"
+  systemctl list-timers --all --no-legend \
+    | awk '$1 == "n/a" || $2 == "n/a" {print $0}' \
+    || success "No hay timers perdidos"
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 3. Timers deshabilitados
+  info "🛑 Timers deshabilitados:"
+  systemctl list-unit-files --type=timer --state=disabled --no-legend || success "No hay timers deshabilitados"
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 4. Recomendaciones
+  info "💡 Recomendaciones:"
+  echo "  • Deshabilita timers que no reconozcas"
+  echo "  • Investiga timers con 'n/a' en última ejecución"
+  echo "  • Prefiere timers sobre cron cuando sea posible"
+  
+  echo
+  success "$SCRIPT_NAME finalizado correctamente"
+}
 
-# 3. Disabled timers
-echo "🛑 Disabled timers:"
-systemctl list-unit-files --type=timer --state=disabled --no-legend || echo "✅ No disabled timers"
-
-echo
-echo "---------------------"
-echo
-
-# 4. Recommendations
-echo "💡 Recommendations:"
-echo "- Disable timers you don't recognize"
-echo "- Investigate timers with 'n/a' last run"
-echo "- Prefer timers over cron when possible"
-
-echo
-echo "✔ Timer audit completed"
+main
