@@ -67,7 +67,7 @@ main() {
     smartctl -H "$disk" || true
     echo
     info "📊 Atributos SMART críticos:"
-    smartctl -A "$disk" | egrep "Reallocated|Pending|Uncorrect|Temperature" || true
+    smartctl -A "$disk" | grep -E "Reallocated|Pending|Uncorrect|Temperature" || true
     
     echo
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
