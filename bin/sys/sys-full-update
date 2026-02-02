@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
 # ─────────────────────────────────────────────────────────────
 # Auto-elevación controlada
@@ -8,35 +9,71 @@ if [[ $EUID -ne 0 ]]; then
   exec sudo "$0" "$@"
 fi
 
-SCRIPT_NAME="$(basename "$0")"
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-REAL_USER="${SUDO_USER:-}"
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
+readonly REAL_USER="${SUDO_USER:-}"
 
-info()  { echo "ℹ️  [$SCRIPT_NAME] $*"; }
-warn()  { echo "⚠️  [$SCRIPT_NAME] $*"; }
-error() { echo "❌ [$SCRIPT_NAME] $*" >&2; }
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-echo "🚀 FULL SYSTEM UPDATE"
-echo
-echo
-echo
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-# 1. Keyrings
-echo "🔑 Updating keyrings"
-echo
-echo
-
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Actualización completa del sistema" "🚀"
+  
+  # 1. Keyrings
+  echo
+  info "🔑 Actualizando keyrings"
+  echo
+  
   # 1.1. Sincronizar repositorios
   pacman -Sy
   echo
-
+  
   # 1.2. Reinstalar keyring
   info "Actualizando archlinux-keyring…"
   echo
   pacman -S --noconfirm archlinux-keyring
   echo
-
-  # 1.3. Inicializar y poblar keyring (seguro aunque ya exista)
+  
+  # 1.3. Inicializar y poblar keyring
   info "Inicializando keyring…"
   echo
   pacman-key --init
@@ -45,46 +82,43 @@ echo
   echo
   pacman-key --populate archlinux
   echo
-  info "keyring-update finalizado correctamente"
+  success "Keyrings actualizados"
   echo
+  
+  # 2. Mirrors (reflector)
+  if command -v reflector &>/dev/null; then
+    info "🌍 Actualizando mirrors"
+    echo
+    reflector --country Colombia --latest 10 --protocol https --sort rate \
+      --save /etc/pacman.d/mirrorlist
+    echo
+    success "Mirrors actualizados"
+  else
+    warn "reflector no está instalado, omitiendo actualización de mirrors"
+  fi
+  echo
+  
+  # 3. Actualización completa del sistema (repos oficiales)
+  info "📦 Ejecutando pacman -Syu"
+  echo
+  pacman -Syu
+  echo
+  success "Sistema actualizado"
+  echo
+  
+  # 4. AUR (paru, como usuario no-root)
+  if [[ -n "$REAL_USER" ]] && command -v paru &>/dev/null; then
+    info "🧱 Actualizando paquetes AUR (paru)"
+    echo
+    sudo -u "$REAL_USER" paru -Syu --devel
+    echo
+    success "AUR actualizado"
+  else
+    warn "paru no disponible o REAL_USER no definido, omitiendo AUR"
+  fi
+  
+  echo
+  success "$SCRIPT_NAME finalizado correctamente"
+}
 
-echo "✅ Keyrings OK"
-echo
-
-# 2. Mirrors (reflector)
-if command -v reflector &>/dev/null; then
-  echo "🌍 Updating mirrors"
-  echo
-  reflector --country Colombia --latest 10 --protocol https --sort rate \
-    --save /etc/pacman.d/mirrorlist
-  echo "✅ Mirrors updated"
-else
-  echo "⚠ reflector not installed, skipping mirrors"
-fi
-echo
-echo
-
-# 3. Full system update (official repos)
-echo "📦 Running pacman -Syu"
-echo
-pacman -Syu
-echo "✅ System updated"
-echo
-echo
-
-# 4. AUR (paru, non-root)
-if [[ -n "$REAL_USER" ]] && command -v paru &>/dev/null; then
-  echo "🧱 Updating AUR packages (paru)"
-  echo
-  echo
-  sudo -u "$REAL_USER" paru -Syu --devel
-  echo
-  echo
-  echo "✅ AUR updated"
-else
-  echo "⚠ paru not available or REAL_USER undefined, skipping AUR"
-fi
-
-echo
-echo
-echo "✔ Full system update completed"
+main
