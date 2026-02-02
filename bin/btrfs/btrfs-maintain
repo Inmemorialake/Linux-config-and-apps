@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
 # ─────────────────────────────────────────────────────────────
 # Auto-elevación controlada
@@ -8,40 +9,83 @@ if [[ $EUID -ne 0 ]]; then
   exec sudo "$0" "$@"
 fi
 
-MOUNTPOINT="/"
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-if [[ $EUID -ne 0 ]]; then
-  echo "❌ Este script requiere root (usa sudo)"
-  exit 1
-fi
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
+readonly MOUNTPOINT="/"
 
-echo "🛠 BTRFS MAINTENANCE"
-echo "==================="
-echo "Mount point: $MOUNTPOINT"
-echo
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-if ! findmnt -n -t btrfs "$MOUNTPOINT" &>/dev/null; then
-  echo "❌ $MOUNTPOINT is not a Btrfs filesystem"
-  exit 1
-fi
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-# 1. Filesystem stats
-echo "📊 Filesystem stats:"
-btrfs filesystem df "$MOUNTPOINT"
-echo
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Mantenimiento de Btrfs" "🛠"
+  
+  info "Punto de montaje: $MOUNTPOINT"
+  echo
+  
+  if ! findmnt -n -t btrfs "$MOUNTPOINT" &>/dev/null; then
+    error "$MOUNTPOINT no es un sistema de archivos Btrfs"
+    exit 1
+  fi
+  
+  # 1. Estadísticas del sistema de archivos
+  info "📊 Estadísticas del sistema de archivos:"
+  btrfs filesystem df "$MOUNTPOINT"
+  echo
+  
+  # 2. Balance ligero (umbrales seguros)
+  info "⚖  Ejecutando balance ligero (modo seguro)"
+  btrfs balance start -dusage=75 -musage=75 "$MOUNTPOINT"
+  success "Balance completado"
+  echo
+  
+  # 3. Desfragmentar directorios importantes (NO todo el sistema de archivos)
+  info "🧩 Desfragmentando directorios seleccionados"
+  btrfs filesystem defragment -r -clzo \
+    /var/log \
+    /var/cache \
+    /home || true
+  
+  echo
+  success "$SCRIPT_NAME finalizado correctamente"
+}
 
-# 2. Light balance (safe thresholds)
-echo "⚖ Running light balance (safe mode)"
-btrfs balance start -dusage=75 -musage=75 "$MOUNTPOINT"
-echo "✅ Balance completed"
-echo
-
-# 3. Defragment important dirs (NOT entire FS)
-echo "🧩 Defragmenting selected directories"
-btrfs filesystem defragment -r -clzo \
-  /var/log \
-  /var/cache \
-  /home || true
-
-echo
-echo "✔ Btrfs maintenance completed"
+main
