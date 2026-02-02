@@ -8,23 +8,53 @@ if [[ $EUID -ne 0 ]]; then
   exec sudo "$0" "$@"
 fi
 
+SCRIPT_NAME="$(basename "$0")"
+
 REAL_USER="${SUDO_USER:-}"
 
+info()  { echo "ℹ️  [$SCRIPT_NAME] $*"; }
+warn()  { echo "⚠️  [$SCRIPT_NAME] $*"; }
+error() { echo "❌ [$SCRIPT_NAME] $*" >&2; }
+
 echo "🚀 FULL SYSTEM UPDATE"
-echo "===================="
+echo
+echo
 echo
 
 # 1. Keyrings
 echo "🔑 Updating keyrings"
-pacman -Sy --needed archlinux-keyring
-pacman-key --populate archlinux
-pacman-key --refresh-keys
+echo
+echo
+
+  # 1.1. Sincronizar repositorios
+  pacman -Sy
+  echo
+
+  # 1.2. Reinstalar keyring
+  info "Actualizando archlinux-keyring…"
+  echo
+  pacman -S --noconfirm archlinux-keyring
+  echo
+
+  # 1.3. Inicializar y poblar keyring (seguro aunque ya exista)
+  info "Inicializando keyring…"
+  echo
+  pacman-key --init
+  echo
+  info "Poblando keyring oficial…"
+  echo
+  pacman-key --populate archlinux
+  echo
+  info "keyring-update finalizado correctamente"
+  echo
+
 echo "✅ Keyrings OK"
 echo
 
 # 2. Mirrors (reflector)
 if command -v reflector &>/dev/null; then
   echo "🌍 Updating mirrors"
+  echo
   reflector --country Colombia --latest 10 --protocol https --sort rate \
     --save /etc/pacman.d/mirrorlist
   echo "✅ Mirrors updated"
@@ -32,21 +62,29 @@ else
   echo "⚠ reflector not installed, skipping mirrors"
 fi
 echo
+echo
 
 # 3. Full system update (official repos)
 echo "📦 Running pacman -Syu"
+echo
 pacman -Syu
 echo "✅ System updated"
+echo
 echo
 
 # 4. AUR (paru, non-root)
 if [[ -n "$REAL_USER" ]] && command -v paru &>/dev/null; then
   echo "🧱 Updating AUR packages (paru)"
+  echo
+  echo
   sudo -u "$REAL_USER" paru -Syu --devel
+  echo
+  echo
   echo "✅ AUR updated"
 else
   echo "⚠ paru not available or REAL_USER undefined, skipping AUR"
 fi
 
+echo
 echo
 echo "✔ Full system update completed"
