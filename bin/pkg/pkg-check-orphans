@@ -1,20 +1,71 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+IFS=$'\n\t'
 
-echo "//--- Orphaned package cleanup ---//"
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
 
-orphans=$(pacman -Qtdq 2>/dev/null || true)
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
 
-if [[ -z "$orphans" ]]; then
-  echo "✔ No orphaned packages found"
-  exit 0
-fi
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
 
-echo "⚠ Orphaned packages detected:"
-echo
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
 
-while read -r pkg; do
-  echo "  • $pkg"
-done <<< "$orphans"
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Verificación de paquetes huérfanos" "🔍"
+  
+  local orphans
+  orphans=$(pacman -Qtdq 2>/dev/null || true)
+  
+  if [[ -z "$orphans" ]]; then
+    success "No se encontraron paquetes huérfanos"
+    exit 0
+  fi
+  
+  warn "Paquetes huérfanos detectados:"
+  echo
+  
+  while read -r pkg; do
+    echo "  • $pkg"
+  done <<< "$orphans"
+  
+  exit 1
+}
 
-exit 1
+main
