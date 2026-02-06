@@ -125,11 +125,6 @@ Author: @Inmemorialake
 
   * Description: Open-source, cross-platform media player
 
-* App name: **Quick Share**
-
-  * Description: Tool for quick and easy file sharing
-  * It must be configured after installation.
-
 * App name: **Snapper**
 
   * Description: A tool for managing and visualizing Btrfs snapshots
@@ -161,12 +156,7 @@ Author: @Inmemorialake
 
   * Description: Instant messaging and voice/video call app, personal preference: Whatsdesk
   * It must be configured after installation.
-
-* App name: **Zoom**
-
-  * Description: Video conferencing and online meeting platform
-  * It must be configured after installation.
-
+  
 * App name: **Tailscale**
 
   * Description: Virtual private network (VPN) service that makes connecting devices securely and easily

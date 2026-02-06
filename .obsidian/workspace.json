@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ca60acbd1b187c1b",
+        "id": "05bf2890d75637b5",
         "type": "tabs",
         "children": [
           {
-            "id": "720a79ec416a5eff",
+            "id": "c62f98cd70fad159",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_maintenance.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "03_maintenance"
+              "title": "New tab"
             }
           }
         ]
@@ -184,10 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "720a79ec416a5eff",
+  "active": "c62f98cd70fad159",
   "lastOpenFiles": [
-    "04_firewall.md",
     "03_maintenance.md",
+    "04_firewall.md",
     "05_rice.md",
     "04_Terminal.md",
     "todo.md",
