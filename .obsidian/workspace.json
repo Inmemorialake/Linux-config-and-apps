@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Apps.md",
+                "file": "05_rice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Apps"
+              "title": "05_rice"
             }
           }
         ]
@@ -186,15 +186,16 @@
   },
   "active": "c62f98cd70fad159",
   "lastOpenFiles": [
-    "06_Terminal.md",
-    "05_rice.md",
     "04_firewall.md",
     "03_maintenance.md",
+    "architecture.md",
+    "Apps.md",
+    "06_Terminal.md",
+    "05_rice.md",
     "02_Btrfs_and_snapshots.md",
     "01_Installation.md",
     "04_Terminal.md",
     "todo.md",
-    "architecture.md",
     "Terminal.md"
   ]
 }
