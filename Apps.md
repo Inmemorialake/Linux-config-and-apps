@@ -199,10 +199,12 @@ Author: @Inmemorialake
 * App name: **eza**
 
   * Description: A modern replacement for the 'ls' command with additional features and improved aesthetics
+  * It must be configured after installation.
 
 * App name: **bat**
 
   * Description: A cat clone with syntax highlighting and Git integration
+  * It must be configured after installation.
 
 * App name: **ripgrep**
 
