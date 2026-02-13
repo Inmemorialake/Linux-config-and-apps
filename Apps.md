@@ -196,6 +196,43 @@ Author: @Inmemorialake
 
   * Description: A command that displays animated ASCII art of pipes in the terminal
 
+* App name: **eza**
+
+  * Description: A modern replacement for the 'ls' command with additional features and improved aesthetics
+
+* App name: **bat**
+
+  * Description: A cat clone with syntax highlighting and Git integration
+
+* App name: **ripgrep**
+
+  * Description: A fast, modern alternative to grep with support for multiple file types and features
+
+* App name: **fd**
+
+  * Description: A simple, fast, and user-friendly alternative to the 'find' command
+
+* App name: **btop**
+
+  * Description: A modern replacement for 'htop' with a more visually appealing interface
+  * Theme: "Tokyo Storm"
+
+* App name: **Yazi**
+
+  * Description: A modern, fast, and user-friendly file manager written in Rust
+
+* App name: **Lazy Git**
+
+  * Description: A simple terminal UI for git commands
+
+* App name: **Delta**
+
+  * Description: A syntax-highlighting pager for git and diff output
+
+* App name: **httpie**
+
+  * Description: A user-friendly command-line HTTP client
+
 ---
 
 ## Template to add an app
