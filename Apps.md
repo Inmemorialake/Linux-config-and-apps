@@ -235,6 +235,21 @@ Author: @Inmemorialake
 
   * Description: A user-friendly command-line HTTP client
 
+* App name: **Lazy Docker**
+
+  * Description: A simple terminal UI for Docker and Docker Compose
+  * It must be configured after installation.
+
+* App name: **Starship**
+
+  * Description: A minimal, blazing-fast, and infinitely customizable prompt for any shell
+  * It must be configured after installation.
+
+* App name: **JetBrains Mono Nerd Font**
+
+  * Description: A patched version of the JetBrains Mono font with additional glyphs for use in terminal applications and code editors
+  * It must be configured after installation.
+
 ---
 
 ## Template to add an app
