@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
+
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
+
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
+
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
+
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  header "Verificación de salud del sistema" "🩺"
+  
+  # 1. Servicios fallidos
+  info "🔴 Servicios fallidos:"
+  local failed_services
+  failed_services=$(systemctl --failed --no-legend || true)
+  
+  if [[ -z "$failed_services" ]]; then
+    success "No hay servicios fallidos"
+  else
+    echo "$failed_services"
+  fi
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 2. Unidades en mal estado
+  info "🟠 Unidades en mal estado (no activas/en ejecución):"
+  systemctl list-units --state=failed,activating,deactivating --no-legend || success "Todas las unidades están estables"
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 3. Logs críticos del sistema (arranque actual)
+  info "📜 Logs críticos del arranque actual:"
+  journalctl -p 3 -b --no-pager || success "No hay errores críticos"
+  
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo
+  
+  # 4. Resumen
+  info "📊 Resumen:"
+  systemctl is-system-running --quiet \
+    && success "Estado del sistema: ejecutándose" \
+    || warn "Estado del sistema: degradado"
+  
+  echo
+  success "$SCRIPT_NAME finalizado correctamente"
+}
+
+main

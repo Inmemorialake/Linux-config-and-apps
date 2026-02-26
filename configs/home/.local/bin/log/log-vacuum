@@ -1,0 +1,138 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
+
+# ─────────────────────────────────────────────────────────────
+# Auto-elevación controlada
+# ─────────────────────────────────────────────────────────────
+if [[ $EUID -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+# ─────────────────────────────────────────────────────────────
+# Colores estandarizados
+# ─────────────────────────────────────────────────────────────
+readonly INFO="\033[1;36m"      # Cyan
+readonly WARN="\033[1;33m"      # Amarillo
+readonly ERROR="\033[1;31m"     # Rojo
+readonly SUCCESS="\033[1;32m"   # Verde
+readonly BOLD="\033[1m"
+readonly RESET="\033[0m"
+
+# ─────────────────────────────────────────────────────────────
+# Variables globales
+# ─────────────────────────────────────────────────────────────
+readonly SCRIPT_NAME="$(basename "$0")"
+
+# Política (luego puedes mover esto a ~/.config/sys-maint/logging.conf)
+MAX_SIZE="500M"
+MAX_TIME="30d"
+
+DRY_RUN=false
+AUTO_YES=false
+
+# ─────────────────────────────────────────────────────────────
+# Funciones de logging
+# ─────────────────────────────────────────────────────────────
+info()    { echo -e "${INFO}ℹ️  [$SCRIPT_NAME]${RESET} $*"; }
+warn()    { echo -e "${WARN}⚠️  [$SCRIPT_NAME]${RESET} $*"; }
+error()   { echo -e "${ERROR}❌ [$SCRIPT_NAME]${RESET} $*" >&2; }
+success() { echo -e "${SUCCESS}✔  [$SCRIPT_NAME]${RESET} $*"; }
+
+# ─────────────────────────────────────────────────────────────
+# Función header
+# ─────────────────────────────────────────────────────────────
+header() {
+  local title="$1"
+  local emoji="${2:-}"
+  local width=60
+  
+  echo -e "${BOLD}${INFO}"
+  echo "//==========================================================//"
+  
+  local text="$emoji $title"
+  local padding=$(( (width - ${#text}) / 2 ))
+  printf "%${padding}s%s\n" "" "$text"
+  
+  echo "//==========================================================//"
+  echo -e "${RESET}"
+}
+
+# ─────────────────────────────────────────────────────────────
+# Función de ayuda
+# ─────────────────────────────────────────────────────────────
+usage() {
+  cat <<EOF
+Uso: $SCRIPT_NAME [opciones]
+
+Opciones:
+  --dry-run     Muestra qué se haría sin borrar nada
+  --yes         No pide confirmación
+  -h, --help    Muestra esta ayuda
+EOF
+}
+
+# ─────────────────────────────────────────────────────────────
+# Parse de argumentos
+# ─────────────────────────────────────────────────────────────
+parse_args() {
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --dry-run) DRY_RUN=true ;;
+      --yes)     AUTO_YES=true ;;
+      -h|--help) usage; exit 0 ;;
+      *) error "Opción desconocida: $1"; exit 1 ;;
+    esac
+    shift
+  done
+}
+
+# ─────────────────────────────────────────────────────────────
+# Función principal
+# ─────────────────────────────────────────────────────────────
+main() {
+  parse_args "$@"
+  
+  header "Limpieza de logs del sistema" "🧹"
+  
+  info "Uso actual de journald:"
+  journalctl --disk-usage
+  echo
+  
+  info "Política de limpieza:"
+  echo "  • Retención temporal : $MAX_TIME"
+  echo "  • Tamaño máximo      : $MAX_SIZE"
+  echo
+  
+  if [[ "$DRY_RUN" == true ]]; then
+    warn "Modo DRY-RUN activado: no se eliminará nada"
+  else
+    if [[ "$AUTO_YES" == false ]]; then
+      read -rp "¿Deseas continuar con la limpieza de logs? [y/N]: " respuesta
+      [[ "$respuesta" =~ ^[Yy]$ ]] || {
+        warn "Operación cancelada por el usuario"
+        exit 0
+      }
+    fi
+  fi
+  
+  if [[ "$DRY_RUN" == true ]]; then
+    info "[DRY-RUN] journalctl --vacuum-time=$MAX_TIME"
+    info "[DRY-RUN] journalctl --vacuum-size=$MAX_SIZE"
+  else
+    info "Limpiando logs por tiempo…"
+    journalctl --vacuum-time="$MAX_TIME"
+    
+    info "Limpiando logs por tamaño…"
+    journalctl --vacuum-size="$MAX_SIZE"
+  fi
+  
+  echo
+  info "Uso de journald después de la operación:"
+  journalctl --disk-usage
+  
+  echo
+  success "$SCRIPT_NAME finalizado correctamente"
+}
+
+main "$@"
