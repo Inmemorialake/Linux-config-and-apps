@@ -1,0 +1,10 @@
+[Added Associations]
+text/plain=sublime_text.desktop;
+
+[Default Applications]
+text/html=opera.desktop
+text/plain=sublime_text.desktop;
+x-scheme-handler/http=opera.desktop
+x-scheme-handler/https=opera.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mailto=opera.desktop

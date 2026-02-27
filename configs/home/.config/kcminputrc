@@ -1,0 +1,5 @@
+[Libinput][10182][480][GOOD0001:00 27C6:01E0 Touchpad]
+NaturalScroll=true
+
+[Libinput][7847][100][2.4G Mouse]
+PointerAccelerationProfile=1

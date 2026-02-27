@@ -1,0 +1,20 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"EditorConfig",
+		"GitGutter",
+		"Package Control",
+		"tinted_theming",
+	],
+	"repositories":
+	[
+    "https://github.com/tinted-theming/tinted-sublime-text"
+	],
+	"package_name_map": {
+    	"tinted-sublime-text": "tinted_theming",
+	},
+}

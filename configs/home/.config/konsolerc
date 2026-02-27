@@ -1,0 +1,16 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Inmemorialake.profile
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+ShowWindowTitleOnTitleBar=true
+
+[SearchSettings]
+SearchRegExpression=true
+
+[UiSettings]
+ColorScheme=
