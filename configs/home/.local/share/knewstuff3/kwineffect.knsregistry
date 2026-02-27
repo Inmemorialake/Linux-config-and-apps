@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="719">
+  <name>Squash2</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>leo5sk</author>
+  <homepage>https://store.kde.org/p/1806319</homepage>
+  <licence></licence>
+  <version>1.0_6_2</version>
+  <rating>76</rating>
+  <downloads>24390</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/kwin/effects/kwin4_effect_squash2/</installedfile>
+  <id>1806319</id>
+  <releasedate>2026-01-23</releasedate>
+  <summary>&lt;p>An effect to minimise and unminimise windows, modified from the default effect to be more in line with gnome animation style.&lt;br />&lt;br />Use squash2.tar.gz for plamsa 6+.&lt;br />Use kwin4-effect-squash2.tar.gz for plasma 5 and below.&lt;br />&lt;br />Those on plasma 6.5+ should consider &lt;a href="https://store.kde.org/p/2344061">Squash Plus&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/22/46/1806319/g52.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/22/46/1806319/g52.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY1MzUwNzU1NiwibyI6IjEiLCJzIjoiYzEwYmMxMjlhYzRhMzA4Zjk4M2ViODFhNjE3NzA5ZGY5YTkxMjY4MTlhMjRmZmM0Y2FkM2VmOGY3YjIyMTMzNTQ3NTZjYzE3MzAwMjkzZGZlZTA4OTQwNGVmM2MyZTg2OTA1YjYyYWI2N2E0MDA5MmJkMGEzNjNlYTUyNWJjNjciLCJ0IjoxNzcwMzQ4ODAzLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE2MS42NSJ9.rQQJ1Wfp1I_kZfZw3_CYGAHRkJBlrcz2TATAk8A1Rjs/kwin4-effect-squash2.tar.gz</payload>
+  <tags>original-product,unix,gplv2-later,effect,animation,linux,minimize,kwin</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

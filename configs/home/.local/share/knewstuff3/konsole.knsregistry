@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="462">
+  <name>Nordic konsole</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1329371</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>68</rating>
+  <downloads>88352</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/konsole/Nordic.colorscheme</installedfile>
+  <id>1329371</id>
+  <releasedate>2019-10-08</releasedate>
+  <summary>&lt;p>Nordic is a dark theme created using the awesome &lt;a href="https://github.com/arcticicestudio/nord">Nord&lt;/a> color palette.&lt;br />&lt;br />Suggested settings: &lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1326896/"> Nordic Plasma theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326272/">Nordic Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326274/">Nordic Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326271/">Nordic color scheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.gnome-look.org/dl?file_id=1567965545&amp;amp;file_type=application/x-xz&amp;amp;file_name=Nordic-Folders.tar.xz&amp;amp;file_size=24000&amp;amp;project_id=1267246"> Folders &lt;/a>&lt;br />&lt;br />Wallpaper in screenshot &lt;a href="https://i.imgur.com/SBKjnxm.jpg"> here &lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1329371/a8e4ad61130ea319918c9ca217fd145964c71.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1329371/a8e4ad61130ea319918c9ca217fd145964c71.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTU3MDU2MDkyMywibyI6IjEiLCJzIjoiM2NlMTljZGFjZGQzMjM2ZWI5N2I1MmIwNzE5NzE1NWNhM2M3ZDBlMzBkNzBhYWQxZDZmMzUxMjYxZTlhZDFjMzZlMTE3NDYxYjQzZjJkZTM3NzNhYTA2ZTE5MTI4OTE1NTQ5NDU5NGU2MTc0Y2ExNDhhMWU5ZmQzZmM0ZmYxMDgiLCJ0IjoxNzcwNDM2ODQxLCJzdGZwIjpudWxsLCJzdGlwIjoiMTgxLjEzMC4xOTMuMTMxIn0.DKyMAu3IYNlJEg97xxqA02CXWvsGTvw8Bgtv7jv8cY8/Nordic.colorscheme</payload>
+  <tags>addon,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

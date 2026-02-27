@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="716">
+  <name>Arch Simple Blue KDE 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>kraken-afk</author>
+  <homepage>https://store.kde.org/p/2136517</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>58</rating>
+  <downloads>82028</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/look-and-feel/archsimpleblue/</installedfile>
+  <id>2136517</id>
+  <releasedate>2024-03-13</releasedate>
+  <summary>&lt;p>A simple blue Arch Linux logo for Plasma Splash-screen for KDE 6.&lt;br />Originally from &lt;a href="https://store.kde.org/p/1312961">https://store.kde.org/p/1312961&lt;/a>&lt;br />&lt;br /># Installation&lt;br />You can install it via System Settings or clone &lt;a href="https://github.com/kraken-afk/archsimpleblue">https://github.com/kraken-afk/archsimpleblue&lt;/a> into ~/.local/share/plasma/look-and-feel/&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/77/15/81/2136517/splash2.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/77/15/81/2136517/splash2.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxMDI2MDk0NywibyI6IjEiLCJzIjoiNTQ2NDkyMjc0MDhjNTdhYjQ3MjAxY2M2Y2I0ZTI1Njg0ZTU0ZTVkMmEzMmFiZjE2ZTY4MTk3ZWFhM2YwZWM1ZDZjODA5MTgxNGE5YzVlMDdhZDRlZTQ2Yjc4NDE3MjQwZjFiZjgxZDhhMTc2ODAyMDNiN2JlNDc0MjQ0MDA5MmYiLCJ0IjoxNzcwNjA1MTc0LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4xMTMifQ.Par7oyf8j953DhxRSRr_KVhJm_vjwve8nynGIbATa_E/archsimpleblue.tar.gz</payload>
+  <tags>plasma##majorversion=6,plasma,arch,kde,kde-plasma,lgplv3,linux,unix,theme,splashscreen,efi</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="716">
+  <name>YAPLASS ArchLinux</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>MrMaire</author>
+  <homepage>https://store.kde.org/p/2155166</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>50</rating>
+  <downloads>1728</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/look-and-feel/YaplassArchLinux-Plasma6/</installedfile>
+  <id>2155166</id>
+  <releasedate>2024-05-15</releasedate>
+  <summary>&lt;p>YAPLASS (Yet Another Plasma Splash Screen) - ArchLinux Plasma 6 version&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/00/34/53/2155166/logo.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/00/34/53/2155166/logo.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxNTgwNTUwNiwibyI6IjEiLCJzIjoiZTM0YzA1MzU4Y2Q3NzExMGZkN2YyNDViZTBiMDYwZTg3OTljMDBmNTc2ZGFjNGE4ZmYwMzNkODIxMWI2ZDFiYjM0NTAzYmM3ZTNlMzNiNGZmMjA4MGU5NmY1OGE4NjgyNjQyNGRjZWY2MDRkZTQzOThjNjkzMDMzMmZmODVmOTciLCJ0IjoxNzcwNjA1MTY2LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4xMTMifQ.oGcaWHqWBoxBEg-srQyQPvnIODw8AC_l_Xk0qpQ8rcE/YaplassArchLinux-Plasma6.tar.gz</payload>
+  <tags>plasma##majorversion=6,plasma6,plasma,splashscreen,theme,unix,archlinux,kde,linux,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="716">
+  <name>Kuro the cat</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>a2-n</author>
+  <homepage>https://store.kde.org/p/2135195</homepage>
+  <licence></licence>
+  <version>1.0.1</version>
+  <rating>72</rating>
+  <downloads>102503</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/look-and-feel/a2n.kuro/</installedfile>
+  <id>2135195</id>
+  <releasedate>2025-07-15</releasedate>
+  <summary>&lt;p>Wake up your pc with Kuro the cat&lt;br />&lt;br />Deep black version (for oled or just if you want black color) : &lt;a href="https://www.pling.com/p/2302404/">https://www.pling.com/p/2302404/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/img/00/00/60/86/47/2135195/cat.gif</preview>
+  <previewBig>https://images.pling.com/img/00/00/60/86/47/2135195/cat.gif</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc1MjU5NDg0MywibyI6IjEiLCJzIjoiODMxN2NlZjUyMTVjOTAxNTFhNmQ2ZGEzZTYzMTA0NDBiYTM0NDZiNGJmZmVjODRlMjIzOWMwMTJmOWZiOTUxODVjOTA0NTM4OTg4YTkxYzdmYTk4M2M0ZDc1ODUxNDZlYWE5OWIwZjkxZDI1MThhODE4NGFkZmUzZmQ2ODQ4YTAiLCJ0IjoxNzcwNjA1MTM2LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4xMTMifQ.6A9ZTQ2YyuLR7h9j-gCQtszOd2xH2n5Fq0BBmQrOd9w/a2n.kuro.tar.gz</payload>
+  <tags>gplv3,cat,splashscreen,unix,theme,original-product,plasma,plasma##majorversion=6,linux,kde,kdeplasma,kdesplash,kde-plasma</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

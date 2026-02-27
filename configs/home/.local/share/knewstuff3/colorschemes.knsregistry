@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="112">
+  <name>Sweet Mars KDE</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1393486</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>64</rating>
+  <downloads>420384</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/color-schemes/Sweet-Mars.colors</installedfile>
+  <id>1393486</id>
+  <releasedate>2021-08-05</releasedate>
+  <summary>&lt;p>Sweet Mars color scheme&lt;br />&lt;br />Settings in screenshot:&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Mars Kvantum theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.opendesktop.org/p/1393497/">Sweet-Mars aurorae theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393498/">Sweet,Mars Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Mars Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to  my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1393486/64308f5f8222946f0cc9d786c63d987cf281.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1393486/64308f5f8222946f0cc9d786c63d987cf281.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYyODE5NzczMCwibyI6IjEiLCJzIjoiMTJjNGJhYWZmMjVjYzU2NTY5MDRiYWZkZjBhMzFhMjkzNjA1YzI4NGZkODVmMmE3ZjQzYzU2Y2RlYTI2ZjgxYjRhZTM4NGQ3N2ZiZWE0MWJmNmFiMTg3ODIwZWNmOGRmOWZjMWI4Mjk0ZjVkMzRiMDUxOTZhZWFmNzRkZWE1NDciLCJ0IjoxNzcwMjQxOTE1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.Rb730nAcmc6p3JQ6U3Tptbx6fGDNVmDpG566X0d3AnU/Sweet-Mars.colors</payload>
+  <tags>gplv3,colorscheme,plasma,linux,kde,theme,unix</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="112">
+  <name>Sweet KDE</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1294011</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>80</rating>
+  <downloads>542529</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/color-schemes/Sweet.colors</installedfile>
+  <id>1294011</id>
+  <releasedate>2021-07-28</releasedate>
+  <summary>&lt;p>Color scheme for &lt;a href="https://www.opendesktop.org/p/1294013/">Sweet&lt;/a> theme&lt;br />&lt;br />Settings in screenshot:&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet Kvantum theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.opendesktop.org/p/1286856/">Sweet aurorae theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294174/">Sweet Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1294011/a319d50cbeb1186fd04564bf38b43bfbc8341.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1294011/a319d50cbeb1186fd04564bf38b43bfbc8341.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYyNzUwMzA0MiwibyI6IjEiLCJzIjoiMjNiNTk3YTZmOWI3MTk0NmQzYzQzZjUxNWE2YWI1YmRiZmE1ODVkZjEyNDcyMGVkMjFiMGU5YWUwYzJkYzZhODE5NmUwODY1MzVjOWIxZWM3NDdjOTk0ZGYzM2Q1MWEyYTNiMTM5Y2FhOWQzNzhkNjFhN2VmZDhiZmIwMDZlM2EiLCJ0IjoxNzcwMjQxMzY5LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.cz4Ye4qDsLUBt2YEVMNlHj7_5bqMmUw8tKxuOJc85zI/Sweet.colors</payload>
+  <tags>gplv3,colorscheme,kde,linux,plasma,unix,theme</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="112">
+  <name>Sweet Ambar Blue colors</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1897307</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>50</rating>
+  <downloads>316889</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/color-schemes/SweetAmbarBlue.colors</installedfile>
+  <id>1897307</id>
+  <releasedate>2022-09-04</releasedate>
+  <summary>&lt;p>Sweet Ambar Blue color scheme&lt;br />&lt;br />For better looking please use this theme with  &lt;a href="https://github.com/tsujan/Kvantum/tree/master/Kvantum">Kvantum&lt;/a> engine, you can find the official installation instructions &lt;a href="https://raw.githubusercontent.com/tsujan/Kvantum/master/Kvantum/INSTALL">here&lt;/a>.&lt;br />&lt;br />Suggested setings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Ambar-Blue Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897309/">Sweet-Ambar-Blue Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897308/">Sweet-Ambar-blue Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Ambar-Blue Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1309907/">Sweet wallpaper&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1334945/"> Sweet sddm theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://dribbble.com/shots/3373125-Hexagonal-planets-and-cosmic-dust?utm_source=Pinterest_Shot"> Wallpaper in screenshot here&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897307/kvantum-aurorae.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897307/kvantum-aurorae.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY2MjMyMjcyNCwibyI6IjEiLCJzIjoiZjI5MDhjMTIxZGU3YjA3ZWJkMTU5MTM1ZTJjY2Q4OGQ2ZDJkZDg0Zjc2ZjgwODZkN2E0OTNhYTc0N2I2ZTAzMGE1MjE4ODhmMTU5ODcxYmFjNjRkN2Q1N2E1MzgwYTZlZWFjYzIyYjUwNmE2MDMzYzVhZWIwNTYyNDNiZGIzNmEiLCJ0IjoxNzcwMjQxMzk1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.KObsc8rpo4hhAhFuhu63blNrz66remj8orkSetekN5k/SweetAmbarBlue.colors</payload>
+  <tags>unix,theme,gplv3,colorscheme,plasma,kde,linux</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="722">
+  <name>Sweet Ambar Blue LAF Plasma 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/2157756</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>57</rating>
+  <downloads>262143</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/look-and-feel/Sweet-Ambar-Blue/</installedfile>
+  <id>2157756</id>
+  <releasedate>2026-02-01</releasedate>
+  <summary>&lt;p>A dark and modern theme for Plasma&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>&amp;iexcl;IMPORTANT!&lt;/b>&lt;/h2>&lt;br />&lt;b> Hi, if you are really enjoying these themes from me and also from other authors please consider  &lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1"> becoming a supporter for the  KDE Themes and Extensions section &lt;/a> , I'm sure that me and others creators would be very grateful with your sponsorship since that help us to  keep mantaining and creating new themes for the community &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" />  &lt;/b>&lt;br />&lt;br />&lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1">&lt;b> Become a supporter here &lt;/b>&lt;/a>&lt;br />&lt;br />For better looking please use this theme with  &lt;a href="https://github.com/tsujan/Kvantum/tree/master/Kvantum">Kvantum&lt;/a> engine, you can find the official installation instructions &lt;a href="https://raw.githubusercontent.com/tsujan/Kvantum/master/Kvantum/INSTALL">here&lt;/a>.&lt;br />&lt;br />Suggested setings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Ambar-Blue Kvantum theme&lt;/a>&lt;br />&lt;br />This theme will install as dependencies:&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897309/">Sweet-Ambar-Blue Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897308/">Sweet-Ambar-blue Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897307/">Sweet-Ambar-Blue colorscheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Ambar-Blue Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1309907/">Sweet wallpaper&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/2149362/"> Sweet sddm theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://dribbble.com/shots/3373125-Hexagonal-planets-and-cosmic-dust?utm_source=Pinterest_Shot"> Wallpaper in screenshot here&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2157756/screenshot-20220904-140110-1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2157756/screenshot-20220904-140110-1.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyNTEzMTc1OCwibyI6IjEiLCJzIjoiZjk4ZDNjYWViNWJmMTg1M2E1ZTg0OTliYzZjMjRkYzc3MTc0OTRmODBiNDc2NzlmODBhNDY0MDcyNzEyMGRiZWUyMDc4YWUzYzFmMzY1Y2YxYTI5ZmE3YjM5MjIxOTlhMzFhOTZkYzE2NDEzMzhjMjgyN2E4NWQzZjQwMWYzMDkiLCJ0IjoxNzcwMjQxODgwLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.kkJ7hG1hgU4Qa8C7fksVxaI_tOYdk74suVgzF25-vgM/Sweet-Ambar-Blue.tar-20240831190106.xz</payload>
+  <tags>kde,linux,plasma,gplv3,plasma##majorversion=6,theme,unix</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="722">
+  <name>Sweet Mars LAF Plasma 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/2166424</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>58</rating>
+  <downloads>153181</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/look-and-feel/Sweet-Mars/</installedfile>
+  <id>2166424</id>
+  <releasedate>2026-01-31</releasedate>
+  <summary>&lt;p>A dark and modern theme for Plasma&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>&amp;iexcl;IMPORTANT!&lt;/b>&lt;/h2>&lt;br />&lt;b> Hi, if you are really enjoying these themes from me and also from other authors please consider  &lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1"> becoming a supporter for the  KDE Themes and Extensions section &lt;/a> , I'm sure that me and others creators would be very grateful with your sponsorship since that help us to  keep mantaining and creating new themes for the community &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" />  &lt;/b>&lt;br />&lt;br />&lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1">&lt;b> Become a supporter here &lt;/b>&lt;/a>&lt;br />&lt;br />For better looking please use this theme with  &lt;a href="https://github.com/tsujan/Kvantum/tree/master/Kvantum">Kvantum&lt;/a> engine, you can find the official installation instructions &lt;a href="https://github.com/tsujan/Kvantum/blob/master/Kvantum/INSTALL.md">here&lt;/a>.&lt;br />&lt;br />Suggested setings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Mars Kvantum theme&lt;/a>&lt;br />&lt;br />This theme will install as dependencies:&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393498/">Sweet Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393497/">Sweet-Mars Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393486/">Sweet-Mars color scheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Mars Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1309907/">Sweet wallpaper&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to  my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2166424/ff1cf1d34a02ccbdd209a22b4a875b165e4950f6f135c12e845af4c43d153761ec1a-11.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2166424/ff1cf1d34a02ccbdd209a22b4a875b165e4950f6f135c12e845af4c43d153761ec1a-11.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTczNjkwNzQwNSwibyI6IjEiLCJzIjoiMDY2MDk3MjhiYmM3MjliZjMzZGViNzFhYzk1OWJjYmM5YzhmNjY3NTU0NzYyZjhlNGU5ZWFkOTAyZmVhMzQ5NzI4OGIxYTJjZmM4MDg3NjM3NDQ0YTBjNmQ3OTEzY2JhMzdiMGRlYTdhMDA1NmQwZmFjZGRlY2MyNTc2YmRhYmUiLCJ0IjoxNzcwMjQxOTEwLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.khPi7R1O1-DjynrsE9AVhpc0-txtEwYLKZmayx4u1pY/Sweet-Mars.tar.xz</payload>
+  <tags>plasma##majorversion=6,unix,theme,gplv3,kde,linux,plasma</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

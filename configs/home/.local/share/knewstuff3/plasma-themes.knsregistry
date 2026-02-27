@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="104">
+  <name>Nordic KDE</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1326896</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>75</rating>
+  <downloads>487700</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/desktoptheme/Nordic/</installedfile>
+  <id>1326896</id>
+  <releasedate>2026-01-31</releasedate>
+  <summary>&lt;p>Nordic is a dark theme created using the awesome &lt;a href="https://github.com/arcticicestudio/nord">Nord&lt;/a> color palette.&lt;br />&lt;br />Suggested settings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326272/">Nordic Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326274/">Nordic Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1326271/">Nordic color scheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.gnome-look.org/dl?file_id=1567965545&amp;amp;file_type=application/x-xz&amp;amp;file_name=Nordic-Folders.tar.xz&amp;amp;file_size=24000&amp;amp;project_id=1267246"> Folders &lt;/a>&lt;br />&lt;br />Wallpaper in screenshot &lt;a href="https://i.imgur.com/SBKjnxm.jpg"> here &lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1326896/99ef6c275c74cc074ce534c3b26d798bb767.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1326896/99ef6c275c74cc074ce534c3b26d798bb767.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTczNjk5MDI5MywibyI6IjEiLCJzIjoiZjI1ZWUxNDliYjZlNDEyZjI0MzkyMDg2NjFmNjVkNWJmMWUyMDQ2MGQxYjg1ZjFlZjYzYTY5ZTc5OWVhZmFjODU4MWYzOTFiYjNjYjNhZmIxZmEwNmViODc5YzBmODU3NzJiMWNjYTA1YjMzZWUxNmRkYzBkODRmZGExYjNmMjIiLCJ0IjoxNzcwMjYwMTc4LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.G1By60VHdNWbJfIz9Sti8pAYaQbYQce39li5L1AMzjQ/Nordic.tar.xz</payload>
+  <tags>cc-by-sa,plasma,kde,linux,unix,theme</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="104">
+  <name>McMojave Plasma</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>vinceliuice</author>
+  <homepage>https://store.kde.org/p/1305006</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>82</rating>
+  <downloads>431818</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/desktoptheme/McMojave/</installedfile>
+  <id>1305006</id>
+  <releasedate>2024-10-20</releasedate>
+  <summary>&lt;p>McMojave kde is a MacOSX Mojave like theme for KDE Plasma desktop.&lt;br />-------------------------&lt;br />You can use this with:&lt;br />-------------------------&lt;br />&lt;b>- Aurorae Themes&lt;/b>:&lt;br />&lt;a href="https://www.pling.com/p/1305005/">&lt;/a>&lt;a href="https://www.pling.com/p/1305005/">https://www.pling.com/p/1305005/&lt;/a>&lt;br />&lt;b>- Kvantum Themes&lt;/b>:&lt;br />&lt;a href="https://www.pling.com/p/1304957/">&lt;/a>&lt;a href="https://www.pling.com/p/1304957/">https://www.pling.com/p/1304957/&lt;/a>&lt;br />&lt;b>- Plasma Color Schemes&lt;/b>:&lt;br />&lt;a href="https://www.pling.com/p/1305007/">&lt;/a>&lt;a href="https://www.pling.com/p/1305007/">https://www.pling.com/p/1305007/&lt;/a>&lt;br />&lt;b>- Plasma Look-and-Feel Settings&lt;/b>:&lt;br />&lt;a href="https://www.pling.com/p/1304936/">&lt;/a>&lt;a href="https://www.pling.com/p/1304936/">https://www.pling.com/p/1304936/&lt;/a>&lt;br />-------------------------&lt;br />&lt;b>- Icon theme: McMojave-circle&lt;/b>&lt;br />&lt;a href="https://www.opendesktop.org/p/1305429">&lt;/a>&lt;a href="https://www.opendesktop.org/p/1305429">https://www.opendesktop.org/p/1305429&lt;/a>&lt;br />-------------------------&lt;br />&lt;b>- Cursors theme: McMojave-cursors&lt;/b>&lt;br />&lt;a href="https://www.opendesktop.org/p/1355701">&lt;/a>&lt;a href="https://www.opendesktop.org/p/1355701">https://www.opendesktop.org/p/1355701&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1305006/ae11c36cac92aa4442f0130dd3711f293b79.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1305006/ae11c36cac92aa4442f0130dd3711f293b79.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyOTQwOTkwNiwibyI6IjEiLCJzIjoiNDBmZmE3OGE1YmY1OTIxNjAwZGQ4MGU4NzFhOWJkNzc1NjZiMDc0YjEyMDE4YmQ5NDUwMmVmMTNlZGY4MGU0ODQwZGI2NmVkYTU5NDhjOTNhMTE3ZWE3ZjYzMzk2OTdkMzcyNGY4YjExZDU5ZmQxYTBlODJiYmI1YjdjYmU5NWUiLCJ0IjoxNzcwMjYwMTgyLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.YIH0-8rc01OwfagrhaEwuxLcjGKuh4bAe7GYvBCz2KQ/McMojave.tar.gz</payload>
+  <tags>theme,unix,gplv3,plasma,original-product,kde,linux</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="104">
+  <name>Blur-Glassy Plasma Theme</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>l4k1</author>
+  <homepage>https://store.kde.org/p/1267335</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>82</rating>
+  <downloads>332512</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/desktoptheme/Blur-Glassy-Plasma-V-2/</installedfile>
+  <id>1267335</id>
+  <releasedate>2026-02-03</releasedate>
+  <summary>&lt;p>Light Plasma Theme, Very Transparent and Blur. Enabled Blurred Widgets and Adaptive Transparency for for Plasma 5.23&lt;br />&lt;br />Transparency of all Panels (Opacity 30 %)&lt;br />&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>____&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;br />&lt;br /> Blur-Glassy-Plasma-V-2, differs from the Original version in the transparency of the panels: Left Panel (Opacity 15 %), Right Panel  (Opacity 20 %), Bottom and Top Panels (Opacity 30 %)&lt;br />&lt;br />&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>_&lt;strong>&lt;strong>__&lt;/strong>&lt;/strong>&lt;br />&lt;br />Icons for Light Plasma Themes  &lt;b>Breeze-Noir-Black-Blue&lt;/b> : &lt;a href="https://www.pling.com/p/1361471/"> Here &lt;/a>&lt;br />&lt;br />Icons for Dark Plasma Themes  &lt;b>Breeze-Noir-White-Blue&lt;/b> : &lt;a href="https://www.pling.com/p/1361468/"> Here &lt;/a>&lt;br />_&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;br />&lt;br />Icon Theme: Breeze Chameleon Dark + Breeze Chameleon Light:&lt;br />&lt;br /> &lt;b>Icons:&lt;/b>   &lt;b>Breeze Chameleon Dark&lt;/b> : &lt;a href="https://www.pling.com/p/1281798"> Here &lt;/a>&lt;br />&lt;br /> &lt;b>Icons:&lt;/b>   &lt;b>Breeze Chameleon Light&lt;/b> : &lt;a href="https://www.pling.com/p/1298508"> Here &lt;/a>&lt;br />&lt;br />- The folders change color depending on the   &lt;b>Color&lt;/b>   &lt;b>Scheme&lt;/b>   &lt;b>You&lt;/b>   &lt;b>Set&lt;/b> &lt;br />&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>__&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;br />&lt;br />Light Global Theme For Plasma 6, Transparent and Blur,   &lt;b>Blur-Glassy-Light-Global-6&lt;/b> :  &lt;a href="https://www.pling.com/p/2138237/"> Here &lt;/a>&lt;br />&lt;br />Global Theme (Look-and-Feel) Blur-Glassy: &lt;a href="https://store.kde.org/p/1306014/"> Here &lt;/a>&lt;br />&lt;br />Kvantum Theme Blur-Glassy-Kvantum: &lt;a href="https://store.kde.org/p/1364705/"> Here &lt;/a>&lt;br />&lt;br />Plasma Color Scheme Blur-Glassy: &lt;a href="https://www.pling.com/p/1306011/"> Here &lt;/a>&lt;br />&lt;br />Aurorae Theme Blur-Glassy: &lt;a href="https://www.pling.com/p/1306010/"> Here &lt;/a>&lt;br />&lt;br />Aurorae Theme Blur-Glassy-Flat: &lt;a href="https://store.kde.org/p/1310074/"> Here &lt;/a>&lt;br />&lt;br />Aurorae Theme Blur-Glassy-Color: &lt;a href="https://www.pling.com/p/1310135/"> Here &lt;/a>&lt;br />&lt;br />Aurorae Theme Blur-Glassy-Kvantum: &lt;a href="https://www.pling.com/p/1469895/"> Here &lt;/a> &lt;br />&lt;br />Plasma Splashscreen Breeze-Blur-Blue-Splash: &lt;a href="https://store.kde.org/p/1289364/"> Here &lt;/a>&lt;br />&lt;br />SDDM Login Theme Fantasy-Blue-V.2: &lt;a href="https://www.pling.com/p/1299420/"> Here &lt;/a>&lt;br />&lt;br />SDDM Login Theme Blur-Glassy: &lt;a href="https://www.pling.com/p/1364696/"> Here &lt;/a>&lt;br />&lt;br />SDDM Login Theme Blur-Glassy-V.2: &lt;a href="https://www.pling.com/p/1364699/"> Here &lt;/a>&lt;br />&lt;br />Konsole Colorscheme Blur-Glassy: &lt;a href="https://www.pling.com/p/1364693/"> Here &lt;/a>&lt;br />&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;em>&lt;br />&lt;br />Link to the Walpaper Blur-Glassy-Flat Wallpapers: &lt;a href="https://www.pling.com/p/1364687/"> Here &lt;/a>&lt;br />&lt;br />Link to the Walpaper Blur-Glassy Wallpapers: &lt;a href="https://www.pling.com/p/1364689/"> Here &lt;/a>&lt;br />&lt;/em>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;br />&lt;br />Link to the Walpaper You cant change whats going on around you until you start...: &lt;a href="https://www.pling.com/p/1342256"> Here &lt;/a>&lt;br />&lt;br />The author of the wallpaper: shareorlikeit: &lt;a href="https://www.pling.com/u/shareorlikeit/"> Here &lt;/a>&lt;br />&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>____&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;br />&lt;br />If you do not use the Kvantum Theme, For Blur look of the window, I recommend Kwin Scripts: Force Blur, authored by ESJEON, which you can download: &lt;a href="https://store.kde.org/p/1294604/"> Here &lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/49/90/47/1267335/screenshot-20220821-151827.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/49/90/47/1267335/screenshot-20220821-151827.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3MDA3NzQ4NiwibyI6IjEiLCJzIjoiMjM5NDM1YmRiZjVlMzFhZTZkMzUyZjdjZjYzNjQ2MTk4NTU2Y2VhY2IyYWZkYmFkMWRiYzA3MWY1NmUwNGNiOTA2NzVmZDEzNjYzMTRkYmMyZjI3NGU3MzJiZmZiNTkzM2YyNDNhNDZjNGI2ZTc4ZWEyNGZkYTkxMjMxZjZiYmMiLCJ0IjoxNzcwMjYwMjAwLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.CKnHAfPPc2Ik4rSill6OJT0DOgFjSCCmTee4RFetbQo/Blur-Glassy-Plasma-V-2.tar.gz</payload>
+  <tags>original-product,plasma,kde,linux,unix,theme,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="104">
+  <name>Tokyo Night</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jay-eos</author>
+  <homepage>https://store.kde.org/p/2053458</homepage>
+  <licence></licence>
+  <version>1.0.6-Hotfix</version>
+  <rating>58</rating>
+  <downloads>20967</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/desktoptheme/Tokyo-Night/</installedfile>
+  <id>2053458</id>
+  <releasedate>2025-05-10</releasedate>
+  <summary>&lt;p>Tokyo Night For Plasma Desktop&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/71/19/95/2053458/2023-06-20-08-08.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/71/19/95/2053458/2023-06-20-08-08.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc0Njg0OTYyNCwibyI6IjEiLCJzIjoiNjMxNDU0YzAxZTEzOTVjOWQ4OTdmNWM1MmM3NjgyOWZmMzE0ZjlkZmQzODkwYTJmNzQzMzMxMmE5YTYyMTM2MjliMjE3MGFjN2M0ZmUyYjZjYWFlMTRhMzRkNTZjYzZhYzE3NjlmODM3NTI4M2IxOGVjMmI1OGIzMmZjYzljOGUiLCJ0IjoxNzcwMjYwMjIxLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.oOICQWMg6cOvmKh8PpVLFFU1oA648EDDq4j_CkEk8m8/Tokyo-Night.tar.xz</payload>
+  <tags>gplv3,dark,unix,theme,tokyonight,kde,kde-plasma,linux,plasma,original-product,plasma##majorversion=4,plasma##majorversion=5,plasma##majorversion=6</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="104">
+  <name>Sweet Ambar Blue Plasma</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1897309</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>60</rating>
+  <downloads>558040</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/desktoptheme/Sweet-Ambar-Blue/</installedfile>
+  <id>1897309</id>
+  <releasedate>2026-02-01</releasedate>
+  <summary>&lt;p>Sweet Ambar Blue Plasma Theme&lt;br />&lt;br />For better looking please use this theme with  &lt;a href="https://github.com/tsujan/Kvantum/tree/master/Kvantum">Kvantum&lt;/a> engine, you can find the official installation instructions &lt;a href="https://raw.githubusercontent.com/tsujan/Kvantum/master/Kvantum/INSTALL">here&lt;/a>.&lt;br />&lt;br />Suggested setings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Ambar-Blue Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897308/">Sweet-Ambar-blue Aurorae theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897307/">Sweet-Ambar-Blue colorscheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Ambar-Blue Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1309907/">Sweet wallpaper&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1334945/"> Sweet sddm theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://dribbble.com/shots/3373125-Hexagonal-planets-and-cosmic-dust?utm_source=Pinterest_Shot"> Wallpaper in screenshot here&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897309/screenshot-20220904-140110.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897309/screenshot-20220904-140110.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc0NTYwODk1MiwibyI6IjEiLCJzIjoiYTFlZmNmYzg3MWViMGVkOWEzZDY0MmY2NzU2NWZiNzJkNDM5MWM2MTMyM2FiMGZlY2I1OWViMDkxZWYyODBiZjM0Y2I5ZWIxYTQ0MGQwOTcyNzUyYzVjODYyZTQ0NWUyMTU1OTljOTA0ZWQ0NzliMzM4YWE3YWM5YWQ1ZTJlM2YiLCJ0IjoxNzcwMjYzMjA0LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.kYO9CxdsUi-N2oqZLkRMamKSysxonXLt8fbVumN7Ses/Sweet-Ambar-Blue.tar.xz</payload>
+  <tags>unix,theme,kde,linux,cc-by-sa,plasma</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

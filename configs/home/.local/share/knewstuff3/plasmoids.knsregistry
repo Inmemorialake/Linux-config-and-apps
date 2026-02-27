@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="706">
+  <name>Window Title Applet 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>dhruv8sh</author>
+  <homepage>https://store.kde.org/p/2129423</homepage>
+  <licence></licence>
+  <version>v0.9.0</version>
+  <rating>71</rating>
+  <downloads>109288</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/plasmoids/org.kde.windowtitle/</installedfile>
+  <id>2129423</id>
+  <releasedate>2024-07-28</releasedate>
+  <summary>&lt;p>A Plasma 6 applet that builds on the work by Psifidotos.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/62/52/79/2129423/screenshot-20240309-033004.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/62/52/79/2129423/screenshot-20240309-033004.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyMjE4NTgzMywibyI6IjEiLCJzIjoiZTBjOTJkZWVkMDk5YTYxMDMyNjA2OTU2NDQzYzc3NGRhMGY1NDNkZTllMTYwYWUyNGFkOThhNjMxNWFkZjYyY2E4MDljODIxMTdlOTBmZjY3NDFkYjZmZTk0ZTExMDljOTMyODhkMzkxMjk4NGEyZTc5ODE5ZWQ2ZTQ1OWZkMWYiLCJ0IjoxNzcxOTg5MjY4LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE2My45NSJ9.5mDXaNlE8MQVMfGNwAUFpqAJ86yv0XABadwHxEu0DDU/v0.9.0.tar.gz</payload>
+  <tags>applet,original-product,plasma,plasma##majorversion=6,plasma-desktop,plasmoid,unix,linux,kdeplasma,kde,kde-plasma,widget,gplv2,extension</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="709">
+  <name>Andromeda Launcher Plasma 6</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/2144212</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>74</rating>
+  <downloads>666368</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/plasmoids/AndromedaLauncher/</installedfile>
+  <id>2144212</id>
+  <releasedate>2026-02-20</releasedate>
+  <summary>&lt;p>A simple Launcher for KDE Plasma 6 based on the awesome &lt;a href="https://store.kde.org/p/1720532"> MMcK Launcher&lt;/a> created to fit the &lt;a href="https://store.kde.org/p/2036836/"> Andromeda theme for KDE&lt;/a>&lt;br />&lt;br />Required Fonts:&lt;br />&lt;a href="http://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Text-Semibold.otf">SF Pro Text &lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2144212/preview-2.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2144212/preview-2.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2OTIxMDkwNSwibyI6IjEiLCJzIjoiMzgzMWVlMGVlYmE5MzliM2IwOWMxNzBhZjI5N2I1YTBmMGI0ZmU3NDQ3ZTY0MWQ1N2E3MjZiZmRjODRjZTE5MDRkMzQ2ZjM5ZWE5ZTA5NTIwMGQ1NDYxNDRkMzU4YThlMjZkMDZkYmNhNDZmYTk5MTM4NGJlZDI1MzhkZmFmNmYiLCJ0IjoxNzcxNzM0MjUxLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE2My45NSJ9.XdT10pa02CkcFBiBCTrgH7zQU4Q2SFPGb7j2EDidv4A/AndromedaLauncher.tar.xz</payload>
+  <tags>extension,gplv2-later,linux,kde,widget,plasma,unix,plasma##majorversion=6</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="706">
+  <name>KDE Control Station</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/2196105</homepage>
+  <licence></licence>
+  <version>2.11.0</version>
+  <rating>64</rating>
+  <downloads>671431</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/plasmoids/KdeControlStation/</installedfile>
+  <id>2196105</id>
+  <releasedate>2026-02-18</releasedate>
+  <summary>&lt;p>A beautiful and modern configuration center for KDE plasma based on the awesome &lt;a href="https://store.kde.org/p/1916655/">kde_controlcentre&lt;/a> by &lt;a href="https://github.com/Prayag2">Prayag2&lt;/a>&lt;br />&lt;br />&lt;b>Highlighted features&lt;/b>&lt;br />&lt;em> Ability to create your own layout! reorder, add, delete widgets and customize widgets individually!&lt;br />&lt;/em> Ability to change between layouts(take a look to the preview images at the top)&lt;br />&lt;em> New components layout&lt;br />&lt;/em> Battery widget that shows relevant information about device battery&lt;br />&lt;em> Button to trigger system session actions&lt;br />&lt;/em> Toggle buttons highlighted based on states&lt;br />&lt;em> Dark/Light mode switcher with posibility to also change Global theme (look and feel)&lt;br />&lt;/em> Night Light control&lt;br />&lt;em> Widget to execute custom commands&lt;br />&lt;/em> Animations while opening/hiding pages&lt;br />&lt;em> Configuration pages for Network, Bluetooth, Battery, Brightness, Volume devices and more&lt;br />&lt;/em> Modern media player UI&lt;br />&lt;br />&lt;b>Main dependencies to work properly:&lt;/b>&lt;br />&lt;br />  &lt;em>  KDE Plasma &amp;gt;= 6.0&lt;br />  &lt;/em>  Packages: plasma-nm, kdeplasma-addons, plasma-pa&lt;br />  *  KDE Connect&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>Support&lt;/b>&lt;/h2>&lt;br />This widget is available for free. if you're enjoying this and  you'd like to support it's development feel free to buy me a cofee, I'd be very thankful! &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" /> &lt;br />&lt;br />&lt;a href="https://www.paypal.me/EliverLara/"> Paypal&lt;/a>&lt;br />&lt;a href="https://ko-fi.com/eliverlara"> Ko-fi&lt;/a>&lt;br />&lt;br />&lt;b>IMPORTANT&lt;/b>&lt;br />This is still a work in progress, so some parts might not work properly if so it would be very helpful if you could report it  in the product page or in the &lt;a href="https://github.com/EliverLara/kde-control-station/issues">github issue tracker for this project&lt;/a>(preferred way)</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3MDI1MTE2OCwibyI6IjEiLCJzIjoiM2VjZDcyZWE4ZWFlMGRjNDg5NDkwNWVlZDI1NjExNmJiMTZmMDViYTExOTUwYWIwMTY5MjZhNjI0ZmQxYTkyYzFlOGY1N2U2ZWFmN2NlOWNlMWI4YWJlZTQ3MTc2NjFhMjQ5YjcxNjVhYTI2MzUyMWI4ZGVlZGRmMDgyNDM5NWEiLCJ0IjoxNzcxNjA4NjcwLCJzdGZwIjpudWxsLCJzdGlwIjoiNDUuNS4xNjUuMTIifQ.V66VVZ3V5xLI87GHCwLuCuHcdkfC_GwW6KfsWs3BkXQ/KdeControlStation.tar.xz</payload>
+  <tags>plasma,extension,gplv3,widget,plasma##majorversion=6,unix,kde,linux</tags>
+  <status>updateable</status>
+ </stuff>
+</hotnewstuffregistry>

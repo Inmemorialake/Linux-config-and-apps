@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="720">
+  <name>Truely Maximized</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>fin444</author>
+  <homepage>https://store.kde.org/p/2136524</homepage>
+  <licence></licence>
+  <version>1.1.0</version>
+  <rating>57</rating>
+  <downloads>9184</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/kwin/scripts/truely-maximized/</installedfile>
+  <id>2136524</id>
+  <releasedate>2026-01-14</releasedate>
+  <summary>&lt;p>A Kwin script that truely maximizes your screen space by hiding the title bars of your windows when they are maximized. You can configure a blacklist from the script settings. There is also an optional screen edge listener to toggle it off/on (look in your screen edge listener settings).&lt;br />&lt;br />This is the Plasma 6 version. The Plasma 5 version can be found here: &lt;a href="https://www.pling.com/p/2018573/">https://www.pling.com/p/2018573/&lt;/a>&lt;br />&lt;br />Based on (but not forked from) bahamondev/hide-titles &lt;a href="https://store.kde.org/p/1354715">https://store.kde.org/p/1354715&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/71/36/84/2136524/max11.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/71/36/84/2136524/max11.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc2ODQwMzIzOSwibyI6IjEiLCJzIjoiMTRkMDk5YTQ5ZTJkZWVhNjMyODYxNDM5NjVkOThmZTBjYTY0ZWY2NmYxYWMyYzk0NjBmNzI1Y2U3NzQ3MGE2ZTRiZDA4MzlhYjlmMjNlZGU1NDk1NDJhZDYxNTE4MzFhZGRlZmY1Y2ZhMmIwNWJmOTgyYjQ5NWRiNDU1YWNiNWEiLCJ0IjoxNzcwMjUzNzg3LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.pbtdYk_YKBqJIjJXYmeLRaRs6al79SvyIoD7V_bqKb0/truely-maximized-1.2.1.kwinscript</payload>
+  <tags>unix,original-product,gplv3,linux</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

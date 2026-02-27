@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="717">
+  <name>Edna</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1367056</homepage>
+  <licence></licence>
+  <version>3.1</version>
+  <rating>66</rating>
+  <downloads>289911</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Edna/*</installedfile>
+  <id>1367056</id>
+  <releasedate>2026-01-20</releasedate>
+  <summary>&lt;p>Aurorae theme for Edna Plasma &lt;a href="https://www.pling.com/p/1117813/">https://www.pling.com/p/1117813/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1367056/edna-aurorae-logo.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1367056/edna-aurorae-logo.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxNTY0MjY2MSwibyI6IjEiLCJzIjoiMDU5Y2YyYjMyYmE3ZTIxYjk2NGYzMmVhMmEyZTBmNWNiYzM2NmI3NThhOGFhM2Y4MWU5ZDE4ZDJhOWE0MTBkOTc1ZDM4ODAyMmRjZDUyYjg0MWRkZjM0MGRmNDBkZDU2NzE0M2RhODNhZjM5OGFhZWUzN2Q5MTRhYjc1YmNmMjQiLCJ0IjoxNzcwMjQ5NjAzLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.3mqz8SKPXjyVzOfZXtdTgRoajWP8daoWRLZCpbkFILA/Edna.tar.gz</payload>
+  <tags>theme,unix,lgplv3,kde,linux,plasma</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="114">
+  <name>Sweet Aurorae</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1286856</homepage>
+  <licence></licence>
+  <version>1.1.0</version>
+  <rating>82</rating>
+  <downloads>672148</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Sweet-Dark-transparent/*</installedfile>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Sweet-Dark/*</installedfile>
+  <id>1286856</id>
+  <releasedate>2026-02-04</releasedate>
+  <summary>&lt;p>Aurorae theme to fit my Sweet theme for &lt;a href="https://www.pling.com/p/1294174/">plasma&lt;/a> and &lt;a href="https://www.pling.com/p/1253385/">gnome&lt;/a>&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>&amp;iexcl;IMPORTANT!&lt;/b>&lt;/h2>&lt;br />&lt;b> Hi, if you are really enjoying these themes from me and also from other authors please consider  &lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1"> becoming a supporter for the  KDE Themes and Extensions section &lt;/a> , I'm sure that me and others creators would be very grateful with your sponsorship since that help us to  keep mantaining and creating new themes for the community &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" />  &lt;/b>&lt;br />&lt;br />&lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1">&lt;b> Become a supporter here &lt;/b>&lt;/a>&lt;br />&lt;br />Settings in screenshot: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294174/">Sweet Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294011/">Sweet colorscheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1286856/cac8754ceb156dbfaafd564be3fbd2c90b9b.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1286856/cac8754ceb156dbfaafd564be3fbd2c90b9b.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY2MDg1OTE3NCwibyI6IjEiLCJzIjoiYjIwYjVlZjlkNmRjYjQ2ODc0M2ViZjg0NGEwNTA4ZTQzZWRhMTRhZmQ1YjA1ZTE5MDc2NjUwMDY0YjIwZTRlYzk0MmQ0NTQ3YTZjZDAyNjNmOGEyNTI0NzU3ZDdlYmFiYzBiYzc4ZWE2M2UyZTJhYzk0OTZjNmE4MjQ5YzFkMjMiLCJ0IjoxNzcwMjQxMzc3LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.ogq7Iww0D7bgqckMImJIPDURO9ejg_b-J1uFsUAcG6I/Sweet.tar.xz</payload>
+  <tags>plasma,theme,unix,linux,kde,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="114">
+  <name>Sweet Mars KDE</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1393497</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>58</rating>
+  <downloads>457857</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Sweet-Mars-transparent/*</installedfile>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Sweet-Mars/*</installedfile>
+  <id>1393497</id>
+  <releasedate>2026-02-01</releasedate>
+  <summary>&lt;p>Aurorae theme to fit my Sweet theme for &lt;a href="https://www.pling.com/p/1393498/">plasma&lt;/a> and &lt;a href="https://www.pling.com/p/1253385/">gnome&lt;/a>&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>&amp;iexcl;IMPORTANT!&lt;/b>&lt;/h2>&lt;br />&lt;b> Hi, if you are really enjoying these themes from me and also from other authors please consider  &lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1"> becoming a supporter for the  KDE Themes and Extensions section &lt;/a> , I'm sure that me and others creators would be very grateful with your sponsorship since that help us to  keep mantaining and creating new themes for the community &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" />  &lt;/b>&lt;br />&lt;br />&lt;a href="https://www.pling.com/support-predefined?section_id=5&amp;amp;amount_predefined=1">&lt;b> Become a supporter here &lt;/b>&lt;/a>&lt;br />Settings in screenshot: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393498/">Sweet-Mars Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Mars Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1393486/">Sweet-Mars colorscheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Mars Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to  my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1393497/64308f5f8222946f0cc9d786c63d987cf281.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1393497/64308f5f8222946f0cc9d786c63d987cf281.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY2MTI4OTIwOSwibyI6IjEiLCJzIjoiNjNjOTEzM2U0ZmIyZDU3MTY4ODU2MjAwOGY3OTdkYWNhNWIxN2M5Y2QzOTkxNjExN2M3MzhjNjcyNzk0YmViNTg5YzU3MjllMzJmNjNkNGYxZDk5ZDE0MWE0YTUxMmYzZjJjNDEwZGQ2MDM4Y2U2NTQ5YWZmZTRiZTllZWM3YTQiLCJ0IjoxNzcwMjQxOTIyLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.kt-sV6uY6TpmWbZZVZGqQextVkPY7cXEOYpY7HJLNoI/Sweet-Mars.tar.xz</payload>
+  <tags>unix,theme,kde,linux,plasma,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Otto Aurorae Theme</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1414937</homepage>
+  <licence></licence>
+  <version>1.8</version>
+  <rating>57</rating>
+  <downloads>253619</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Otto/*</installedfile>
+  <id>1414937</id>
+  <releasedate>2026-01-07</releasedate>
+  <summary>&lt;p>Aurorae theme for Otto Plasma theme &lt;a href="https://store.kde.org/p/1358262">https://store.kde.org/p/1358262&lt;/a>&lt;br />&lt;br />Based on McMojave by Vinceliuice &lt;a href="https://github.com/vinceliuice/McMojave-kde/tree/master/aurorae">https://github.com/vinceliuice/McMojave-kde/tree/master/aurorae&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1414937/aurorae-logo.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1414937/aurorae-logo.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxMzYxODU0NSwibyI6IjEiLCJzIjoiMmYxNjM4YzYwZmJjZWE0ZGY4NjY5MzhjZWQ2MzMxNzEyYTMzZGMzMzRkZDRjNjM2ZjYyZGQ4YjIyYTY5MDFjYzIwODI3OWNjMTJmOWI4Yjk4YTZkZDZkNGJiNTFlYjU2ZDgzNDdmMmI3ZjlmN2U0NmEzMTZlZTNlMDBhZWU0ZmUiLCJ0IjoxNzcwMjYwNzM1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.gyerCrYqlbHceCbvAYQKItYC8089orq76kxGmCShSNI/Otto.tar.gz</payload>
+  <tags>plasma,kde,lgplv3,linux,unix,theme</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Marge</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/2222235</homepage>
+  <licence></licence>
+  <version>1.0</version>
+  <rating>50</rating>
+  <downloads>6953</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Marge/*</installedfile>
+  <id>2222235</id>
+  <releasedate>2026-02-04</releasedate>
+  <summary>&lt;p>Marge window decoration by Marge Plasma Theme.&lt;br />&lt;br />Based on McMojave by Vinceliuice &lt;a href="https://github.com/vinceliuice/McMojave-kde/tree/master/aurorae">https://github.com/vinceliuice/McMojave-kde/tree/master/aurorae&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2222235/marge8.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/2222235/marge8.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTczMTE2MDY2NSwibyI6IjEiLCJzIjoiZmEwNDBlZDJjOTQxZjkxZDg0N2Q4NmI1MzBhMWE1YWIzNzk0ZGQwY2FjODY0ODA4YWFjNjRlNGFhMjA3NzZmOTJkY2E5MDk0MzQ3MDU3NjMyYTJmODg2ZWEyMTJmYWYxNGQwNDJlMDBiNTQ0ODJlZWY1MTQ4MGU3Zjc3ZDU1N2YiLCJ0IjoxNzcwMjYwNzgwLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.UjcaUPg7vPFeu7GWPKJm05WdWB-fQRxls7lzO2haKY0/Marge.tar.gz</payload>
+  <tags>window,kde,linux,lgplv3,decoration,theme,unix,plasma,aurorae</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="114">
+  <name>Sweet Ambar Blue Aurorae</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1897308</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>57</rating>
+  <downloads>256102</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Sweet-ambar-blue/*</installedfile>
+  <id>1897308</id>
+  <releasedate>2022-09-04</releasedate>
+  <summary>&lt;p>Aurorae theme for Sweet Ambar Blue&lt;br />&lt;br />For better looking please use this theme with  &lt;a href="https://github.com/tsujan/Kvantum/tree/master/Kvantum">Kvantum&lt;/a> engine, you can find the official installation instructions &lt;a href="https://raw.githubusercontent.com/tsujan/Kvantum/master/Kvantum/INSTALL">here&lt;/a>.&lt;br />&lt;br />Suggested setings: &lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1294013/">Sweet-Ambar-Blue Kvantum theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897309/">Sweet-Ambar-Blue Plasma theme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1897307/">Sweet-Ambar-Blue colorscheme&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1297008/">Sweet-Ambar-Blue Konsole color scheme &lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1305251/">Candy icons&lt;/a>&lt;br />&lt;br />&lt;a href="https://www.pling.com/p/1309907/">Sweet wallpaper&lt;/a>&lt;br />&lt;br />&lt;a href="https://store.kde.org/p/1334945/"> Sweet sddm theme &lt;/a>&lt;br />&lt;br />&lt;a href="https://dribbble.com/shots/3373125-Hexagonal-planets-and-cosmic-dust?utm_source=Pinterest_Shot"> Wallpaper in screenshot here&lt;/a>&lt;br />&lt;br />&lt;b>- Note -&lt;/b>&lt;br />&lt;br />Firefox: if you are a firefox user, you can give a chance to the &lt;a href="https://addons.mozilla.org/es/firefox/addon/sweet-dark/">sweet-dark&lt;/a> extension for a better looking or try my complete &lt;a href="https://github.com/EliverLara/firefox-sweet-theme">&lt;b>Firefox-Sweet-Theme&lt;/b> &lt;/a>.&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897308/kvantum-aurorae.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1897308/kvantum-aurorae.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY2MjMyNDMyMSwibyI6IjEiLCJzIjoiNDE1OWM1NTliODA1YzdhMzlhYjBlNDEzMzc2OGMxMTgzNjk3MDRlMDcwYzUyMzllZGYwYTNiM2E5MGNmNWU0NTA5YjIzYWI3ZTFjZGJjYWI3OGJlZjkxZDQyMTlmMWYwNGZkZDBhZjQ3YTU5NDk1ODgwZWEyZDAwMTYyNTBhMmEiLCJ0IjoxNzcwMjQxNDAzLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.Vf5CMYNO3sjM5oaZFKIpMt_zCwsz24jzagHHT6i9smA/Sweet-ambar-blue.tar.xz</payload>
+  <tags>linux,kde,plasma,theme,unix,gplv3</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Carl Aurorae theme</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1331617</homepage>
+  <licence></licence>
+  <version>1.8</version>
+  <rating>60</rating>
+  <downloads>85105</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Carl/*</installedfile>
+  <id>1331617</id>
+  <releasedate>2026-01-14</releasedate>
+  <summary>&lt;p>Aurorae theme for Carl Plasma theme &lt;a href="https://store.kde.org/p/1330604/">https://store.kde.org/p/1330604/&lt;/a>&lt;br />&lt;br />Based on McMojave aurorae by Vinceliuice &lt;a href="https://github.com/vinceliuice/McMojave-kde">https://github.com/vinceliuice/McMojave-kde&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1331617/carl-aurorae2.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1331617/carl-aurorae2.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxNDg1MTA3NSwibyI6IjEiLCJzIjoiMDBlYjIwODgyMzNmN2M2MDQyNWQyNTI5M2RhNmY4ZmYwNTFkZWUxYjY0NTQ3NDE5MTk5YzNmMTE0OWVkOWJkZWU3MDkyNGYzMzFiOTg2NTM4N2NiNGM5MDY5ZWVmOWRjMzNhNzBhMmVkOTFiMzgxNjMzZDJmZmIzNjc0Zjc1NmYiLCJ0IjoxNzcwMjYzNDA0LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.yqYci539zmgFXY1QxOgYxaAgwgPj6vlVEmeZcX7lHUo/Carl.tar.gz</payload>
+  <tags>plasma,gplv3,unix,theme,linux,kde</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Layan aurorae theme</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>vinceliuice</author>
+  <homepage>https://store.kde.org/p/1325238</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>69</rating>
+  <downloads>579258</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Layan/*</installedfile>
+  <id>1325238</id>
+  <releasedate>2024-09-10</releasedate>
+  <summary>&lt;p>Layan modern and elegant design theme for kde desktop&lt;br />---------------------&lt;br />&lt;b>gtk theme&lt;/b>: Layan&lt;br />&lt;a href="https://www.pling.com/p/1309214/">&lt;/a>&lt;a href="https://www.pling.com/p/1309214/">https://www.pling.com/p/1309214/&lt;/a>&lt;br />---------------------&lt;br />&lt;b>Icon theme&lt;/b>: Tela icon theme&lt;br />&lt;a href="https://www.pling.com/p/1279924/">&lt;/a>&lt;a href="https://www.pling.com/p/1279924/">https://www.pling.com/p/1279924/&lt;/a>&lt;br />---------------------&lt;br />&lt;b>Wallpaper&lt;/b>: Layan&lt;br />&lt;a href="https://www.pling.com/p/1309218/">&lt;/a>&lt;a href="https://www.pling.com/p/1309218/">https://www.pling.com/p/1309218/&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1325238/50fba2e9d2e843b351b59c52c1c91df53a8d.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/32/24/44/1325238/50fba2e9d2e843b351b59c52c1c91df53a8d.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcyNTkzNjI0NiwibyI6IjEiLCJzIjoiNDY4NTgyY2MwNjczZTM4YzNmMGRmMGVjYzE4ZWYxYjdmZTU0ZWYwNWViOTgxMjg0NzE1ZGFjOWIwNWNiYmNkNGRjNjc1NmFmNzk0NjZkODE2NjVmZDFlZWFmNTczZmFkOGM2YmIzNDhmNTZjZDg5ZGJiOTc3MGVlNjkzZWE5ZGIiLCJ0IjoxNzcwMjQ5NTI2LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.dD1fFrsDBk1AKkDLQAdCqjxrqkJDVpKZy4WCuttvFI0/Layan.tar.xz</payload>
+  <tags>linux,kde,gplv3,unix,theme,original-product,plasma</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Moe Aurorae</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1437785</homepage>
+  <licence></licence>
+  <version>1.9</version>
+  <rating>64</rating>
+  <downloads>54573</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Moe/*</installedfile>
+  <id>1437785</id>
+  <releasedate>2026-01-24</releasedate>
+  <summary>&lt;p>Aurorae theme for Moe plasma theme.&lt;br />&lt;br />Based on McMojave by Vinceliuice &lt;a href="https://github.com/vinceliuice/McMojave-kde">https://github.com/vinceliuice/McMojave-kde&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1437785/moeventana.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1437785/moeventana.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxNTM3NTQzMywibyI6IjEiLCJzIjoiYzk5Zjg5MmQ2MWZlODdjZGVjOThjNzNiNjk3MDUwMzlmN2M2OTRhZjc4NDdkMDNkODE1NjhlODYzMzNlODM3ZjEwMDlhYWZmZDhmOTIzNWFmOGZiMjFjYTZiYWM2YTIwZDRkNDAxZjc2OWQzYmZmMGEwZWVkN2NlMmUyYmJiYzQiLCJ0IjoxNzcwMjQ5NjcwLCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.1iErWKmBsc8R5-51hySv6o96bAYn8983nsGQkl1aqHk/Moe.tar.gz</payload>
+  <tags>theme,unix,lgplv3,kde,linux,plasma</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="717">
+  <name>Scratchy</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>jomada</author>
+  <homepage>https://store.kde.org/p/1896009</homepage>
+  <licence></licence>
+  <version>1.5</version>
+  <rating>55</rating>
+  <downloads>106695</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/aurorae/themes/Scratchy/*</installedfile>
+  <id>1896009</id>
+  <releasedate>2026-01-02</releasedate>
+  <summary>&lt;p>Dark theme, based on the catppuccin macchiato color palette.&lt;br />&lt;a href="https://github.com/catppuccin/catppuccin">https://github.com/catppuccin/catppuccin&lt;/a>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896009/scratchy-ventana-logo2.jpg</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/43/73/13/1896009/scratchy-ventana-logo2.jpg</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTcxMzkwMTM0NSwibyI6IjEiLCJzIjoiOWQ2YWZhMjlkOWZiMWU5YjNkODY5YTdiMmMxOWVhMzk4ODE5MGQ3Y2Q5ZGJkNzg4ZWI3ZjI0MGVhMmFkNmY3OGJlZmJiYmE2ZGMwZjRiZDE0NjcyNDQxNDg3NThiZDA5ZjA1ZjBjOTVhYTE5Y2IwZDk5NjQwYTE5MWMwMWI3MjkiLCJ0IjoxNzcwMjQ5NTg1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.Nn-gS2pKYGPlyhmmRrVy0UYJ99PUQoOSooJuCN9fz-M/Scratchy.tar.gz</payload>
+  <tags>plasma,linux,kde,gplv3,theme,unix</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

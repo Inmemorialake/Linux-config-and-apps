@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="299">
+  <name>Sweet wallpaper</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/1309907</homepage>
+  <licence></licence>
+  <version></version>
+  <rating>72</rating>
+  <downloads>830295</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/wallpapers/Sweet-Wallpapers/*</installedfile>
+  <id>1309907</id>
+  <releasedate>2020-01-12</releasedate>
+  <summary>&lt;p>&lt;b>wallpaper with colors that fits my &lt;a href="https://www.pling.com/p/1294729/">Sweet theme for plasma&lt;/a> &lt;/b>&lt;/p></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1309907/61af45fda6d673380e56166ae5fbfc315d2b1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/1309907/61af45fda6d673380e56166ae5fbfc315d2b1.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTU3ODg2NTI4NiwibyI6IjEiLCJzIjoiNjJhMDdkYzU4Y2NkODlkMTM2MmZmYjIxODNiMmY1YjM2OGZjMmJjNmUwYzA2M2E3MjkzZjVhZDEwMWIzY2E0NzQzOGFkMWJhZGVmNGJhODIzZWM0MGFlZGZlM2IyZWQ4MDc2MzE2MDkwNzIyMTRkYjJhMzUwNjE5MTY0Y2E3YWYiLCJ0IjoxNzcwMjQxMzg1LCJzdGZwIjpudWxsLCJzdGlwIjoiMTg2LjI3LjE3MC4yMTEifQ.Y7dsY5x9TTHXjc8mRZYaC8Qla_B6VxTboCwW9-oprTk/Sweet-Wallpapers.tar.xz</payload>
+  <tags>original-product,plasma,wallpaper,kde,artwork,cc-by-sa</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
