@@ -37,6 +37,7 @@
 /configs/home/.local/share/kactivitymanagerd
 /configs/home/.local/share/klipper
 /configs/home/.local/share/krita
+/configs/home/.local/share/kwalletd
 /configs/home/.local/share/okular
 /configs/home/.local/share/onlyoffice
 /configs/home/.local/share/vlc
