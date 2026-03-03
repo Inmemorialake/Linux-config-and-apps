@@ -50,8 +50,8 @@ header() {
 main() {
   header "Actualización de mirrors" "🌍"
   
-  sudo reflector --country colombia --latest 10 --protocol https --sort rate \
-    --save /etc/pacman.d/mirrorlist --verbose
+  sudo reflector --country Colombia,Brazil,Chile,Argentina,Mexico,UnitedStates --latest 10 \
+                 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
   
   echo
   success "$SCRIPT_NAME finalizado correctamente"
