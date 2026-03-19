@@ -89,7 +89,7 @@ main() {
   if command -v reflector &>/dev/null; then
     info "🌍 Actualizando mirrors"
     echo
-    reflector --country Colombia --latest 10 --protocol https --sort rate \
+    reflector --country Colombia,Brazil,Chile,Argentina,Mexico,UnitedStates --latest 10 --protocol https --sort rate \
       --save /etc/pacman.d/mirrorlist
     echo
     success "Mirrors actualizados"

@@ -1,17 +1,33 @@
 # Archivos particulares
+/configs/home/.config/akonadi*
+/configs/home/.config/*calendar*
+/configs/home/.config/email*
+/configs/home/.config/eventviews*
+/configs/home/.config/filetypes*
 /configs/home/.config/gwenviewrc
+/configs/home/.config/kalendar*
+/configs/home/.config/kamoso*
+/configs/home/.config/kmail*
+/configs/home/.config/kontact*
+/configs/home/.config/korganizer*
 /configs/home/.config/krita*
+/configs/home/.config/mailtransport*
+/configs/home/.config/merkuro*
 /configs/home/.config/okular*
+/configs/home/.config/specialmail*
 /configs/home/.config/partitionmanagerrc
 /configs/home/.config/trashrc
 /configs/home/.local/share/krunnerstaterc
 /configs/home/.local/share/recently-used.xbel
 /configs/home/.local/share/fish/fish_history
+/configs/home/.local/share/applications/*Thunderbird*
 
 
 # Directorios particulares
+/configs/home/.config/akonadi
 /configs/home/.config/byobu
 /configs/home/.config/Code
+/configs/home/.config/dconf
 /configs/home/.config/discord
 /configs/home/.config/Electron
 /configs/home/.config/GIMP
@@ -24,22 +40,33 @@
 /configs/home/.config/obsidian
 /configs/home/.config/onedrive
 /configs/home/.config/opera
+/configs/home/.config/rstudio
+/configs/home/.config/session
 /configs/home/.config/sublime-text/Local
 /configs/home/.config/tidal-hifi
 /configs/home/.config/whatsdesk
 /configs/home/.config/yay
+/configs/home/.local/share/akonadi*
+/configs/home/.local/share/baloo*
+/configs/home/.local/share/contacts
 /configs/home/.local/state
 /configs/home/.local/share/ark
+/configs/home/.local/share/apps/korganizer
+/configs/home/.local/share/baloo*
 /configs/home/.local/share/flatpak
+/configs/home/.local/share/fresh
 /configs/home/.local/share/gegl-0.4
 /configs/home/.local/share/gwenview
 /configs/home/.local/share/icons
 /configs/home/.local/share/kactivitymanagerd
 /configs/home/.local/share/klipper
+/configs/home/.local/share/kmail*
+/configs/home/.local/share/kontact*
 /configs/home/.local/share/krita
 /configs/home/.local/share/kwalletd
 /configs/home/.local/share/okular
 /configs/home/.local/share/onlyoffice
+/configs/home/.local/share/rstudio
 /configs/home/.local/share/vlc
 /configs/home/.local/share/plasma/plasmoids
 
