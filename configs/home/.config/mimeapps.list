@@ -1,10 +1,18 @@
 [Added Associations]
+text/markdown=sublime_text.desktop;
 text/plain=sublime_text.desktop;
+text/x-c++src=code.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-6ELKL3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-6ELKL3.desktop;
 
 [Default Applications]
+message/rfc822=userapp-Thunderbird-6ELKL3.desktop
 text/html=opera.desktop
+text/markdown=sublime_text.desktop;
 text/plain=sublime_text.desktop;
+text/x-c++src=code.desktop;
 x-scheme-handler/http=opera.desktop
 x-scheme-handler/https=opera.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
-x-scheme-handler/mailto=opera.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-6ELKL3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-6ELKL3.desktop

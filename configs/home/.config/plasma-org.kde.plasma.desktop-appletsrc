@@ -142,23 +142,6 @@ DialogWidth=810
 extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume
 knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume
 
-[Containments][122][Applets][150]
-immutability=1
-plugin=org.kde.plasma.digitalclock
-
-[Containments][122][Applets][150][Configuration]
-popupHeight=451
-popupWidth=810
-
-[Containments][122][Applets][150][Configuration][Appearance]
-dateDisplayFormat=BesideTime
-enabledCalendarPlugins=holidaysevents
-showWeekNumbers=true
-
-[Containments][122][Applets][150][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
 [Containments][122][Applets][151]
 immutability=1
 plugin=org.kde.plasma.panelspacer
@@ -255,6 +238,10 @@ plugin=org.kde.plasma.clipboard
 
 [Containments][122][Applets][156][Applets][182]
 immutability=1
+plugin=org.kde.kscreen
+
+[Containments][122][Applets][156][Applets][213]
+immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][122][Applets][156][ConfigDialog]
@@ -262,8 +249,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][122][Applets][156][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.kscreen
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.kscreen
 shownItems=org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard
 
 [Containments][122][Applets][209]
@@ -274,8 +261,48 @@ plugin=KdeControlStation
 popupHeight=419
 popupWidth=420
 
+[Containments][122][Applets][211]
+immutability=1
+plugin=org.kde.plasma.digitalclock
+
+[Containments][122][Applets][211][Configuration]
+popupHeight=451
+popupWidth=810
+
+[Containments][122][Applets][211][Configuration][Appearance]
+dateDisplayFormat=BesideTime
+enabledCalendarPlugins=holidaysevents
+firstDayOfWeek=0
+showWeekNumbers=true
+use24hFormat=2
+
+[Containments][122][Applets][211][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][122][Applets][214]
+immutability=1
+plugin=com.github.antroids.application-title-bar
+
+[Containments][122][Applets][214][Configuration][Appearance]
+widgetButtonsAuroraeTheme=Carl
+widgetButtonsIconsTheme=Aurorae
+widgetButtonsMargins=1
+widgetElements=windowCloseButton,windowMaximizeButton,windowMinimizeButton,spacer,windowIcon,windowTitle
+widgetMargins=8
+widgetSpacing=5
+windowTitleFontBold=false
+windowTitleUndefined=Inmemorialake
+
+[Containments][122][Applets][214][Configuration][Behavior]
+widgetMouseAreaLeftDoubleClickAction=
+
+[Containments][122][Applets][214][Configuration][ConfigDialog]
+DialogHeight=1048
+DialogWidth=1920
+
 [Containments][122][General]
-AppletOrder=103;152;150;151;209;156
+AppletOrder=103;214;152;211;151;209;156
 
 [Containments][182]
 ItemGeometries-1920x1080=
@@ -289,11 +316,11 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][182][ConfigDialog]
-DialogHeight=1080
-DialogWidth=1920
+DialogHeight=1021
+DialogWidth=1916
 
 [Containments][182][Wallpaper][org.kde.image][General]
-Image=file:///home/Inmemorialake/Pictures/tokyonight-wallpapers/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
+Image=file:///home/Inmemorialake/OneDrive/Imágenes/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
 SlidePaths=/home/Inmemorialake/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][183]
@@ -529,13 +556,17 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][185][Applets][190][Applets][212]
+immutability=1
+plugin=org.kde.kscreen
+
 [Containments][185][Applets][190][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][185][Applets][190][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth
-knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.kscreen
+knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.kscreen
 shownItems=org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard
 
 [Containments][185][General]

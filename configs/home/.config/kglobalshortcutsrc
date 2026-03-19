@@ -249,6 +249,7 @@ activate task manager entry 6=Meta+6,Meta+6,Activar la entrada 6 del gestor de t
 activate task manager entry 7=Meta+7,Meta+7,Activar la entrada 7 del gestor de tareas
 activate task manager entry 8=Meta+8,Meta+8,Activar la entrada 8 del gestor de tareas
 activate task manager entry 9=Meta+9,Meta+9,Activar la entrada 9 del gestor de tareas
+activate widget 211=,none,Activar el elemento gráfico Reloj digital
 clear-history=none,,Borrar historial del portapapeles
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Menú emergente de acciones automático
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Mover el foco del teclado entre paneles
@@ -270,3 +271,9 @@ toggle do not disturb=none,,Conmutar no molestar
 NewTab=Ctrl+K
 NewWindow=Ctrl+Shift+K
 _launch=Meta+K\tCtrl+Alt+T
+
+[services][org.kde.kscreen.desktop]
+ShowOSD=Display\t
+
+[services][systemsettings.desktop]
+kcm-kscreen=Meta+P
