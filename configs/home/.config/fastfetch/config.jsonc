@@ -22,9 +22,9 @@
             "type": "custom",
             "format": "\u001b[35m━━━ System Information ━━━\u001b[0m"
         },
-        { "type": "os",       "key": " ",     "keyColor": "35" },
-        { "type": "kernel",   "key": " ",     "keyColor": "35" },
-        { "type": "uptime",   "key": " ",     "keyColor": "35" },
+        { "type": "os",       "key": "󰣇",     "keyColor": "35" },
+        { "type": "kernel",   "key": "",     "keyColor": "35" },
+        { "type": "uptime",   "key": "󰐦",     "keyColor": "35" },
         { "type": "packages", "key": "󰏓 ",   "keyColor": "35" },
 
         "break",
@@ -36,7 +36,7 @@
         },
         { "type": "de",       "key": "󰧨 ",   "keyColor": "34" },
         { "type": "wm",       "key": "󱂬 ",   "keyColor": "34" },
-        { "type": "terminal", "key": " ",     "keyColor": "34" },
+        { "type": "terminal", "key": "",     "keyColor": "34" },
         { "type": "shell",    "key": "󰞷 ",   "keyColor": "34" },
 
         "break",
