@@ -47,7 +47,7 @@
 /configs/home/.config/whatsdesk
 /configs/home/.config/yay
 /configs/home/.local/share/akonadi*
-/configs/home/.local/share/baloo*
+/configs/home/.local/share/baloo
 /configs/home/.local/share/contacts
 /configs/home/.local/state
 /configs/home/.local/share/ark
