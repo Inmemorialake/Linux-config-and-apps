@@ -134,6 +134,7 @@ ForegroundVisited=187,154,247
 
 [General]
 BrowserApplication=opera.desktop
+ColorScheme=TokyoNigthStormBlue
 ColorSchemeHash=1743995135d7e805fc5b61d77f933578c1fbbf87
 LastUsedCustomAccentColor=122,162,247
 XftHintStyle=hintslight
@@ -150,6 +151,8 @@ Theme=Slot-Nord-Dark-Icons
 [KDE]
 AnimationDurationFactor=0.7071067811865475
 LookAndFeelPackage=org.kde.breezedark.desktop
+contrast=4
+frameContrast=0.2
 widgetStyle=Breeze
 
 [KFileDialog Settings]

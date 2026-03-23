@@ -305,6 +305,7 @@ DialogWidth=1920
 AppletOrder=103;214;152;211;151;209;156
 
 [Containments][182]
+ItemGeometries-1280x800=
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=86d6ced1-57ee-4a72-9333-285b93d0644c

@@ -1,2 +1,3 @@
 [General]
+GlobalMuteSinksMutedDevices=alsa_output.pci-0000_01_00.1.hdmi-stereo.0,auto_null.4294967295
 RaiseMaximumVolume=true

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=wifiman-desktop
+Exec=/usr/bin/wifiman-desktop %u
+Terminal=false
+MimeType=x-scheme-handler/wifiman-desktop-dl
+NoDisplay=true
