@@ -1,3 +1,6 @@
+[Annotations]
+annotationToolType=1
+
 [ImageSave]
 lastImageSaveAsLocation=file:///home/Inmemorialake/Downloads/Captura de pantalla_20260318_221959.png
 lastImageSaveLocation=file:///home/Inmemorialake/Downloads/Captura de pantalla_20260318_221959.png
@@ -6,3 +9,7 @@ translatedScreenshotsFolder=Screenshots
 [VideoSave]
 lastVideoSaveAsLocation=file:///home/Inmemorialake/Videos/Screencasts/Videocaptura de pantalla_20260323_112640.webm
 translatedScreencastsFolder=Screencasts
+
+[ViewerWindow]
+1920x1080 screen: Height=570
+1920x1080 screen: Width=980

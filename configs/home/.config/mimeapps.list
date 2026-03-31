@@ -17,3 +17,4 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-6ELKL3.desktop
 x-scheme-handler/mid=userapp-Thunderbird-6ELKL3.desktop
 x-scheme-handler/wifiman-desktop-dl=wifiman-desktop-handler.desktop
+x-scheme-handler/webcal=opera.desktop
