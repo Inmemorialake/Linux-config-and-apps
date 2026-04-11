@@ -91,8 +91,10 @@ KDE Connect allows integration between my phone and PC (file sharing, notificati
 **Ports needed**: 1714-1764 (TCP and UDP)
 
 ```bash
-sudo ufw allow 1714:1764/udp comment "KDE Connect"
-sudo ufw allow 1714:1764/tcp comment "KDE Connect"
+sudo ufw allow from 192.168.0.0/24 to any port 1714:1764 proto udp comment "KDE Connect LAN"
+sudo ufw allow from 192.168.0.0/24 to any port 1714:1764 proto tcp comment "KDE Connect LAN"
+sudo ufw allow from 100.64.0.0/10 to any port 1714:1764 proto udp comment "KDE Connect Tailscale"
+sudo ufw allow from 100.64.0.0/10 to any port 1714:1764 proto tcp comment "KDE Connect Tailscale"
 ```
 
 **Verification**:
@@ -125,6 +127,7 @@ sudo ufw allow in on docker0 comment "Docker bridge interface"
 - These rules make the configuration explicit and easier to audit
 - If you expose Docker containers to the internet, configure port-specific rules
 - Docker Compose networks use custom subnets (usually 172.18+)
+- If all containers only listen on loopback (127.0.0.1), these rules are optional
 
 **Verification**:
 
@@ -709,10 +712,10 @@ sudo ufw --force reset
 # View current configuration
 sudo ufw status numbered
 
-# Expected rules:
-# 1. KDE Connect (1714:1764 TCP/UDP)
-# 2. Docker (172.17.0.0/16, 172.18.0.0/16, docker0)
+# 1. KDE Connect (1714:1764 TCP/UDP — Only LAN and Tailscale)
+# 2. Docker (172.17.0.0/16, 172.18.0.0/16, docker0 — only if you expose ports)
 # 3. Tailscale (tailscale0 in/out)
+# 4. SSH (22/tcp — rate limited)
 ```
 
 ---

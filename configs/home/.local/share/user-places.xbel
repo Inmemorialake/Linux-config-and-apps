@@ -27,14 +27,14 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/Inmemorialake/OneDrive">
-  <title>OneDrive</title>
+ <bookmark href="file:///home/Inmemorialake/GDrive">
+  <title>GDrive</title>
   <info>
    <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="folder-cloud"/>
+    <bookmark:icon name="folder-gdrive"/>
    </metadata>
    <metadata owner="http://www.kde.org">
-    <ID>1770481633/0</ID>
+    <ID>1774933015/1</ID>
    </metadata>
   </info>
  </bookmark>
@@ -95,6 +95,7 @@
    <metadata owner="http://www.kde.org">
     <ID>1767405973/6</ID>
     <isSystemItem>true</isSystemItem>
+    <IsHidden>true</IsHidden>
    </metadata>
   </info>
  </bookmark>
@@ -110,6 +111,17 @@
    </metadata>
   </info>
  </bookmark>
+ <bookmark href="file:///home/Inmemorialake/Music">
+  <title>Music</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-music"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1774933097/2</ID>
+   </metadata>
+  </info>
+ </bookmark>
  <bookmark href="file:///home/Inmemorialake/Notas">
   <title>Notas</title>
   <info>
@@ -118,6 +130,28 @@
    </metadata>
    <metadata owner="http://www.kde.org">
     <ID>1770051963/1</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/Inmemorialake/CP%20Solved%20Problems">
+  <title>CP Solved Problems</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-development"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1775848409/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/Inmemorialake/PC-UV">
+  <title>PC-UV</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="folder-git"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1774932984/0</ID>
    </metadata>
   </info>
  </bookmark>
@@ -183,7 +217,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>0008187d0818743e</uuid>
    </metadata>
@@ -192,7 +226,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4e463197-e487-40a7-b9a6-75a347535970</uuid>
    </metadata>
@@ -201,7 +235,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p5</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p5</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>de06792f067909b3</uuid>
    </metadata>
@@ -214,7 +248,7 @@
     <bookmark:icon name="kdeconnect"/>
    </metadata>
    <metadata owner="http://www.kde.org">
-    <ID>1774914789/0</ID>
+    <ID>1774924752/0</ID>
    </metadata>
   </info>
  </bookmark>

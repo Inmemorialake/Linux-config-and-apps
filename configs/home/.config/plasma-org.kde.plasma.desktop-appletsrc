@@ -17,11 +17,11 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][101][ConfigDialog]
-DialogHeight=1021
-DialogWidth=1916
+DialogHeight=1048
+DialogWidth=1920
 
 [Containments][101][Wallpaper][org.kde.image][General]
-Image=file:///home/Inmemorialake/OneDrive/Imágenes/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
+Image=file:///home/Inmemorialake/GDrive/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
 SlidePaths=/home/Inmemorialake/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][102]
@@ -321,7 +321,7 @@ DialogHeight=1021
 DialogWidth=1916
 
 [Containments][182][Wallpaper][org.kde.image][General]
-Image=file:///home/Inmemorialake/OneDrive/Imágenes/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
+Image=/home/Inmemorialake/Downloads/tokyo-night23CATP.jpg
 SlidePaths=/home/Inmemorialake/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][183]

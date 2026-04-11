@@ -50,7 +50,7 @@ header() {
 main() {
   header "Actualización de mirrors" "🌍"
   
-  sudo reflector --country Colombia,Brazil,Chile,Argentina,Mexico,UnitedStates --latest 10 \
+  sudo reflector --country Colombia,Brazil,Chile,Argentina,Mexico,UnitedStates,Worldwide --latest 10 \
                  --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
   
   echo

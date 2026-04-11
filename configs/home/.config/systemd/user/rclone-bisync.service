@@ -1,0 +1,24 @@
+[Unit]
+Description=Rclone BiSync Google Drive
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '\
+  export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/%U/bus"; \
+  output=$(rclone bisync gDrive: %h/GDrive \
+    --resilient \
+    --create-empty-src-dirs \
+    --log-level INFO 2>&1); \
+  status=$?; \
+  echo "[$(date "+%%Y-%%m-%%d %%H:%%M:%%S")] ---" >> %h/.config/rclone/bisync.log; \
+  echo "$output" >> %h/.config/rclone/bisync.log; \
+  if [ $status -ne 0 ]; then \
+    /usr/bin/notify-send -u critical "Google Drive Sync" "Error en la sincronización. Revisa el log."; \
+  elif echo "$output" | grep -qE "Copied \(|Moved \(|Deleted|Renamed"; then \
+    /usr/bin/notify-send "Google Drive Sync" "Cambios sincronizados correctamente"; \
+  fi'
+
+[Install]
+WantedBy=default.target

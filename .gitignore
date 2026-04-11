@@ -40,6 +40,7 @@
 /configs/home/.config/obsidian
 /configs/home/.config/onedrive
 /configs/home/.config/opera
+/configs/home/.config/rclone
 /configs/home/.config/rstudio
 /configs/home/.config/session
 /configs/home/.config/sublime-text/Local
