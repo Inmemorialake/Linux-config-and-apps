@@ -1,3 +1,6 @@
+[File/Save As]
+Forced MimeType=image/png
+
 [General Settings]
 First Time=false
 Open Images in the Same Window=false
@@ -7,10 +10,14 @@ ToolButtonStyle=IconOnly
 
 [Recent Files]
 File1[$e]=$HOME/GDrive/Mi avance de la carrera.png
+File2[$e]=$HOME/Downloads/unisex-classic-tee-black-front-6899d046b06e1.webp
+File3[$e]=$HOME/Downloads/AURA.png
 Name1[$e]=Mi avance de la carrera.png
+Name2[$e]=unisex-classic-tee-black-front-6899d046b06e1.webp
+Name3[$e]=AURA.png
 
 [Tool Settings]
-Last Used Tool=4
+Last Used Tool=1
 Tool Widget Brush Col=0
 Tool Widget Brush Row=0
 Tool Widget Eraser Size Col=0

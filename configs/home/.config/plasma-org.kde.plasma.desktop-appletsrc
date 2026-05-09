@@ -261,6 +261,10 @@ plugin=KdeControlStation
 popupHeight=419
 popupWidth=420
 
+[Containments][122][Applets][209][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][122][Applets][211]
 immutability=1
 plugin=org.kde.plasma.digitalclock

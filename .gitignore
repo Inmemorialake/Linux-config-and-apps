@@ -32,10 +32,13 @@
 /configs/home/.config/Electron
 /configs/home/.config/GIMP
 /configs/home/.config/go
+/configs/home/.config/Google
 /configs/home/.config/google-chrome
 /configs/home/.config/inkscape
+/configs/home/.config/JetBrains
 /configs/home/.config/kdeconnect
 /configs/home/.config/libaccounts-glib
+/configs/home/.config/microsoft*
 /configs/home/.config/mozilla
 /configs/home/.config/obsidian
 /configs/home/.config/onedrive
@@ -57,7 +60,9 @@
 /configs/home/.local/share/flatpak
 /configs/home/.local/share/fresh
 /configs/home/.local/share/gegl-0.4
+/configs/home/.local/share/Google
 /configs/home/.local/share/gwenview
+/configs/home/.local/share/JetBrains
 /configs/home/.local/share/icons
 /configs/home/.local/share/kactivitymanagerd
 /configs/home/.local/share/klipper

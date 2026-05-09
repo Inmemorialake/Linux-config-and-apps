@@ -1,5 +1,5 @@
 [Desktop Entry]
-Icon=/opt/jetbrains-toolbox/toolbox.svg
+Icon=toolbox
 Exec=/opt/jetbrains-toolbox/jetbrains-toolbox %u
 Version=1.0
 Type=Application
@@ -7,8 +7,10 @@ Categories=Development
 Name=JetBrains Toolbox
 StartupWMClass=jetbrains-toolbox
 Terminal=false
-MimeType=x-scheme-handler/jetbrains;
+MimeType=
 X-GNOME-Autostart-enabled=true
+X-Icon-Path=/home/Inmemorialake/.local/share/icons/hicolor/scalable/apps/toolbox.svg
+X-Installed-Icon-Cache-Path=/home/Inmemorialake/.local/share/icons/hicolor
 StartupNotify=false
 X-GNOME-Autostart-Delay=10
 X-MATE-Autostart-Delay=10

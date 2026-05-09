@@ -7,14 +7,22 @@ Wants=network-online.target
 Type=oneshot
 ExecStart=/bin/bash -c '\
   export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/%U/bus"; \
+  echo "[$(date "+%%Y-%%m-%%d %%H:%%M:%%S")] ---" >> %h/.config/rclone/bisync.log; \
   output=$(rclone bisync gDrive: %h/GDrive \
     --resilient \
     --create-empty-src-dirs \
+    --cache-dir %h/.local/share/rclone \
     --log-level INFO 2>&1); \
   status=$?; \
-  echo "[$(date "+%%Y-%%m-%%d %%H:%%M:%%S")] ---" >> %h/.config/rclone/bisync.log; \
   echo "$output" >> %h/.config/rclone/bisync.log; \
-  if [ $status -ne 0 ]; then \
+  if echo "$output" | grep -q "cannot find prior"; then \
+    /usr/bin/notify-send -u normal "Google Drive Sync" "Estado perdido, ejecutando --resync automático..."; \
+    rclone bisync gDrive: %h/GDrive \
+      --resync --resilient --create-empty-src-dirs \
+      --cache-dir %h/.local/share/rclone \
+      --log-level INFO >> %h/.config/rclone/bisync.log 2>&1; \
+    /usr/bin/notify-send "Google Drive Sync" "Re-sincronización completa (--resync automático)"; \
+  elif [ $status -ne 0 ]; then \
     /usr/bin/notify-send -u critical "Google Drive Sync" "Error en la sincronización. Revisa el log."; \
   elif echo "$output" | grep -qE "Copied \(|Moved \(|Deleted|Renamed"; then \
     /usr/bin/notify-send "Google Drive Sync" "Cambios sincronizados correctamente"; \

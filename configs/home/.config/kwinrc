@@ -10,11 +10,11 @@ BlurStrength=13
 Strength=10
 
 [Effect-translucency]
-ComboboxPopups=81
-Dialogs=84
+ComboboxPopups=89
+Dialogs=90
 DropdownMenus=10
-Menus=42
-MoveResize=42
+Menus=90
+MoveResize=72
 PopupMenus=10
 TornOffMenus=10
 

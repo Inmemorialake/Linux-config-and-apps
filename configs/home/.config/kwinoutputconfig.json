@@ -14,7 +14,7 @@
                 ],
                 "autoRotation": "InTabletMode",
                 "automaticBrightness": false,
-                "brightness": 0.9,
+                "brightness": 1,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
@@ -275,7 +275,7 @@
                         "enabled": true,
                         "outputIndex": 0,
                         "position": {
-                            "x": 0,
+                            "x": 1920,
                             "y": 0
                         },
                         "priority": 1,
@@ -285,11 +285,11 @@
                         "enabled": true,
                         "outputIndex": 3,
                         "position": {
-                            "x": 1920,
+                            "x": 0,
                             "y": 0
                         },
                         "priority": 2,
-                        "replicationSource": "2bc69f9e-2076-40f1-8e49-891071c782e2"
+                        "replicationSource": ""
                     }
                 ]
             }
