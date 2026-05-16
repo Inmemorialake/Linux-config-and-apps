@@ -217,7 +217,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>0008187d0818743e</uuid>
    </metadata>
@@ -226,7 +226,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4e463197-e487-40a7-b9a6-75a347535970</uuid>
    </metadata>
@@ -235,21 +235,10 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p5</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p5</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>de06792f067909b3</uuid>
    </metadata>
   </info>
  </separator>
- <bookmark href="kdeconnect://c1f26ac3_be40_4671_bf06_2ee59af6fd56/">
-  <title>Infinix NOTE 30</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="kdeconnect"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1778297759/1</ID>
-   </metadata>
-  </info>
- </bookmark>
 </xbel>

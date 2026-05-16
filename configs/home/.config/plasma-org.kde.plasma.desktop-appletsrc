@@ -142,10 +142,6 @@ DialogWidth=810
 extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume
 knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume
 
-[Containments][122][Applets][151]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
 [Containments][122][Applets][152]
 immutability=1
 plugin=org.kde.plasma.panelspacer
@@ -305,8 +301,32 @@ widgetMouseAreaLeftDoubleClickAction=
 DialogHeight=1048
 DialogWidth=1920
 
+[Containments][122][Applets][215]
+immutability=1
+plugin=plasmusic-toolbar
+
+[Containments][122][Applets][215][Configuration]
+popupHeight=394
+popupWidth=236
+
+[Containments][122][Applets][215][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][122][Applets][215][Configuration][General]
+albumCoverRadius=4
+panelControlsSizeRatio=1.1
+pauseTextScrollingWhileMediaIsNotPlaying=true
+preferredPlayerIdentity=tidal-hifi
+textScrollingResetOnPause=true
+useAlbumCoverAsPanelIcon=true
+
+[Containments][122][Applets][217]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
 [Containments][122][General]
-AppletOrder=103;214;152;211;151;209;156
+AppletOrder=103;214;152;211;217;215;209;156
 
 [Containments][182]
 ItemGeometries-1280x800=

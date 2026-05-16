@@ -275,5 +275,8 @@ _launch=Meta+K\tCtrl+Alt+T
 [services][org.kde.kscreen.desktop]
 ShowOSD=Display\t
 
+[services][org.kde.plasma-systemmonitor.desktop]
+_launch=Ctrl+Shift+Esc\tMeta+Esc
+
 [services][systemsettings.desktop]
 kcm-kscreen=Meta+P
