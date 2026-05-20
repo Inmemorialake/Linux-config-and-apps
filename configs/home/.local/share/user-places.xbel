@@ -241,4 +241,15 @@
    </metadata>
   </info>
  </separator>
+ <bookmark href="kdeconnect://c1f26ac3_be40_4671_bf06_2ee59af6fd56/">
+  <title>Infinix NOTE 30</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="kdeconnect"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1779126479/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
 </xbel>
