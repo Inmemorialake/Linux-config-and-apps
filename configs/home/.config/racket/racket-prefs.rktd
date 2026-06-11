@@ -1,22 +1,12 @@
 (
- (plt:framework-pref:framework:exit-when-no-frames #t)
- (plt:framework-pref:framework:standard-style-list:font-size #2(#hash((((1920 1080)) . 12)) 12))
  (plt:framework-pref:framework:color-scheme classic)
  (|plt:DrRacket 9.0-splash-max-width| 1000)
- (plt:framework-pref:plt:debug-tool:stack/variable-area 9/10)
- (plt:framework-pref:drracket:window-position #hash((#f . (0 0 0)) (((0 0 1920 1080)) . (0 0 0))))
- (plt:framework-pref:drracket:window-size #hash((#f . (#t 600 650)) (((0 0 1920 1080)) . (#t 600 650))))
- (plt:framework-pref:drracket:recent-language-names (("Determine language from source" #6(#t print mixed-fraction-e #f #t debug) (default) #0() #f #t #t ((test) (main)) #t)))
  (plt:framework-pref:drracket:language-settings ((-32768) (#6(#t print mixed-fraction-e #f #t debug) (default) #0() #f #t #t ((test) (main)) #t)))
- (plt:framework-pref:drracket:unit-window-size-percentage 1/2)
- (plt:framework-pref:framework:recently-opened-files/pos ((#"/home/Inmemorialake/Downloads/Codigo de Prueba/Racket" 0 0)))
- (plt:framework-pref:drracket:most-recent-lang-line "#lang eopl\n")
- (plt:framework-pref:framework:verify-exit #t)
- (plt:framework-pref:framework:last-opened-files ())
- (plt:framework-pref:drracket:recently-closed-tabs ((#"/home/Inmemorialake/Downloads/Codigo de Prueba/Racket" 12 12)))
- (plt:framework-pref:drracket:console-previous-exprs (("+ 5 2") ("(+ 5 2)")))
+ (plt:framework-pref:framework:spell-check-strings? #f)
+ (|plt:DrRacket 9.2-splash-max-width| 987)
  (readline-input-history
   (
+   #"(interprete \"@a\")"
    #"(EVALUARSAT '(FNC 4 ((1 or -2 or 3 or 4) and (-2 or 3) and (-1 or -2 or -3) and (3 or 4) and (2))))"
    #"(EVALUARSAT '(FNC 4 ((1 -2 3 4) (-2 3) (-1 -2 -3) (3 4) (2))))"
    #"; resultado asumido que pasaron las variables ordenadas\n(define EVALUARSAT (lambda (my-fnc)(\n  let*(\n    [parsed-fnc (PARSEBNF my-fnc)]\n    [lst-clausulas (fnc->clausulas parsed-fnc)]\n    [unique-vars (get-unique-vars lst-clausulas)]\n    [posibilities (n-posibilities (length unique-vars))]\n    [cartesian (multiproduct-cartesian posibilities)]\n    [mapped-values (make-map unique-vars cartesian)]\n  )\n  (EVALUARSAT-helper lst-clausulas mapped-values)\n)))"
@@ -84,5 +74,32 @@
    #"A"
    #"(define A 2)"
    #"ls"
+  ))
+ (plt:framework-pref:framework:white-on-black? #f)
+ (plt:framework-pref:framework:exit-when-no-frames #t)
+ (plt:framework-pref:framework:standard-style-list:font-size #2(#hash((((1920 1080)) . 12)) 12))
+ (plt:framework-pref:framework:color-scheme-light classic)
+ (plt:framework-pref:framework:delegatee-overview-color (173 216 230 1.0))
+ (plt:framework-pref:plt:debug-tool:stack/variable-area 9/10)
+ (plt:framework-pref:drracket:window-size #hash((#f . (#t 600 650)) (((0 0 1920 1080)) . (#t 600 650))))
+ (plt:framework-pref:drracket:window-position #hash((#f . (0 0 0)) (((0 0 1920 1080)) . (0 0 0))))
+ (plt:framework-pref:framework:recently-opened-files/pos ((#"/home/Inmemorialake/Documents/Taller3-FLP-/interpretador.rkt" 0 0) (#"/home/Inmemorialake/Downloads/Codigo de Prueba/Racket" 0 0)))
+ (plt:framework-pref:drracket:recent-language-names (("Determine language from source" #6(#t print mixed-fraction-e #f #t debug) (default) #0() #f #t #t ((test) (main)) #t)))
+ (plt:framework-pref:drracket:most-recent-lang-line "#lang eopl\n")
+ (plt:framework-pref:drracket:unit-window-size-percentage 1/2)
+ (plt:framework-pref:framework:verify-exit #t)
+ (plt:framework-pref:framework:last-opened-files ())
+ (plt:framework-pref:drracket:recently-closed-tabs ((#"/home/Inmemorialake/Documents/Taller3-FLP-/interpretador.rkt" 14912 14912) (#"/home/Inmemorialake/Downloads/Codigo de Prueba/Racket" 12 12)))
+ (plt:framework-pref:drracket:console-previous-exprs
+  (
+   ("+ 5 2")
+   ("(+ 5 2)")
+   ("(interprete \"@a\")")
+   ("(interprete @a)")
+   ("(interprete \"@a\")")
+   ("(interprete \"@a\")                          ; → 1\n  (interprete \"(5 > 9)\")                     ; → 0\n  (interprete \"(6 <= 6)\")                    ; → 1\n  (interprete \"(@d concat @e)\")             ; → \"holaFLP\"\n  (interprete \"longitud(@d)\")               ; → 4\n  (interprete \"Si (2+3) { 2 } sino { 3 }\") ; → 2\n  (interprete \"declarar (@x=2;@y=3;) { (@x+@y) }\") ; → 5")
+   ("(interpretador \"@a\")")
+   ("(interpretador \"(@a)\")\n  (interpretador \"(@b)\")\n  (interpretador \"(@e)\")\n  (interpretador \"(5 > 9)\")\n  (interpretador \"Si (2+3) { 2 }sino{ 3 }\")")
+   ("(interpretar \"(@a)\")")
   ))
 )

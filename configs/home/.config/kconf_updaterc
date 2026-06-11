@@ -1,28 +1,28 @@
 updateInfoAdded=true
 
 [dolphin_detailsmodesettings.upd]
-ctime=1778271379
+ctime=1780751268
 done=rename-leading-padding,rename-side-padding,move-content-display
-mtime=1778020128
+mtime=1780558463
 
 [dolphin_replace_view_mode_with_view_settings_in_toolbar.upd]
-ctime=1778271379
+ctime=1780751268
 done=move-content-display,replace-view-mode-with-view-settings-in-toolbar
-mtime=1778020128
+mtime=1780558463
 
 [dolphin_statusandlocationbarssettings.upd]
-ctime=1778271379
+ctime=1780751268
 done=replace-view-mode-with-view-settings-in-toolbar,25.04-convert-bool-showstatusbar-to-enum-showstatusbar
-mtime=1778020128
+mtime=1780558463
 
 [kcalcrc.upd]
-ctime=1778271381
-mtime=1778013463
+ctime=1780751269
+mtime=1780568706
 
 [kwin.upd]
-ctime=1778947616
+ctime=1780986645
 done=kwin-6.0-reset-active-mouse-screen,kwin-6.0-delete-desktop-switching-shortcuts,kwin-6.0-remove-breeze-tabbox-default,kwin-6.1-remove-gridview-expose-shortcuts,kwin-6.5-showpaint-changes
-mtime=1778684003
+mtime=1780924414
 
 [migrate-calendar-to-plugin-id.upd]
 ctime=1779236755

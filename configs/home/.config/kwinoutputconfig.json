@@ -163,6 +163,48 @@
                 "uuid": "4b0d3b92-905c-493f-8904-908900ab5a47",
                 "vrrPolicy": "Never",
                 "wideColorGamut": false
+            },
+            {
+                "allowDdcCi": true,
+                "allowSdrSoftwareBrightness": true,
+                "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "autoRotation": "InTabletMode",
+                "automaticBrightness": false,
+                "brightness": 1,
+                "colorPowerTradeoff": "PreferEfficiency",
+                "colorProfileSource": "sRGB",
+                "connectorName": "HDMI-A-1",
+                "customModes": [
+                ],
+                "detectedDdcCi": false,
+                "edidHash": "83628eb77bd7c6b96a04d94dc2e59951",
+                "edidIdentifier": "NEC 31625 16843009 23 2018 0",
+                "edrPolicy": "always",
+                "highDynamicRange": false,
+                "iccProfilePath": "",
+                "mode": {
+                    "flags": 1,
+                    "height": 800,
+                    "refreshRate": 59810,
+                    "width": 1280
+                },
+                "overscan": 0,
+                "rgbRange": "Automatic",
+                "scale": 1,
+                "sdrBrightness": 200,
+                "sdrGamutWideness": 0,
+                "sharpness": 0,
+                "transform": "Normal",
+                "uuid": "108d46f6-5f1a-43c0-a821-23da15819dec",
+                "vrrPolicy": "Never",
+                "wideColorGamut": false
             }
         ],
         "name": "outputs"
@@ -321,6 +363,31 @@
                         },
                         "priority": 2,
                         "replicationSource": ""
+                    }
+                ]
+            },
+            {
+                "lidClosed": false,
+                "outputs": [
+                    {
+                        "enabled": true,
+                        "outputIndex": 0,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 1,
+                        "replicationSource": ""
+                    },
+                    {
+                        "enabled": true,
+                        "outputIndex": 4,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 2,
+                        "replicationSource": "2bc69f9e-2076-40f1-8e49-891071c782e2"
                     }
                 ]
             }

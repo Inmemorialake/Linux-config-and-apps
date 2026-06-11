@@ -1,3 +1,6 @@
+[Applications][code]
+Seen=true
+
 [Applications][discord]
 Seen=true
 
@@ -9,3 +12,6 @@ Seen=true
 
 [Applications][whatsdesk]
 Seen=true
+
+[DoNotDisturb]
+Until=2026,5,28,18,45,0.063

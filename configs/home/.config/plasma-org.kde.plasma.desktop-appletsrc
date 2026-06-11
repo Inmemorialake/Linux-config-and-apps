@@ -216,10 +216,6 @@ placeDisplayName=Cali, Colombia, CO
 placeInfo=Cali, Colombia, CO|3687925
 provider=bbcukmet
 
-[Containments][122][Applets][156][Applets][168]
-immutability=1
-plugin=org.kde.plasma.mediacontroller
-
 [Containments][122][Applets][156][Applets][174]
 immutability=1
 plugin=org.kde.plasma.brightness
@@ -245,7 +241,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][122][Applets][156][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.kscreen
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.kscreen
 knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.kscreen
 shownItems=org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard
 

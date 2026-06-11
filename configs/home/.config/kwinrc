@@ -35,6 +35,10 @@ translucencyEnabled=true
 truely-maximizedEnabled=true
 wobblywindowsEnabled=true
 
+[Tiling][462f15a4-0000-44c7-b61b-2ab9c286ea9a][108d46f6-5f1a-43c0-a821-23da15819dec]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][462f15a4-0000-44c7-b61b-2ab9c286ea9a][1cadf24a-1bab-4be9-904c-924917dc1aaf]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}

@@ -1,20 +1,36 @@
 [File/Save As]
 Forced MimeType=image/png
+Forced Quality=75
 
 [General Settings]
 First Time=false
+Last Document Size=971,887
 Open Images in the Same Window=false
 
 [MainWindow][Toolbar Tool Box]
 ToolButtonStyle=IconOnly
 
 [Recent Files]
-File1[$e]=$HOME/GDrive/Mi avance de la carrera.png
-File2[$e]=$HOME/Downloads/unisex-classic-tee-black-front-6899d046b06e1.webp
-File3[$e]=$HOME/Downloads/AURA.png
-Name1[$e]=Mi avance de la carrera.png
-Name2[$e]=unisex-classic-tee-black-front-6899d046b06e1.webp
-Name3[$e]=AURA.png
+File1[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/IMG_6584 - JUAN FERNANDO CALLE SANCHEZ.jpeg
+File10[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
+File2[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - JUAN ESTEBAN RODRIGUEZ VALENCIA.jpeg
+File3[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/firma - MICHAEL STEVEN RODRIGUEZ ARANA.jpeg
+File4[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - JUAN SEBASTIAN SIERRA CRUZ.png
+File5[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
+File6[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
+File7[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - KAREN ELIZABETH BERG GARCIA.jpg
+File8[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
+File9[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/firma - JUAN PABLO PEREZ TRUJILLO.jpeg
+Name1[$e]=IMG_6584 - JUAN FERNANDO CALLE SANCHEZ.jpeg
+Name10[$e]=SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
+Name2[$e]=Firma - JUAN ESTEBAN RODRIGUEZ VALENCIA.jpeg
+Name3[$e]=firma - MICHAEL STEVEN RODRIGUEZ ARANA.jpeg
+Name4[$e]=Firma - JUAN SEBASTIAN SIERRA CRUZ.png
+Name5[$e]=IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
+Name6[$e]=17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
+Name7[$e]=Firma - KAREN ELIZABETH BERG GARCIA.jpg
+Name8[$e]=Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
+Name9[$e]=firma - JUAN PABLO PEREZ TRUJILLO.jpeg
 
 [Tool Settings]
 Last Used Tool=1
@@ -27,7 +43,7 @@ Tool Widget Fill Style Row=0
 Tool Widget Line Width Col=0
 Tool Widget Line Width Row=3
 Tool Widget Opaque/Transparent Col=0
-Tool Widget Opaque/Transparent Row=0
+Tool Widget Opaque/Transparent Row=1
 Tool Widget Spraycan Size Col=0
 Tool Widget Spraycan Size Row=0
 

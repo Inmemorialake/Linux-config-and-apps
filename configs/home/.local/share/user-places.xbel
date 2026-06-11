@@ -217,7 +217,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>0008187d0818743e</uuid>
    </metadata>
@@ -226,7 +226,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4e463197-e487-40a7-b9a6-75a347535970</uuid>
    </metadata>
@@ -235,9 +235,45 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p5</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p5</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>de06792f067909b3</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/sda1</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>ec36-4de1</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/sda2</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>d4cc7d63-da78-48ad-9bdd-64ffbba449a8</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/sda1</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>0d58-6978</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/sda2</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>e634e0a4-a958-46cb-abad-862d2102573f</uuid>
    </metadata>
   </info>
  </separator>
@@ -248,7 +284,7 @@
     <bookmark:icon name="kdeconnect"/>
    </metadata>
    <metadata owner="http://www.kde.org">
-    <ID>1779126479/0</ID>
+    <ID>1781016953/0</ID>
    </metadata>
   </info>
  </bookmark>
