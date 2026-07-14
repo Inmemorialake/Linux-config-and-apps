@@ -119,3 +119,32 @@
 **/.Trash
 **/.recycle
 **/.Recycle
+
+# Autenticación y secretos
+/configs/home/.config/github-copilot/oauth.json
+/configs/home/.local/share/opencode/auth.json
+/configs/home/.config/gh
+/configs/home/.config/gh/hosts.yml
+/configs/home/.aws/credentials
+/configs/home/.aws/config
+/configs/home/.azure
+/configs/home/.kube/config
+/configs/home/.docker/config.json
+/configs/home/.npmrc
+/configs/home/.pypirc
+/configs/home/.netrc
+/configs/home/.gnupg
+/configs/home/.ssh
+/configs/home/.config/gcloud
+/configs/home/.config/rclone/rclone.conf
+*.pem
+*.key
+*.pfx
+id_rsa*
+id_ed25519*
+known_hosts
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
