@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=IntelliJ IDEA 2026.1.4
+Exec="/home/Inmemorialake/Linux-config-and-apps/configs/home/.local/share/JetBrains/Toolbox/apps/intellij-idea/bin/idea" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=jetbrains-idea-d4c9591d-86bc-4679-ab43-54c0aa975de1
+X-Icon-Path=/home/Inmemorialake/.local/share/icons/hicolor/scalable/apps/jetbrains-idea-d4c9591d-86bc-4679-ab43-54c0aa975de1.svg
+X-Installed-Icon-Cache-Path=/home/Inmemorialake/.local/share/icons/hicolor
+X-Icon-Name-Before-Sanitization=jetbrains-idea-d4c9591d-86bc-4679-ab43-54c0aa975de1.desktop.icon.svg
+Comment=The IDE for pro Java and Kotlin development
+StartupWMClass=jetbrains-idea
+StartupNotify=true

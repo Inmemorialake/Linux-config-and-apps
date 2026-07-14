@@ -1,6 +1,9 @@
 [Annotations]
 annotationToolType=1
 
+[General]
+ocrLanguages=afr
+
 [ImageSave]
 lastImageSaveAsLocation=file:///home/Inmemorialake/Downloads/MH-120.png
 lastImageSaveLocation=file:///home/Inmemorialake/Downloads/MH-120.png
@@ -13,3 +16,4 @@ translatedScreencastsFolder=Screencasts
 [ViewerWindow]
 1920x1080 screen: Height=570
 1920x1080 screen: Width=980
+1920x1080 screen: Window-Maximized=true

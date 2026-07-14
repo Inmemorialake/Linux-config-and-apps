@@ -11,26 +11,26 @@ Open Images in the Same Window=false
 ToolButtonStyle=IconOnly
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/IMG_6584 - JUAN FERNANDO CALLE SANCHEZ.jpeg
-File10[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
-File2[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - JUAN ESTEBAN RODRIGUEZ VALENCIA.jpeg
-File3[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/firma - MICHAEL STEVEN RODRIGUEZ ARANA.jpeg
-File4[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - JUAN SEBASTIAN SIERRA CRUZ.png
-File5[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
-File6[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
-File7[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - KAREN ELIZABETH BERG GARCIA.jpg
-File8[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
-File9[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/firma - JUAN PABLO PEREZ TRUJILLO.jpeg
-Name1[$e]=IMG_6584 - JUAN FERNANDO CALLE SANCHEZ.jpeg
-Name10[$e]=SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
-Name2[$e]=Firma - JUAN ESTEBAN RODRIGUEZ VALENCIA.jpeg
-Name3[$e]=firma - MICHAEL STEVEN RODRIGUEZ ARANA.jpeg
-Name4[$e]=Firma - JUAN SEBASTIAN SIERRA CRUZ.png
-Name5[$e]=IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
-Name6[$e]=17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
-Name7[$e]=Firma - KAREN ELIZABETH BERG GARCIA.jpg
-Name8[$e]=Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
-Name9[$e]=firma - JUAN PABLO PEREZ TRUJILLO.jpeg
+File1[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - JUAN SEBASTIAN SIERRA CRUZ.png
+File10[$e]=$HOME/Downloads/img1.jpg
+File2[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
+File3[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
+File4[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma - KAREN ELIZABETH BERG GARCIA.jpg
+File5[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
+File6[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/firma - JUAN PABLO PEREZ TRUJILLO.jpeg
+File7[$e]=$HOME/Downloads/drive-download-20260603T164149Z-3-001/SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
+File8[$e]=$HOME/Downloads/Autorización Sebastian Rubio.jpeg
+File9[$e]=$HOME/Downloads/Autorización Sebastian Rubio.png
+Name1[$e]=Firma - JUAN SEBASTIAN SIERRA CRUZ.png
+Name10[$e]=img1.jpg
+Name2[$e]=IMG_9435 - JUAN MANUEL VASQUEZ SEGURA.jpeg
+Name3[$e]=17801034958467318226836533666360 - JUAN MANUEL POLANIA NAVARRO.jpg
+Name4[$e]=Firma - KAREN ELIZABETH BERG GARCIA.jpg
+Name5[$e]=Firma electrónica Adrián_page-0001 - ADRIAN ALDEMAR RAMIREZ REALPE.jpg
+Name6[$e]=firma - JUAN PABLO PEREZ TRUJILLO.jpeg
+Name7[$e]=SAVE_20260601_203322 - MIGUEL ANGEL CASTILLO SANCHEZ.jpg
+Name8[$e]=Autorización Sebastian Rubio.jpeg
+Name9[$e]=Autorización Sebastian Rubio.png
 
 [Tool Settings]
 Last Used Tool=1
