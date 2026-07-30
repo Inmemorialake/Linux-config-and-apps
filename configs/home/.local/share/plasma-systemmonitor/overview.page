@@ -3,6 +3,10 @@ Title=Redes
 chartFace=org.kde.ksysguard.textonly
 
 [Face-101427258480848][SensorColors]
+network/enp0s20f0u2/download=122,162,247
+network/enp0s20f0u2/ipv4address=247,207,122
+network/enp0s20f0u2/ipv6address=122,247,145
+network/enp0s20f0u2/upload=247,122,225
 network/enp8s0/download=122,162,247
 network/enp8s0/ipv4address=247,207,122
 network/enp8s0/ipv6address=122,247,145
@@ -78,6 +82,7 @@ showTitle=true
 
 [Face-108592549200736][org.kde.ksysguard.applicationstable][General]
 showToolBar=true
+sortColumn=usage
 sortDirection=
 
 [Face-99554503711904][Appearance]

@@ -20,6 +20,12 @@ wallpaperplugin=org.kde.image
 DialogHeight=1048
 DialogWidth=1920
 
+[Containments][101][General]
+changedPositions={"desktop:/heroic.desktop":["1920x1080","0","1"],"desktop:/steam.desktop":["1920x1080","0","0"]}
+lastResolution=1920x1080
+positions={"1920x1080":["1","17","desktop:/steam.desktop","0","0","desktop:/heroic.desktop","0","1"]}
+sortMode=-1
+
 [Containments][101][Wallpaper][org.kde.image][General]
 Image=file:///home/Inmemorialake/GDrive/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
 SlidePaths=/home/Inmemorialake/.local/share/wallpapers/,/usr/share/wallpapers/
@@ -242,6 +248,7 @@ DialogWidth=1920
 
 [Containments][122][Applets][156][General]
 extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.bluetooth,org.kde.kscreen
+hiddenItems=Easy Effects
 knownItems=org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardlayout,org.kde.kdeconnect,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.networkmanagement,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.kscreen
 shownItems=org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.clipboard
 
@@ -297,32 +304,12 @@ widgetMouseAreaLeftDoubleClickAction=
 DialogHeight=1048
 DialogWidth=1920
 
-[Containments][122][Applets][215]
-immutability=1
-plugin=plasmusic-toolbar
-
-[Containments][122][Applets][215][Configuration]
-popupHeight=394
-popupWidth=236
-
-[Containments][122][Applets][215][Configuration][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][122][Applets][215][Configuration][General]
-albumCoverRadius=4
-panelControlsSizeRatio=1.1
-pauseTextScrollingWhileMediaIsNotPlaying=true
-preferredPlayerIdentity=tidal-hifi
-textScrollingResetOnPause=true
-useAlbumCoverAsPanelIcon=true
-
 [Containments][122][Applets][217]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
 [Containments][122][General]
-AppletOrder=103;214;152;211;217;215;209;156
+AppletOrder=103;214;152;211;217;209;156
 
 [Containments][182]
 ItemGeometries-1280x800=
@@ -593,6 +580,55 @@ shownItems=org.kde.plasma.weather,org.kde.plasma.notifications,org.kde.plasma.cl
 [Containments][185][General]
 AppletOrder=186;189;187;188;190
 
+[Containments][219]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=4
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][219][Applets][223]
+immutability=1
+plugin=luisbocanegra.audio.visualizer
+
+[Containments][219][Applets][223][Configuration]
+popupHeight=451
+popupWidth=450
+
+[Containments][219][Applets][223][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][219][Applets][223][Configuration][General]
+barColors={"enabled":false,"lightness":0.5,"saturation":0.5,"alpha":1,"systemColor":"highlightColor","systemColorSet":"Window","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"reverseList":false,"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"sourceType":1,"smoothGradient":true,"colorsOrientation":0,"image":{"source":"","fillMode":2},"hueStart":0,"hueEnd":360}
+cavaSleepTimer=3
+hideWhenIdle=true
+idleTimer=2
+inactiveBlockColors={"enabled":false,"lightness":0.5,"saturation":0.5,"alpha":0.3,"systemColor":"textColor","systemColorSet":"Window","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"reverseList":false,"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"sourceType":1,"smoothGradient":true,"colorsOrientation":0,"image":{"source":"","fillMode":2},"hueStart":0,"hueEnd":360}
+visualizerStyle=0
+waveFillColors={"enabled":false,"lightness":0.5,"saturation":0.5,"alpha":0.3,"systemColor":"highlightColor","systemColorSet":"Window","custom":"#013eff","list":["#ED8796","#A6DA95","#EED49F","#8AADF4","#F5BDE6","#8BD5CA","#f5a97f"],"reverseList":false,"followColor":0,"saturationEnabled":false,"lightnessEnabled":false,"sourceType":1,"smoothGradient":true,"colorsOrientation":0,"image":{"source":"","fillMode":2},"hueStart":0,"hueEnd":360}
+
+[Containments][219][Applets][227]
+immutability=1
+plugin=plasmusic-toolbar
+
+[Containments][219][Applets][227][Configuration]
+popupHeight=458
+popupWidth=300
+
+[Containments][219][Applets][227][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][219][Applets][227][Configuration][General]
+panelIcon=
+useAlbumCoverAsPanelIcon=true
+
+[Containments][219][General]
+AppletOrder=227;223
+
 [Containments122Appletsts][103][Configuration][General]
 favoritesPortedToKAstats=true
 primaryActions=3
@@ -611,4 +647,4 @@ useCurrentDecoration=false
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=
+screenMapping=desktop:/steam.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c,desktop:/heroic.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c

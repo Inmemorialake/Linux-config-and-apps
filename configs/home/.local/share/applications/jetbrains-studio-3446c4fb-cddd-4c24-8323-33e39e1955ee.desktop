@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Android Studio Quail 2 2026.1.2 Patch 1
+Exec="/home/Inmemorialake/Linux-config-and-apps/configs/home/.local/share/JetBrains/Toolbox/apps/android-studio/bin/studio" %u
+Version=1.0
+Type=Application
+Categories=Development;IDE;
+Terminal=false
+Icon=jetbrains-studio-3446c4fb-cddd-4c24-8323-33e39e1955ee
+X-Icon-Path=/home/Inmemorialake/.local/share/icons/hicolor/scalable/apps/jetbrains-studio-3446c4fb-cddd-4c24-8323-33e39e1955ee.svg
+X-Installed-Icon-Cache-Path=/home/Inmemorialake/.local/share/icons/hicolor
+X-Icon-Name-Before-Sanitization=jetbrains-studio-3446c4fb-cddd-4c24-8323-33e39e1955ee.desktop.icon.svg
+Comment=An IDE for Android app development
+StartupWMClass=jetbrains-studio
+StartupNotify=true

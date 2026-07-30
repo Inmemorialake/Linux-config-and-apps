@@ -1,0 +1,116 @@
+2026-07-26T04:55:08.104Z [info] [bookmarks] 0 marcadores cargados
+2026-07-26T04:55:08.442Z [info] [proc] Ejecutando el comando: /usr/bin/cmake --version
+2026-07-26T04:55:08.443Z [debug] [proc]   con el entorno: {"ANDROID_HOME":"/opt/android-sdk","ANDROID_SDK_ROOT":"/opt/android-sdk","CHROME_DESKTOP":"code.desktop","CHROME_EXECUTABLE":"/usr/bin/opera","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/1000/bus","DEBUGINFOD_URLS":"https://debuginfod.archlinux.org ","DESKTOP_SESSION":"plasma","DISPLAY":":0","ELECTRON_NO_ATTACH_CONSOLE":"1","FC_FONTATIONS":"1","GDK_BACKEND":"wayland","GRADLE_HOME":"/usr/share/java/gradle","GTK2_RC_FILES":"/etc/gtk-2.0/gtkrc:/home/Inmemorialake/.gtkrc-2.0:/home/Inmemorialake/.config/gtkrc-2.0","GTK_RC_FILES":"/etc/gtk/gtkrc:/home/Inmemorialake/.gtkrc:/home/Inmemorialake/.config/gtkrc","HOME":"/home/Inmemorialake","ICEAUTHORITY":"/run/user/1000/iceauth_ipFKBU","INVOCATION_ID":"3fa6be3154d540849696fb44edaa1f47","JOURNAL_STREAM":"10:23802","KDE_APPLICATIONS_AS_SCOPE":"1","KDE_FULL_SESSION":"true","KDE_SESSION_UID":"1000","KDE_SESSION_VERSION":"6","LANG":"es_CO.UTF-8","LOGNAME":"Inmemorialake","MAIL":"/var/spool/mail/Inmemorialake","MANAGERPID":"1200","MANAGERPIDFDID":"4273","MEMORY_PRESSURE_WATCH":"/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure","MEMORY_PRESSURE_WRITE":"c29tZSAyMDAwMDAgMjAwMDAwMAA=","MOTD_SHOWN":"pam","NO_AT_BRIDGE":"1","PAM_KWALLET5_LOGIN":"/run/user/1000/kwallet5.socket","PATH":"/home/Inmemorialake/packages/flutter/bin/:/home/Inmemorialake/.local/bin/btrfs:/home/Inmemorialake/.local/bin/disk:/home/Inmemorialake/.local/bin/keyring:/home/Inmemorialake/.local/bin/log:/home/Inmemorialake/.local/bin/pkg:/home/Inmemorialake/.local/bin/sys:/home/Inmemorialake/.local/bin/systemd:/home/Inmemorialake/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/Inmemorialake/.local/share/JetBrains/Toolbox/scripts","PWD":"/home/Inmemorialake","QT_WAYLAND_RECONNECT":"1","SESSION_MANAGER":"local/Inmemorialake-LOQ:@/tmp/.ICE-unix/1558,unix/Inmemorialake-LOQ:/tmp/.ICE-unix/1558","SHELL":"/usr/bin/fish","SHLVL":"1","STARSHIP_SESSION_KEY":"1244810598194661","STARSHIP_SHELL":"fish","SYSTEMD_EXEC_PID":"1572","USER":"Inmemorialake","VSCODE_CLI":"1","VSCODE_CODE_CACHE_PATH":"/home/Inmemorialake/.config/Code/CachedData/1b6a188127eeaf9194f945eb6eb89a657e93c54c","VSCODE_CRASH_REPORTER_PROCESS_TYPE":"extensionHost","VSCODE_CWD":"/home/Inmemorialake","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","VSCODE_IPC_HOOK":"/run/user/1000/vscode-401542d1-1.13-main.sock","VSCODE_NLS_CONFIG":"{\"userLocale\":\"es\",\"osLocale\":\"es-co\",\"resolvedLanguage\":\"es\",\"defaultMessagesFile\":\"/usr/share/code/resources/app/out/nls.messages.json\",\"languagePack\":{\"translationsConfigFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/tcf.json\",\"messagesFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/1b6a188127eeaf9194f945eb6eb89a657e93c54c/nls.messages.json\",\"corruptMarkerFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/corrupted.info\"},\"locale\":\"es\",\"availableLanguages\":{\"*\":\"es\"},\"_languagePackId\":\"06e640e5eae15d3bcc2182609d241e94.es\",\"_languagePackSupport\":true,\"_translationsConfigFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/tcf.json\",\"_cacheRoot\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es\",\"_resolvedLanguagePackCoreLocation\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/1b6a188127eeaf9194f945eb6eb89a657e93c54c\",\"_corruptedFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/corrupted.info\"}","VSCODE_PID":"88091","VSSCRIPT_PATH":"/usr/lib/python3.14/site-packages/vapoursynth/libvsscript.so","WAYLAND_DISPLAY":"wayland-0","XAUTHORITY":"/run/user/1000/xauth_CqEHjf","XDG_CONFIG_DIRS":"/home/Inmemorialake/.config/kdedefaults:/etc/xdg","XDG_CURRENT_DESKTOP":"KDE","XDG_DATA_DIRS":"/home/Inmemorialake/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop","XDG_MENU_PREFIX":"plasma-","XDG_RUNTIME_DIR":"/run/user/1000","XDG_SEAT":"seat0","XDG_SEAT_PATH":"/org/freedesktop/DisplayManager/Seat0","XDG_SESSION_CLASS":"user","XDG_SESSION_DESKTOP":"KDE","XDG_SESSION_ID":"2","XDG_SESSION_PATH":"/org/freedesktop/DisplayManager/Session1","XDG_SESSION_TYPE":"wayland","XDG_VTNR":"2","_":"/usr/share/code/bin/../code","_JAVA_AWT_WM_NONREPARENTING":"1","ELECTRON_RUN_AS_NODE":"1"}
+2026-07-26T04:55:08.479Z [info] [proc] Ejecutando el comando: /usr/bin/cmake -E capabilities
+2026-07-26T04:55:08.480Z [debug] [proc]   con el entorno: {"ANDROID_HOME":"/opt/android-sdk","ANDROID_SDK_ROOT":"/opt/android-sdk","CHROME_DESKTOP":"code.desktop","CHROME_EXECUTABLE":"/usr/bin/opera","DBUS_SESSION_BUS_ADDRESS":"unix:path=/run/user/1000/bus","DEBUGINFOD_URLS":"https://debuginfod.archlinux.org ","DESKTOP_SESSION":"plasma","DISPLAY":":0","ELECTRON_NO_ATTACH_CONSOLE":"1","FC_FONTATIONS":"1","GDK_BACKEND":"wayland","GRADLE_HOME":"/usr/share/java/gradle","GTK2_RC_FILES":"/etc/gtk-2.0/gtkrc:/home/Inmemorialake/.gtkrc-2.0:/home/Inmemorialake/.config/gtkrc-2.0","GTK_RC_FILES":"/etc/gtk/gtkrc:/home/Inmemorialake/.gtkrc:/home/Inmemorialake/.config/gtkrc","HOME":"/home/Inmemorialake","ICEAUTHORITY":"/run/user/1000/iceauth_ipFKBU","INVOCATION_ID":"3fa6be3154d540849696fb44edaa1f47","JOURNAL_STREAM":"10:23802","KDE_APPLICATIONS_AS_SCOPE":"1","KDE_FULL_SESSION":"true","KDE_SESSION_UID":"1000","KDE_SESSION_VERSION":"6","LANG":"es_CO.UTF-8","LOGNAME":"Inmemorialake","MAIL":"/var/spool/mail/Inmemorialake","MANAGERPID":"1200","MANAGERPIDFDID":"4273","MEMORY_PRESSURE_WATCH":"/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure","MEMORY_PRESSURE_WRITE":"c29tZSAyMDAwMDAgMjAwMDAwMAA=","MOTD_SHOWN":"pam","NO_AT_BRIDGE":"1","PAM_KWALLET5_LOGIN":"/run/user/1000/kwallet5.socket","PATH":"/home/Inmemorialake/packages/flutter/bin/:/home/Inmemorialake/.local/bin/btrfs:/home/Inmemorialake/.local/bin/disk:/home/Inmemorialake/.local/bin/keyring:/home/Inmemorialake/.local/bin/log:/home/Inmemorialake/.local/bin/pkg:/home/Inmemorialake/.local/bin/sys:/home/Inmemorialake/.local/bin/systemd:/home/Inmemorialake/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/Inmemorialake/.local/share/JetBrains/Toolbox/scripts","PWD":"/home/Inmemorialake","QT_WAYLAND_RECONNECT":"1","SESSION_MANAGER":"local/Inmemorialake-LOQ:@/tmp/.ICE-unix/1558,unix/Inmemorialake-LOQ:/tmp/.ICE-unix/1558","SHELL":"/usr/bin/fish","SHLVL":"1","STARSHIP_SESSION_KEY":"1244810598194661","STARSHIP_SHELL":"fish","SYSTEMD_EXEC_PID":"1572","USER":"Inmemorialake","VSCODE_CLI":"1","VSCODE_CODE_CACHE_PATH":"/home/Inmemorialake/.config/Code/CachedData/1b6a188127eeaf9194f945eb6eb89a657e93c54c","VSCODE_CRASH_REPORTER_PROCESS_TYPE":"extensionHost","VSCODE_CWD":"/home/Inmemorialake","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","VSCODE_IPC_HOOK":"/run/user/1000/vscode-401542d1-1.13-main.sock","VSCODE_NLS_CONFIG":"{\"userLocale\":\"es\",\"osLocale\":\"es-co\",\"resolvedLanguage\":\"es\",\"defaultMessagesFile\":\"/usr/share/code/resources/app/out/nls.messages.json\",\"languagePack\":{\"translationsConfigFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/tcf.json\",\"messagesFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/1b6a188127eeaf9194f945eb6eb89a657e93c54c/nls.messages.json\",\"corruptMarkerFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/corrupted.info\"},\"locale\":\"es\",\"availableLanguages\":{\"*\":\"es\"},\"_languagePackId\":\"06e640e5eae15d3bcc2182609d241e94.es\",\"_languagePackSupport\":true,\"_translationsConfigFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/tcf.json\",\"_cacheRoot\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es\",\"_resolvedLanguagePackCoreLocation\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/1b6a188127eeaf9194f945eb6eb89a657e93c54c\",\"_corruptedFile\":\"/home/Inmemorialake/.config/Code/clp/06e640e5eae15d3bcc2182609d241e94.es/corrupted.info\"}","VSCODE_PID":"88091","VSSCRIPT_PATH":"/usr/lib/python3.14/site-packages/vapoursynth/libvsscript.so","WAYLAND_DISPLAY":"wayland-0","XAUTHORITY":"/run/user/1000/xauth_CqEHjf","XDG_CONFIG_DIRS":"/home/Inmemorialake/.config/kdedefaults:/etc/xdg","XDG_CURRENT_DESKTOP":"KDE","XDG_DATA_DIRS":"/home/Inmemorialake/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop","XDG_MENU_PREFIX":"plasma-","XDG_RUNTIME_DIR":"/run/user/1000","XDG_SEAT":"seat0","XDG_SEAT_PATH":"/org/freedesktop/DisplayManager/Seat0","XDG_SESSION_CLASS":"user","XDG_SESSION_DESKTOP":"KDE","XDG_SESSION_ID":"2","XDG_SESSION_PATH":"/org/freedesktop/DisplayManager/Session1","XDG_SESSION_TYPE":"wayland","XDG_VTNR":"2","_":"/usr/share/code/bin/../code","_JAVA_AWT_WM_NONREPARENTING":"1","ELECTRON_RUN_AS_NODE":"1"}
+2026-07-26T04:55:08.577Z [debug] [main] Creación segura de una instancia de CMakeProject
+2026-07-26T04:55:08.577Z [debug] [variant] Construcción de VariantManager
+2026-07-26T04:55:08.578Z [debug] [main] Creación de una instancia de CMakeProject
+2026-07-26T04:55:08.579Z [debug] [main] Empezando la inicialización de segunda fase de CMakeTools
+2026-07-26T04:55:08.580Z [debug] [expand] Se ha expandido ${workspaceFolder}
+2026-07-26T04:55:08.608Z [debug] [kit] Leyendo el archivo de kits /home/Inmemorialake/.local/share/CMakeTools/cmake-tools-kits.json
+2026-07-26T04:55:08.654Z [info] [kit] Se han cargado correctamente 3 kits de /home/Inmemorialake/.local/share/CMakeTools/cmake-tools-kits.json
+2026-07-26T04:55:08.662Z [debug] [kit] No se está leyendo el archivo de kits no existentes: /home/Inmemorialake/Tangara-Hackaton-Ecobytes-/.vscode/cmake-kits.json
+2026-07-26T04:55:09.103Z [info] [variant] Se cargó un nuevo conjunto de variantes.
+2026-07-26T04:55:09.104Z [debug] [main] La inicialización de la instancia de CMakeProject se ha completado.
+2026-07-26T04:55:14.586Z [debug] [extension] Desactivar CMakeTools
+ de CMake: no hay ningún kit seleccionado
+2026-07-26T04:52:58.450Z [debug] [extension] Desactivar CMakeTools
+ de CMake: no hay ningún kit seleccionado
+2026-07-26T02:55:05.628Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-26T02:55:08.353Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-26T02:55:18.245Z [debug] [extension] Desactivar CMakeTools
+.json
+2026-07-26T01:13:35.552Z [debug] [kit] No se está leyendo el archivo de kits no existentes: /home/Inmemorialake/Tangara-Hackaton-Ecobytes-/.vscode/cmake-kits.json
+n
+2026-07-24T23:08:32.771Z [info] [variant] Se cargó un nuevo conjunto de variantes.
+2026-07-24T23:08:32.774Z [debug] [main] La inicialización de la instancia de CMakeProject se ha completado.
+2026-07-24T23:08:40.292Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-24T23:42:21.863Z [debug] [extension] Desactivar CMakeTools
+bin/pkg para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /home/Inmemorialake/.local/bin/sys para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /home/Inmemorialake/.local/bin para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /home/Inmemorialake/.local/bin/systemd para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /usr/local/sbin para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /usr/local/bin para ver si hay compiladores
+2026-07-22T03:56:18.402Z [debug] [kit] Examinando el directorio /usr/bin para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /usr/lib/jvm/default/bin para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /usr/bin/site_perl para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /usr/bin/vendor_perl para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /usr/bin/core_perl para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /var/lib/snapd/snap/bin para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Examinando el directorio /home/Inmemorialake/.local/share/JetBrains/Toolbox/scripts para ver si hay compiladores
+2026-07-22T03:56:18.403Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\LLVM\bin no existente
+2026-07-22T03:56:18.403Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\LLVM\bin
+2026-07-22T03:56:18.403Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\mingw32\bin no existente
+2026-07-22T03:56:18.403Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\mingw32\bin
+2026-07-22T03:56:18.403Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\mingw64\bin no existente
+2026-07-22T03:56:18.403Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\mingw64\bin
+2026-07-22T03:56:18.404Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\clang32\bin no existente
+2026-07-22T03:56:18.404Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\clang32\bin
+2026-07-22T03:56:18.404Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\clang64\bin no existente
+2026-07-22T03:56:18.404Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\clang64\bin
+2026-07-22T03:56:18.404Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\clangarm64\bin no existente
+2026-07-22T03:56:18.404Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\clangarm64\bin
+2026-07-22T03:56:18.404Z [debug] [kit] Omitiendo el examen de la ruta de acceso undefined\msys64\ucrt64\bin no existente
+2026-07-22T03:56:18.404Z [debug] [kit] Se encontraron 0 kits en el directorio undefined\msys64\ucrt64\bin
+2026-07-22T03:56:18.430Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/btrfs
+2026-07-22T03:56:18.430Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/disk
+2026-07-22T03:56:18.430Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/keyring
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/log
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/pkg
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/systemd
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin/sys
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/local/bin
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/local/sbin
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/bin
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/bin/site_perl
+2026-07-22T03:56:18.431Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/bin/vendor_perl
+2026-07-22T03:56:18.432Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/lib/jvm/default/bin
+2026-07-22T03:56:18.432Z [debug] [kit] Se encontraron 0 kits en el directorio /home/Inmemorialake/.local/share/JetBrains/Toolbox/scripts
+2026-07-22T03:56:18.432Z [debug] [kit] Se encontraron 0 kits en el directorio /usr/bin/core_perl
+2026-07-22T03:56:18.432Z [debug] [kit] Se encontraron 0 kits en el directorio /var/lib/snapd/snap/bin
+2026-07-22T03:56:18.441Z [debug] [kit] Probando el binario de Clang: /usr/bin/clang
+2026-07-22T03:56:18.441Z [info] [proc] Ejecutando el comando: /usr/bin/clang -v
+2026-07-22T03:56:18.449Z [debug] [kit] Probando el binario de Clang: /usr/bin/clang-22
+2026-07-22T03:56:18.449Z [info] [proc] Ejecutando el comando: /usr/bin/clang-22 -v
+2026-07-22T03:56:18.455Z [debug] [kit] Probando el binario de Clang: /usr/bin/clang-cl
+2026-07-22T03:56:18.456Z [info] [proc] Ejecutando el comando: /usr/bin/clang-cl -v
+2026-07-22T03:56:18.476Z [debug] [kit] Probando el binario de GCC: /usr/bin/gcc
+2026-07-22T03:56:18.476Z [info] [proc] Ejecutando el comando: /usr/bin/gcc -v
+2026-07-22T03:56:18.633Z [debug] [kit] Probando el binario de GCC: /usr/bin/x86_64-linux-gnu-gcc
+2026-07-22T03:56:18.634Z [info] [proc] Ejecutando el comando: /usr/bin/x86_64-linux-gnu-gcc -v
+2026-07-22T03:56:18.642Z [debug] [kit] Probando el binario de GCC: /usr/bin/x86_64-pc-linux-gnu-gcc
+2026-07-22T03:56:18.642Z [info] [proc] Ejecutando el comando: /usr/bin/x86_64-pc-linux-gnu-gcc -v
+2026-07-22T03:56:18.655Z [debug] [kit] Probando el binario de GCC: /usr/bin/x86_64-pc-linux-gnu-gcc-16
+2026-07-22T03:56:18.656Z [info] [proc] Ejecutando el comando: /usr/bin/x86_64-pc-linux-gnu-gcc-16 -v
+2026-07-22T03:56:18.707Z [debug] [kit] Compilador de GCC detectado: /usr/bin/x86_64-pc-linux-gnu-gcc-16
+2026-07-22T03:56:18.708Z [debug] [kit] Compilador de GCC detectado: /usr/bin/x86_64-pc-linux-gnu-gcc
+2026-07-22T03:56:18.708Z [debug] [kit] Compilador de GCC detectado: /usr/bin/x86_64-linux-gnu-gcc
+2026-07-22T03:56:18.709Z [debug] [kit] Compilador de GCC detectado: /usr/bin/gcc
+2026-07-22T03:56:18.709Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang-cl
+2026-07-22T03:56:18.709Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang-cl
+2026-07-22T03:56:18.719Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang
+2026-07-22T03:56:18.719Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang
+2026-07-22T03:56:18.719Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang-22
+2026-07-22T03:56:18.719Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang-22
+2026-07-22T03:56:18.729Z [debug] [kit] Probando el binario de GCC: /usr/bin/x86_64-pc-linux-gnu-gcc
+2026-07-22T03:56:18.731Z [info] [proc] Ejecutando el comando: /usr/bin/x86_64-pc-linux-gnu-gcc -v
+2026-07-22T03:56:18.743Z [debug] [kit] Probando el binario de Clang: /usr/bin/clang
+2026-07-22T03:56:18.744Z [info] [proc] Ejecutando el comando: /usr/bin/clang -v
+2026-07-22T03:56:18.753Z [debug] [kit] Compilador de GCC detectado: /usr/bin/x86_64-pc-linux-gnu-gcc
+2026-07-22T03:56:18.827Z [debug] [kit] Compilador de Clang detectado: /usr/bin/clang
+2026-07-22T03:56:18.827Z [debug] [kit] Se encontraron 7 kits en el directorio /usr/bin
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): Clang 22.1.8 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): Clang 22.1.8 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): Clang-cl 22.1.8 x86_64-pc-windows-msvc
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): GCC 16.1.1 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): GCC 16.1.1 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): GCC 16.1.1 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [info] [kit] Kit encontrado (De confianza): GCC 16.1.1 x86_64-pc-linux-gnu
+2026-07-22T03:56:18.828Z [debug] [kitsController] Guardando los kits en /home/Inmemorialake/.local/share/CMakeTools/cmake-tools-kits.json
+2026-07-22T03:56:18.828Z [debug] [kitsController] Guardando los kits nuevos en /home/Inmemorialake/.local/share/CMakeTools/cmake-tools-kits.json
+2026-07-22T03:56:22.234Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-22T04:14:42.775Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-22T04:15:19.126Z [debug] [main] No se inicia el controlador de CMake: no hay ningún kit seleccionado
+2026-07-22T04:20:17.250Z [debug] [extension] Desactivar CMakeTools

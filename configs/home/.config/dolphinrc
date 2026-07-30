@@ -1,4 +1,5 @@
 [General]
+RememberOpenedTabs=false
 Version=202
 ViewPropsTimestamp=2026,2,27,8,39,30.876
 
@@ -11,3 +12,6 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,directorythumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,fontthumbnail,glycin-heif,glycin-image-rs,glycin-jxl,glycin-svg

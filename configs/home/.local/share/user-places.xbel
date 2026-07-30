@@ -226,7 +226,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4e463197-e487-40a7-b9a6-75a347535970</uuid>
    </metadata>
@@ -284,7 +284,7 @@
     <bookmark:icon name="kdeconnect"/>
    </metadata>
    <metadata owner="http://www.kde.org">
-    <ID>1782775726/2</ID>
+    <ID>1785380166/0</ID>
    </metadata>
   </info>
  </bookmark>

@@ -4,6 +4,9 @@ Seen=true
 [Applications][discord]
 Seen=true
 
+[Applications][heroic]
+Seen=true
+
 [Applications][opera]
 Seen=true
 
@@ -14,4 +17,4 @@ Seen=true
 Seen=true
 
 [DoNotDisturb]
-Until=2026,5,28,18,45,0.063
+Until=2026,7,27,20,55,0.788

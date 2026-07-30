@@ -281,9 +281,5 @@ ShowOSD=\tDisplay
 [services][org.kde.plasma-systemmonitor.desktop]
 _launch=Ctrl+Shift+Esc\tMeta+Esc
 
-[services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=none
-OpenWithoutScreenshot=none
-
 [services][systemsettings.desktop]
 kcm-kscreen=Meta+P

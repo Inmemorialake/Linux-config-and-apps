@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Clang 22.1.8 x86_64-pc-linux-gnu",
+    "compilers": {
+      "C": "/usr/bin/clang",
+      "CXX": "/usr/bin/clang++"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "Clang-cl 22.1.8 x86_64-pc-windows-msvc",
+    "compilers": {
+      "C": "/usr/bin/clang-cl",
+      "CXX": "/usr/bin/clang-cl"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "GCC 16.1.1 x86_64-pc-linux-gnu",
+    "compilers": {
+      "C": "/usr/bin/gcc",
+      "CXX": "/usr/bin/g++"
+    },
+    "isTrusted": true
+  }
+]

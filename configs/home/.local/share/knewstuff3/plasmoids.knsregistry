@@ -2,6 +2,72 @@
 <!DOCTYPE khotnewstuff3>
 <hotnewstuffregistry>
  <stuff category="706">
+  <name>KDE Control Station</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>eliverlara</author>
+  <homepage>https://store.kde.org/p/2196105</homepage>
+  <licence></licence>
+  <version>2.11.0</version>
+  <rating>69</rating>
+  <downloads>926250</downloads>
+  <installedfile>/home/Inmemorialake/.local/share/plasma/plasmoids/KdeControlStation/</installedfile>
+  <id>2196105</id>
+  <releasedate>2026-02-18</releasedate>
+  <summary>&lt;p>A beautiful and modern configuration center for KDE plasma based on the awesome &lt;a href="https://store.kde.org/p/1916655/">kde_controlcentre&lt;/a> by &lt;a href="https://github.com/Prayag2">Prayag2&lt;/a>&lt;br />&lt;br />&lt;b>Highlighted features&lt;/b>&lt;br />&lt;em> Ability to create your own layout! reorder, add, delete widgets and customize widgets individually!&lt;br />&lt;/em> Ability to change between layouts(take a look to the preview images at the top)&lt;br />&lt;em> New components layout&lt;br />&lt;/em> Battery widget that shows relevant information about device battery&lt;br />&lt;em> Button to trigger system session actions&lt;br />&lt;/em> Toggle buttons highlighted based on states&lt;br />&lt;em> Dark/Light mode switcher with posibility to also change Global theme (look and feel)&lt;br />&lt;/em> Night Light control&lt;br />&lt;em> Widget to execute custom commands&lt;br />&lt;/em> Animations while opening/hiding pages&lt;br />&lt;em> Configuration pages for Network, Bluetooth, Battery, Brightness, Volume devices and more&lt;br />&lt;/em> Modern media player UI&lt;br />&lt;br />&lt;b>Main dependencies to work properly:&lt;/b>&lt;br />&lt;br />  &lt;em>  KDE Plasma &amp;gt;= 6.0&lt;br />  &lt;/em>  Packages: plasma-nm, kdeplasma-addons, plasma-pa&lt;br />  *  KDE Connect&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>Support&lt;/b>&lt;/h2>&lt;br />This widget is available for free. if you're enjoying this and  you'd like to support it's development feel free to buy me a cofee, I'd be very thankful! &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" /> &lt;br />&lt;br />&lt;a href="https://www.paypal.me/EliverLara/"> Paypal&lt;/a>&lt;br />&lt;a href="https://ko-fi.com/eliverlara"> Ko-fi&lt;/a>&lt;br />&lt;br />&lt;b>IMPORTANT&lt;/b>&lt;br />This is still a work in progress, so some parts might not work properly if so it would be very helpful if you could report it  in the product page or in the &lt;a href="https://github.com/EliverLara/kde-control-station/issues">github issue tracker for this project&lt;/a>(preferred way)</summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3MDI1MTE2OCwibyI6IjEiLCJzIjoiM2VjZDcyZWE4ZWFlMGRjNDg5NDkwNWVlZDI1NjExNmJiMTZmMDViYTExOTUwYWIwMTY5MjZhNjI0ZmQxYTkyYzFlOGY1N2U2ZWFmN2NlOWNlMWI4YWJlZTQ3MTc2NjFhMjQ5YjcxNjVhYTI2MzUyMWI4ZGVlZGRmMDgyNDM5NWEiLCJ0IjoxNzcxNjA4NjcwLCJzdGZwIjpudWxsLCJzdGlwIjoiNDUuNS4xNjUuMTIifQ.V66VVZ3V5xLI87GHCwLuCuHcdkfC_GwW6KfsWs3BkXQ/KdeControlStation.tar.xz</payload>
+  <tags>extension,widget,plasma,plasma##majorversion=6,unix,gplv3,linux,kde</tags>
+  <status>updateable</status>
+ </stuff>
+ <stuff category="706">
+  <name>Kurve - Audio Visualizer</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>luis-bocanegra</author>
+  <homepage>https://store.kde.org/p/2299506</homepage>
+  <licence></licence>
+  <version>v3.5.1</version>
+  <rating>89</rating>
+  <downloads>64643</downloads>
+  <installedfile>/home/Inmemorialake/Linux-config-and-apps/configs/home/.local/share/plasma/plasmoids/luisbocanegra.audio.visualizer/</installedfile>
+  <id>2299506</id>
+  <releasedate>2026-03-27</releasedate>
+  <summary>&lt;p>Audio visualizer powered by CAVA&lt;br />&lt;br />Requires installing cava qt6-websockets and python-websockets packages or their equivalents for your distribution!&lt;br />&lt;br />Check the README on GitHub for more detailed instructions: &lt;a href="https://github.com/luisbocanegra/kurve">&lt;/a>&lt;a href="https://github.com/luisbocanegra/kurve">https://github.com/luisbocanegra/kurve&lt;/a>&lt;br />&lt;br />&lt;b>Support the development ❤️&lt;/b>&lt;br />&lt;br />&lt;/p>&lt;ul>&lt;li> GitHub Sponsors &lt;a href="https://github.com/sponsors/luisbocanegra">&lt;/a>&lt;a href="https://github.com/sponsors/luisbocanegra">https://github.com/sponsors/luisbocanegra&lt;/a>&lt;br />&lt;/li>&lt;li> Ko-fi &lt;a href="https://ko-fi.com/luisbocanegra">&lt;/a>&lt;a href="https://ko-fi.com/luisbocanegra">https://ko-fi.com/luisbocanegra&lt;/a>&lt;br />&lt;/li>&lt;li> Buy Me A Coffee &lt;a href="https://www.buymeacoffee.com/luisbocanegra">&lt;/a>&lt;a href="https://www.buymeacoffee.com/luisbocanegra">https://www.buymeacoffee.com/luisbocanegra&lt;/a>&lt;br />&lt;/li>&lt;li> PayPal &lt;a href="https://www.paypal.com/donate/?hosted_button_id=Y5TMH3Z4YZRDA">&lt;/a>&lt;a href="https://www.paypal.com/donate/?hosted_button_id=Y5TMH3Z4YZRDA">https://www.paypal.com/donate/?hosted_button_id=Y5TMH3Z4YZRDA&lt;/a>&lt;br />&lt;/li>&lt;li> Liberapay &lt;a href="https://liberapay.com/luisbocanegra/">&lt;/a>&lt;a href="https://liberapay.com/luisbocanegra/">https://liberapay.com/luisbocanegra/&lt;/a>&lt;br />&lt;/li>&lt;/ul></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/67/61/06/2299506/append-2025-06-26-071634.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/67/61/06/2299506/append-2025-06-26-071634.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3NDYzNzczMiwidSI6bnVsbCwicyI6IjllMTU2ZTRkYzcyOTFiZWNiNDdjOGY4NGExZDAzNTA5YzFiNjhiZmVjNTE2YmMyNTUwMDBlM2Y4ZTVhNmU0OGQ2ZWNkOWQxYTA3NTMyZTJlZDg2YjJjNjhlNWJmMDJmMzAyZGY2Zjk5MmQ5NTUzYTRmYWU1MjdlN2ZkN2U3OWYzIiwidCI6MTc4NDYwOTA2NywibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6ImZkMmY3YzA0ODQwNzgyNTg0NDg2MDMxODAxMjdiZDM3IiwiaWF0IjoxNzg0NjA1NDY3LCJleHAiOjE3ODQ3NzgyNjcsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.GvUcNgNXZGWpb92x-efCPIlzkuuEW2Qfwd_e6JSdq3c/Kurve-v3.5.1.plasmoid</payload>
+  <tags>plasma,plasma##majorversion=6,original-product,extension,audio,gplv3,music,kde,linux,unix,visualizer,sound,widget</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="711">
+  <name>Audio Wave Visualizer</name>
+  <providerid>api.kde-look.org</providerid>
+  <author>Muddyblack</author>
+  <homepage>https://store.kde.org/p/2359422</homepage>
+  <licence></licence>
+  <version>2.1.1</version>
+  <rating>57</rating>
+  <downloads>2038</downloads>
+  <installedfile>/home/Inmemorialake/Linux-config-and-apps/configs/home/.local/share/plasma/plasmoids/org.muddyblack.plasmaAudioVisualizer/</installedfile>
+  <id>2359422</id>
+  <releasedate>2026-06-04</releasedate>
+  <summary>&lt;h1>Plasma Audio Visualizer&lt;/h1>&lt;br />&lt;br />A modern, customizable audio visualizer widget for KDE Plasma 6. It renders a mirrored waveform reacting in real-time to whatever audio is playing system-wide, alongside complete MPRIS track info, album art, transport controls, and a seekable progress bar.&lt;br />&lt;br />---&lt;br />&lt;br />&lt;b>Features&lt;/b>&lt;br />&lt;ul>&lt;li> &lt;b>6 Visualizer Styles:&lt;/b> Smooth Wave, Rounded Bars, Mirror Bars, Tech Line, Floating Dots, and Floating Dots Bold.&lt;br />&lt;/li>&lt;li> &lt;b>5 Progress Bar Styles:&lt;/b> Glassy Sleek (default), Ultra Minimal (thin 1px), Glowing Pulse (neon accent), Bold Pill, and Waveform.&lt;br />&lt;/li>&lt;li> &lt;b>Album Art as Background:&lt;/b> Use the current cover as a blurred card backdrop, with independent Blur and Darkness sliders to tune the look from a bold crisp cover to a subtle frosted tint. The redundant thumbnail hides automatically.&lt;br />&lt;/li>&lt;li> &lt;b>Smart Background Card:&lt;/b> Optional frosted card with customizable color, transparency (via color picker alpha), and corner radius.&lt;br />&lt;/li>&lt;li> &lt;b>Smooth Motion:&lt;/b> Frame interpolation keeps the waveform gliding instead of snapping between updates.&lt;br />&lt;/li>&lt;li> &lt;b>High Contrast/Transparent Panel Friendly:&lt;/b> Visualizer styles adapt to work on transparent panels or over custom backgrounds.&lt;br />&lt;/li>&lt;li> &lt;b>System Accent Integration:&lt;/b> Automatically matches your Plasma system accent color and text colors (or set your own custom colors).&lt;br />&lt;/li>&lt;li> &lt;b>Robust MPRIS Integration:&lt;/b> Displays album art, track details, playback timer, and transport controls (Play/Pause, Previous, Next).&lt;br />&lt;/li>&lt;li> &lt;b>Fast &amp;amp; Lightweight:&lt;/b> Powered by cava in the background with lock management to prevent system lag.&lt;br />&lt;/li>&lt;/ul>&lt;br />&lt;br />---&lt;br />&lt;br />&lt;b>Requirements&lt;/b>&lt;br />To run this widget, you will need:&lt;br />&lt;ul>&lt;li> &lt;b>cava&lt;/b> (console audio visualizer) &amp;mdash; to generate the raw waveform bars.&lt;br />&lt;/li>&lt;li> &lt;b>flock&lt;/b> (from util-linux) and &lt;b>pkill&lt;/b> (from procps) &amp;mdash; standard utilities pre-installed on virtually all Linux distributions.&lt;br />&lt;/li>&lt;/ul>&lt;br />&lt;br />---&lt;br />&lt;br />&lt;b>Quick Install (Terminal)&lt;/b>&lt;br />&lt;br />&lt;pre>&lt;code>
+git clone https://github.com/muddyblack/plasma-audio-visualizer.git
+cd plasma-audio-visualizer
+kpackagetool6 -t Plasma/Applet -i package
+&lt;/code>&lt;/pre>&lt;br />&lt;br />To update an existing installation:&lt;br />&lt;pre>&lt;code>
+kpackagetool6 -t Plasma/Applet -u package
+&lt;/code>&lt;/pre>&lt;br />&lt;br />---&lt;br />&lt;br />&lt;b>Configuration&lt;/b>&lt;br />Right-click the widget and select "Configure Plasma Audio Visualizer" to customize:&lt;br />&lt;ul>&lt;li> Visualizer type &amp;amp; styling&lt;br />&lt;/li>&lt;li> Progress bar design&lt;br />&lt;/li>&lt;li> Number of frequency bars ( 8 to 128 )&lt;br />&lt;/li>&lt;li> Target framerate &amp;amp; smoothing factor&lt;br />&lt;/li>&lt;li> Wave, Text, Controls, and Dock background colors (with alpha support)&lt;br />&lt;/li>&lt;li> Background card visibility, radius, and color&lt;br />&lt;/li>&lt;li> Album art as a blurred background, with Blur and Darkness sliders&lt;br />&lt;/li>&lt;/ul></summary>
+  <changelog></changelog>
+  <preview>https://images.pling.com/cache/770x540-4/img/00/00/85/56/31/2359422/icon1.png</preview>
+  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/85/56/31/2359422/icon1.png</previewBig>
+  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc4MDU3Njc2OCwidSI6bnVsbCwicyI6IjZjZWRlMDZiZjk3MTNmMTZjNGM4NGE0NWIwZjdkNGE4Nzc3Njg0N2RiY2ZlOGIyZWQwMzE5MjUxYzA5NDBkZTAxMGQ3NmUxOGRmODA4MzJjYmFhZWQ4OWQ3YjQyMmRhN2ZiOGFlNWRjMmNkOWE1MmY4YWIwODc5NjFiOWM4M2QxIiwidCI6MTc4NDYxMDM4MiwibyI6MSwibHQiOiJkb3dubG9hZCIsImp0aSI6IjY2M2FkMzUwY2Y0NTkxMTZkYThkODUyODI3NTQyMDEyIiwiaWF0IjoxNzg0NjA2NzgyLCJleHAiOjE3ODQ3Nzk1ODIsInN0aXAiOiIxMC4xMzUuMjQ2LjE5In0.qZ9UJ8_qegnL6YVXhzTGFxOcBoMMB_TwHbycdnEnZ98/plasma-audio-visualizer-2.1.1.plasmoid</payload>
+  <tags>widget,linux,mit-license,kde,kde-6,plasma,plasma##majorversion=6,original-product,audio,unix,visualiser,visualizer,extension</tags>
+  <status>installed</status>
+ </stuff>
+ <stuff category="706">
   <name>plasmusic-toolbar</name>
   <providerid>api.kde-look.org</providerid>
   <author>ccatterina</author>
@@ -20,25 +86,5 @@
   <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3MzQ5OTk3OSwibyI6IjEiLCJzIjoiZjNlZWMwMGQ2NDEzZGU2MmYxMTYwNWNkMGQ2MDE1ODZmNDlkMzEyZmVmZGY4MzEwNDNhMWUwMjRjZGU4M2M1NzA2YzkyZTE0ZGZjYTk5ZWJhMDY2YjI4MTAzMGM5ZmEzZmY3MWNkYzdjODI4OWRmOTM0YjA1N2YwNTFmOTY0NzQiLCJ0IjoxNzc4NjM5ODMyLCJzdGZwIjpudWxsLCJzdGlwIjoiNDUuNS4xNjUuMTcifQ.9ifwjUfGbiWg6G9YybBRcL75ssCblcYiq-ETMEsGqRc/plasmusic-toolbar-v4.0.0.plasmoid</payload>
   <tags>widget,kde,linux,gplv3,extension,unix,vlc,toolbar,spotify,original-product,plasma,plasma##majorversion=6,player,music</tags>
   <status>installed</status>
- </stuff>
- <stuff category="706">
-  <name>KDE Control Station</name>
-  <providerid>api.kde-look.org</providerid>
-  <author>eliverlara</author>
-  <homepage>https://store.kde.org/p/2196105</homepage>
-  <licence></licence>
-  <version>2.11.0</version>
-  <rating>64</rating>
-  <downloads>671431</downloads>
-  <installedfile>/home/Inmemorialake/.local/share/plasma/plasmoids/KdeControlStation/</installedfile>
-  <id>2196105</id>
-  <releasedate>2026-02-18</releasedate>
-  <summary>&lt;p>A beautiful and modern configuration center for KDE plasma based on the awesome &lt;a href="https://store.kde.org/p/1916655/">kde_controlcentre&lt;/a> by &lt;a href="https://github.com/Prayag2">Prayag2&lt;/a>&lt;br />&lt;br />&lt;b>Highlighted features&lt;/b>&lt;br />&lt;em> Ability to create your own layout! reorder, add, delete widgets and customize widgets individually!&lt;br />&lt;/em> Ability to change between layouts(take a look to the preview images at the top)&lt;br />&lt;em> New components layout&lt;br />&lt;/em> Battery widget that shows relevant information about device battery&lt;br />&lt;em> Button to trigger system session actions&lt;br />&lt;/em> Toggle buttons highlighted based on states&lt;br />&lt;em> Dark/Light mode switcher with posibility to also change Global theme (look and feel)&lt;br />&lt;/em> Night Light control&lt;br />&lt;em> Widget to execute custom commands&lt;br />&lt;/em> Animations while opening/hiding pages&lt;br />&lt;em> Configuration pages for Network, Bluetooth, Battery, Brightness, Volume devices and more&lt;br />&lt;/em> Modern media player UI&lt;br />&lt;br />&lt;b>Main dependencies to work properly:&lt;/b>&lt;br />&lt;br />  &lt;em>  KDE Plasma &amp;gt;= 6.0&lt;br />  &lt;/em>  Packages: plasma-nm, kdeplasma-addons, plasma-pa&lt;br />  *  KDE Connect&lt;br />&lt;br />&lt;/p>&lt;h2>&lt;b>Support&lt;/b>&lt;/h2>&lt;br />This widget is available for free. if you're enjoying this and  you'd like to support it's development feel free to buy me a cofee, I'd be very thankful! &lt;img src="https://www.pling.com/media/emoticons/happy.png" alt="" /> &lt;br />&lt;br />&lt;a href="https://www.paypal.me/EliverLara/"> Paypal&lt;/a>&lt;br />&lt;a href="https://ko-fi.com/eliverlara"> Ko-fi&lt;/a>&lt;br />&lt;br />&lt;b>IMPORTANT&lt;/b>&lt;br />This is still a work in progress, so some parts might not work properly if so it would be very helpful if you could report it  in the product page or in the &lt;a href="https://github.com/EliverLara/kde-control-station/issues">github issue tracker for this project&lt;/a>(preferred way)</summary>
-  <changelog></changelog>
-  <preview>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</preview>
-  <previewBig>https://images.pling.com/cache/770x540-4/img/00/00/36/61/48/2196105/screenshot-20250818-1752441.png</previewBig>
-  <payload>https://files06.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3MDI1MTE2OCwibyI6IjEiLCJzIjoiM2VjZDcyZWE4ZWFlMGRjNDg5NDkwNWVlZDI1NjExNmJiMTZmMDViYTExOTUwYWIwMTY5MjZhNjI0ZmQxYTkyYzFlOGY1N2U2ZWFmN2NlOWNlMWI4YWJlZTQ3MTc2NjFhMjQ5YjcxNjVhYTI2MzUyMWI4ZGVlZGRmMDgyNDM5NWEiLCJ0IjoxNzcxNjA4NjcwLCJzdGZwIjpudWxsLCJzdGlwIjoiNDUuNS4xNjUuMTIifQ.V66VVZ3V5xLI87GHCwLuCuHcdkfC_GwW6KfsWs3BkXQ/KdeControlStation.tar.xz</payload>
-  <tags>plasma,extension,gplv3,widget,plasma##majorversion=6,unix,kde,linux</tags>
-  <status>updateable</status>
  </stuff>
 </hotnewstuffregistry>

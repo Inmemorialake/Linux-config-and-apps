@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CHROME_EXECUTABLE:/usr/bin/opera
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_user_paths:/home/Inmemorialake/\x2elocal/bin/btrfs\x1e/home/Inmemorialake/\x2elocal/bin/disk\x1e/home/Inmemorialake/\x2elocal/bin/keyring\x1e/home/Inmemorialake/\x2elocal/bin/log\x1e/home/Inmemorialake/\x2elocal/bin/pkg\x1e/home/Inmemorialake/\x2elocal/bin/sys\x1e/home/Inmemorialake/\x2elocal/bin/systemd\x1e/home/Inmemorialake/\x2elocal/bin
+SETUVAR fish_user_paths:/home/Inmemorialake/packages/flutter/bin/\x1e/home/Inmemorialake/\x2elocal/bin/btrfs\x1e/home/Inmemorialake/\x2elocal/bin/disk\x1e/home/Inmemorialake/\x2elocal/bin/keyring\x1e/home/Inmemorialake/\x2elocal/bin/log\x1e/home/Inmemorialake/\x2elocal/bin/pkg\x1e/home/Inmemorialake/\x2elocal/bin/sys\x1e/home/Inmemorialake/\x2elocal/bin/systemd\x1e/home/Inmemorialake/\x2elocal/bin
