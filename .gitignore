@@ -24,6 +24,13 @@
 
 
 # Directorios particulares
+/configs/home/.config/heroic
+/configs/home/.config/Postman
+/configs/home/.local/share/claude
+/configs/home/.local/share/Steam
+/configs/home/.local/share/umu
+/configs/home/.local/share/opencode
+/configs/home/.local/share/JetBrains
 /configs/home/.config/akonadi
 /configs/home/.config/byobu
 /configs/home/.config/Code
