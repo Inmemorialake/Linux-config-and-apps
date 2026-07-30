@@ -31,6 +31,9 @@
 /configs/home/.local/share/umu
 /configs/home/.local/share/opencode
 /configs/home/.local/share/JetBrains
+/configs/home/.config/vivaldi
+/configs/home/.config/opencode/*
+!/configs/home/.config/opencode/opencode.jsonc
 /configs/home/.config/akonadi
 /configs/home/.config/byobu
 /configs/home/.config/Code
