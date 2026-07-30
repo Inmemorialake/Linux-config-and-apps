@@ -23,7 +23,7 @@ DialogWidth=1920
 [Containments][101][General]
 changedPositions={"desktop:/heroic.desktop":["1920x1080","0","1"],"desktop:/steam.desktop":["1920x1080","0","0"]}
 lastResolution=1920x1080
-positions={"1920x1080":["1","17","desktop:/steam.desktop","0","0","desktop:/heroic.desktop","0","1"]}
+positions={"1920x1080":["1","17","desktop:/heroic.desktop","0","1","desktop:/steam.desktop","0","0"]}
 sortMode=-1
 
 [Containments][101][Wallpaper][org.kde.image][General]
@@ -647,4 +647,4 @@ useCurrentDecoration=false
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/steam.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c,desktop:/heroic.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c
+screenMapping=desktop:/heroic.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c,desktop:/steam.desktop,0,86d6ced1-57ee-4a72-9333-285b93d0644c

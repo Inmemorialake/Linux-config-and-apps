@@ -35,7 +35,7 @@ This document provides a comprehensive overview of my Arch Linux system architec
   - Intel iGPU (primary for desktop and battery efficiency)
   - NVIDIA RTX 3050 (Optimus configuration, on-demand via `prime-run`)
 - **Storage**: NVMe SSD with Btrfs filesystem
-- **Memory**: DDR5 RAM
+- **Memory**: 8GB DDR5 RAM (single module, single channel — one DIMM slot populated, running at 4800 MT/s)
 - **Form Factor**: Laptop (optimized for battery life and performance)
 
 ### Power Management
@@ -72,7 +72,7 @@ This document provides a comprehensive overview of my Arch Linux system architec
 Subvolume layout:
 
 ```C++
-/dev/nvme0n1p3 (Btrfs root)
+/dev/nvme0n1p2 (Btrfs root)
 ├── @                → /              (snapshotted)
 ├── @home            → /home          (not snapshotted)
 ├── @snapshots       → /.snapshots    (snapshot storage)
@@ -92,10 +92,12 @@ Subvolume layout:
 ### Partition Scheme
 
 ```C++
-/dev/nvme0n1p1    1G      EFI System Partition (ESP)
-/dev/nvme0n1p2    8G        Swap
-/dev/nvme0n1p3    170G      Root (Btrfs with subvolumes)
+/dev/nvme0n1p1    1G        EFI System Partition (ESP), mounted at /efi
+/dev/nvme0n1p2    455.9G    Root (Btrfs with subvolumes)
+/dev/nvme0n1p3    20G       Swap
 ```
+
+Grew from the original layout in [`01_Installation.md`](01_Installation.md#16-partition-the-disk) (170G root, 8G swap) after the root partition was extended into space left unpartitioned at install time, and swap was resized separately. `01_Installation.md` documents the install process as it happened and is left as-is; this section reflects current sizes.
 
 ### Init System
 
@@ -123,19 +125,11 @@ KDE Plasma (Latest version)
 
 - Session: Wayland
 - Display Manager: SDDM (configured for Wayland)
-- Theme: [To be customized]
-- Widgets: [To be documented after personalization]
+- Theme and widgets: see [`04_rice.md`](04_rice.md)
 
 #### Core KDE Applications
 
-- **Dolphin**: File manager
-- **Konsole**: Terminal emulator (with Fish shell)
-- **Kate**: Text editor
-- **Spectacle**: Screenshot tool
-- **KDE Connect**: Phone integration
-- **Gwenview**: Image viewer
-- **Okular**: Document viewer
-- **Elisa**: Music player
+Dolphin, Konsole, Kate, Spectacle, KDE Connect, Gwenview, Okular, Elisa — see [`05_Terminal.md`](05_Terminal.md) for the terminal/shell stack specifically.
 
 #### System Integration
 
@@ -158,7 +152,7 @@ KDE Plasma (Latest version)
 - Path: `/usr/bin/fish`
 - Config: `~/.config/fish`
 - Features: Syntax highlighting, autosuggestions, web-based configuration
-- Prompt: [Starship/Custom - to be documented]
+- Prompt: Starship — see [`05_Terminal.md`](05_Terminal.md#starship)
 
 ### Editors and IDEs
 
@@ -245,13 +239,14 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
 
 ### Automation
 
-**Systemd Timers** (active)
+**Systemd Timers/Services**
 
-- `snapper-cleanup.timer`: Automatic snapshot cleanup
-- `grub-btrfsd.service`: GRUB menu updates with snapshots
-- `fstrim.timer`: Weekly SSD TRIM
-- `reflector.timer`: Mirror list updates (optional)
-- `paccache.timer`: Pacman cache cleanup (optional)
+- `snapper-cleanup.timer`: Automatic snapshot cleanup — **active**
+- `grub-btrfsd.service`: GRUB menu updates with snapshots — **active**
+- `tailscaled.service`: Tailscale VPN daemon — **active**
+- `fstrim.timer`: Weekly SSD TRIM — **disabled** (TRIM is handled continuously via `discard=async` instead, see [Performance Optimizations](#performance-optimizations))
+- `reflector.timer`: Mirror list updates — **disabled** (run manually via `mirrors-update` when needed)
+- `paccache.timer`: Pacman cache cleanup — **disabled** (run manually via `pkg-clean-cache` instead)
 
 ---
 
@@ -275,7 +270,7 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
 **UFW** (Uncomplicated Firewall)
 
 - Status: Active and enabled
-- Default policy: Deny incoming, allow outgoing
+- Default policy: Deny incoming, allow outgoing, deny routed
 - Logging: Disabled (performance optimization)
 
 **Allowed Services**:
@@ -283,7 +278,7 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
 - KDE Connect: Ports 1714-1764 (TCP/UDP)
 - Docker: Networks 172.17.0.0/16, 172.18.0.0/16, interface docker0
 - Tailscale: Interface tailscale0 (bidirectional)
-- SSH (if enabled): Port 22 (customizable)
+- SSH: Port 22, active with rate limiting (`ufw limit`)
 - Samba can be enabled temporarily when needed
 
 ### Phone Integration with KDE Connect
@@ -351,7 +346,7 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
                               │
 ┌─────────────────────────────────────────────────────────────┐
 │                      FILESYSTEM                             │
-│  EFI (1G) │ Swap (8G) │ Btrfs (170G with subvolumes)        │
+│  EFI (1G) │ Btrfs (455.9G with subvolumes) │ Swap (20G)     │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
@@ -387,7 +382,7 @@ The system is designed to be fully reproducible:
 2. Configure Btrfs snapshots per `02_Btrfs_and_snapshots.md`
 3. Install packages from package lists
 4. Clone this repo into `$HOME` and recreate the top-level symlinks (`.config`, `.local`, `.gitconfig`, `.fonts.conf`) described in [Dotfiles](#dotfiles) — this also brings the maintenance scripts under `~/.local/bin/` live, with no separate install step
-5. Configure firewall with `04_firewall.md`
+5. Configure firewall with `03_firewall.md`
 
 **Estimated time to reproduce**: 2-3 hours (excluding personalization)
 
@@ -400,15 +395,15 @@ The system is designed to be fully reproducible:
 - **Target**: < 15 seconds to login screen
 - **Optimizations**:
   - Minimal services enabled
-  - SSD with TRIM enabled
-  - Btrfs with `noatime` mount option
+  - SSD TRIM via `discard=async` mount option (continuous, not the weekly `fstrim.timer` — that timer is present but disabled on this system)
+  - Btrfs mounted with `relatime` (not `noatime`)
   - Systemd analyze for bottleneck detection
 
 ### Disk Space Management
 
-- **Automatic cleanup**:
-  - Pacman cache: `paccache.timer` (keep last 2-3 versions)
-  - Snapshots: `snapper-cleanup.timer` (retention policy)
+- **Cleanup**:
+  - Pacman cache: manual, via `pkg-clean-cache` (keeps last 2 versions per package) — not the `paccache.timer` systemd timer, which is disabled on this system
+  - Snapshots: `snapper-cleanup.timer` (retention policy, active)
   - Journal logs: `journald` with size limits
   - Docker: Manual cleanup with `docker system prune`
 
@@ -462,10 +457,9 @@ The system is designed to be fully reproducible:
 
 ### Documentation Updates
 
-- [ ] Complete `05_rice.md` (visual customization)
-- [ ] Complete `06_Terminal.md` (shell configuration)
-- [ ] Create comprehensive README.md
-- [ ] Document all application configurations
+- [x] Create comprehensive README.md
+- [x] Complete `05_Terminal.md` (shell configuration)
+- [ ] Complete `04_rice.md` (visual customization)
 
 ---
 
@@ -483,6 +477,9 @@ The system is designed to be fully reproducible:
 
 - [Arch Linux Installation Guide](01_Installation.md)
 - [Btrfs and Snapshots](02_Btrfs_and_snapshots.md)
-- [System Maintenance](03_maintenance.md)
-- [Firewall and Security](04_firewall.md)
+- [Firewall and Security](03_firewall.md)
+- [Rice](04_rice.md)
+- [Terminal](05_Terminal.md)
+- [Gaming](06_Gaming.md)
+- [System Maintenance](maintenance.md)
 - [Arch Wiki](https://wiki.archlinux.org/)
