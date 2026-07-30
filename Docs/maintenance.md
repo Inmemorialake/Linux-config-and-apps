@@ -77,6 +77,7 @@ Used for global, non-interactive maintenance.
 
 * `paccache` is used with a defined retention policy (e.g., keep the last 2–3 versions).
 * Prevents uncontrolled cache growth.
+* **Known inconsistency**: `pkg-clean-cache` runs `paccache -r -k2` (keeps 2 versions), but `disk-cleanup` (see [Disk health and space](#disk-health-and-space)) calls bare `paccache -r` with no `-k` flag, which falls back to paccache's own default (3 versions). Both scripts touch the same cache with different retention counts — not yet unified.
 
 ### Orphaned packages
 
@@ -101,6 +102,8 @@ Keyrings are critical to avoid signature errors during upgrades.
 
 * Refresh is performed in a controlled manner.
 * Integrated into full system updates.
+
+**Known duplication**: `sys-full-update` runs its own inline keyring refresh (`pacman -Sy`, `pacman -S archlinux-keyring`, `pacman-key --init/--populate`) instead of calling the standalone `keyring-update` script below — they implement the same steps independently, so a change to one (e.g. `keyring-update`'s `--dry-run`/`--yes` flags) doesn't propagate to the other. Similarly, `mirrors-update` and `sys-full-update`'s inline `reflector` call use slightly different country lists (`mirrors-update` includes `Worldwide` as a fallback, `sys-full-update` doesn't).
 
 ### Associated scripts for keyring
 
@@ -159,7 +162,8 @@ Keyrings are critical to avoid signature errors during upgrades.
 
 * `btrfs/btrfs-maintain`
 
-  * **Requires pre- and post-snapshots**.
+  * Runs a light balance (`-dusage=75 -musage=75`) and defragments `/var/log`, `/var/cache`, `/home` — none of which are snapshotted subvolumes, so this is safe with respect to snapshot space usage.
+  * Does **not** take a snapshot before or after running. If you want a rollback point before a maintenance pass, create one manually first: `sudo snapper -c root create -d "pre-btrfs-maintain"`.
 * `btrfs/btrfs-disk-usage`
 
 ---
@@ -178,8 +182,8 @@ Keyrings are critical to avoid signature errors during upgrades.
 
 ### Cleanup
 
-* Safe cleanup of unnecessary files.
-* **Requires pre- and post-snapshots**.
+* Safe cleanup of unnecessary files: user cache (`~/.cache`), trash, and pacman cache.
+* No automatic snapshot is taken before or after — `disk-cleanup` runs directly with no confirmation prompt when called from `sys-maintain`. If you want a rollback point, create one manually first: `sudo snapper -c root create -d "pre-disk-cleanup"`.
 
 ### Associated scripts for disk health and space
 
