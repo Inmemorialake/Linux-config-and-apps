@@ -1,6 +1,6 @@
 # System Maintenance Plan
 
-This document defines a **comprehensive system maintenance plan** aligned with the final scripts architecture shown below. It preserves the original guidelines (updates, packages, logs, systemd, Btrfs, and disks) while reorganizing them in a **coherent, modular, and automatable** way, using `Linux-config-and-apps/bin/` as the single *source of truth*.
+This document defines a **comprehensive system maintenance plan** aligned with the final scripts architecture shown below. It preserves the original guidelines (updates, packages, logs, systemd, Btrfs, and disks) while reorganizing them in a **coherent, modular, and automatable** way, using `Linux-config-and-apps/configs/home/.local/bin/` as the single *source of truth*.
 
 ---
 
@@ -196,7 +196,7 @@ All scripts live in a version-controlled repository with a clear structure:
 ```bash
 Linux-config-and-apps/
 │
-├── bin/                            # User-installed system scripts (source of truth)
+├── configs/home/.local/bin/        # User system scripts (source of truth)
 │   ├── sys/
 │   ├── pkg/
 │   ├── keyring/
@@ -205,14 +205,13 @@ Linux-config-and-apps/
 │   ├── btrfs/
 │   └── disk/
 │
-├── install.sh                      # Installer (creates symlinks into ~/.local/bin)
 └── .gitignore
 ```
 
 ### Principles
 
-* `bin/` is the **single source of truth**.
-* `install.sh` creates symlinks into `~/.local/bin/`.
+* `configs/home/.local/bin/` is the **single source of truth**.
+* `~/.local` is a single top-level symlink pointing into `configs/home/.local/` (see `Docs/architecture.md#dotfiles`), so anything placed under `configs/home/.local/bin/` is live under `~/.local/bin/` automatically — no per-script symlink or install step needed.
 * `~/.local/bin` is included in the user `PATH`.
 * No critical script lives outside the repository.
 
@@ -234,7 +233,7 @@ With this structure:
 ```bash
 Linux-config-and-apps/
 │
-├── bin/                            # User-installed system scripts (source of truth)
+├── configs/home/.local/bin/        # User system scripts (source of truth, live under ~/.local/bin via symlink)
 │
 │   ├── sys/                        # System updates & global maintenance
 │   │   ├── sys-update              # Standard system update (pacman -Syu)
@@ -267,6 +266,5 @@ Linux-config-and-apps/
 │       ├── disk-space-monitor      # Monitor disk usage & thresholds
 │       └── disk-cleanup            # Safe disk cleanup (cache, trash, logs)
 │
-├── install.sh                      # Installer (creates symlinks into ~/.local/bin)
 └── .gitignore
 ```

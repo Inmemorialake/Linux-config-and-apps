@@ -94,25 +94,25 @@ sudo pacman -S mangohud lib32-mangohud
 Config file: `~/.config/MangoHud/MangoHud.conf`. Tried a detailed config first (GPU name/temp/clock, CPU stats, RAM, frametime graph) to confirm the PRIME offload was working — useful for verification, but too busy for actual play. Settled on this minimal, NVIDIA-overlay-style config instead:
 
 ```ini
-### Solo FPS, estilo minimalista (como el overlay de NVIDIA en Windows)
+### FPS only, minimalist style (like the NVIDIA overlay on Windows)
 fps
 fps_only
 legacy_layout=0
 
-### Apagar todo lo demás explícitamente
+### Explicitly turn off everything else
 cpu_stats=0
 gpu_stats=0
 frame_timing=0
 frametime=0
 
-### Estilo
+### Style
 position=top-right
 font_size=24
 background_alpha=0.3
 round_corners=8
 text_color=2E86FF
 
-### Atajos
+### Shortcuts
 toggle_hud=Shift_L+F12
 toggle_logging=Shift_L+F2
 ```
@@ -120,8 +120,8 @@ toggle_logging=Shift_L+F2
 ### Verification
 
 ```bash
-mangohud glxgears          # sin offload, debería mostrar la Intel si se agrega gpu_name temporalmente
-prime-run mangohud glxgears  # con offload, debería mostrar la RTX 3050
+mangohud glxgears          # without offload, should show Intel if gpu_name is temporarily added
+prime-run mangohud glxgears  # with offload, should show the RTX 3050
 ```
 
 ---
@@ -144,7 +144,7 @@ Verify it actually has 3 separate lines before continuing:
 
 ```bash
 cat -A /etc/systemd/zram-generator.conf
-# Debe verse:
+# Should look like:
 # [zram0]␊
 # zram-size = min(ram, 8192)␊
 # compression-algorithm = zstd␊
@@ -197,9 +197,9 @@ Order matters in both: `prime-run` has to be outermost so it wraps the entire pr
 Full end-to-end check after setup:
 
 ```bash
-gamemoded -t                              # todos los tests deben pasar
-zramctl && swapon --show                  # zram activo con prioridad alta
-prime-run mangohud glxgears               # overlay visible, confirma offload
+gamemoded -t                              # all tests should pass
+zramctl && swapon --show                  # zram active with high priority
+prime-run mangohud glxgears               # overlay visible, confirms offload
 ```
 
 In-game: launch through the configured wrapper, confirm the FPS overlay appears top-right, no visible stutter on shader compilation loads.
@@ -214,9 +214,9 @@ In-game: launch through the configured wrapper, confirm the FPS overlay appears 
 
 ```bash
 sudo usermod -aG gamemode $USER
-# cerrar sesión y volver a entrar (o reiniciar)
-groups $USER      # debe listar "gamemode"
-gamemoded -t       # todos los tests pasan
+# log out and back in (or reboot)
+groups $USER      # should list "gamemode"
+gamemoded -t       # all tests pass
 ```
 
 Confirm via `journalctl -b | grep -iE "gamemode|cpugovctl|polkit"` if you see `pkexec ... Not authorized` errors — that's the exact symptom of this issue.
@@ -226,7 +226,7 @@ Confirm via `journalctl -b | grep -iE "gamemode|cpugovctl|polkit"` if you see `p
 There are two separate phases: the **generator phase** (runs on `daemon-reload` or boot) does `modprobe zram` and creates the actual device; the **service's ExecStart** (`systemctl start systemd-zram-setup@zram0.service`) only *configures* a device that must already exist. If you manually `modprobe`/`modprobe -r` the module between attempts, the generator phase needs to re-run — just retrying `systemctl start` won't recreate the device:
 
 ```bash
-sudo modprobe -r zram   # limpia cualquier dispositivo suelto de intentos manuales
+sudo modprobe -r zram   # clears any leftover device from manual attempts
 sudo systemctl daemon-reload
 sudo systemctl start systemd-zram-setup@zram0.service
 ```
@@ -244,16 +244,16 @@ The config file got mangled into a single line during copy-paste (`ini [zram0] z
 ## Quick Reference
 
 ```bash
-# Instalación completa
+# Full installation
 sudo pacman -S steam gamemode lib32-gamemode mangohud lib32-mangohud zram-generator
 paru -S protonplus heroic-games-launcher-bin
 
-# Verificación rápida
+# Quick verification
 gamemoded -t
 zramctl && swapon --show
 prime-run mangohud glxgears
 
-# Activar zram sin reiniciar
+# Activate zram without rebooting
 sudo systemctl daemon-reload
 sudo systemctl start systemd-zram-setup@zram0.service
 ```

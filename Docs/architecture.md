@@ -203,7 +203,7 @@ KDE Plasma (Latest version)
 
 ### Maintenance Scripts
 
-All scripts located in `~/Linux-config-and-apps/bin/` and symlinked to `~/.local/bin/`
+All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live under `~/.local/bin/` automatically via the top-level `~/.local` symlink (see [Dotfiles](#dotfiles)) — no per-script symlink needed
 
 #### System (`sys/`)
 
@@ -366,11 +366,18 @@ All scripts located in `~/Linux-config-and-apps/bin/` and symlinked to `~/.local
 
 ### Dotfiles
 
-**Location**: `~/Linux-config-and-apps/dotfiles/` (to be created)
+**Mechanism**: The repo lives inside `$HOME` (`~/Linux-config-and-apps/`). A handful of top-level symlinks point from `$HOME` into `configs/home/` inside the repo, so the tracked files *are* the live configuration directly — there is no separate `dotfiles/` folder and no sync/copy step.
 
-- Fish shell: `~/.config/fish/`
-- Konsole: `~/.local/share/konsole/`
-- KDE Plasma: `~/.config/` (various files)
+```bash
+~/.config      -> Linux-config-and-apps/configs/home/.config
+~/.local       -> Linux-config-and-apps/configs/home/.local
+~/.gitconfig   -> Linux-config-and-apps/configs/home/.gitconfig
+~/.fonts.conf  -> Linux-config-and-apps/configs/home/.fonts.conf
+```
+
+- Fish shell: `~/.config/fish/` (via the `~/.config` symlink)
+- Konsole: `~/.local/share/konsole/` (via the `~/.local` symlink)
+- KDE Plasma: `~/.config/` (various files, via the `~/.config` symlink)
 
 ### Reproducibility
 
@@ -379,9 +386,8 @@ The system is designed to be fully reproducible:
 1. Install Arch Linux following `01_Installation.md`
 2. Configure Btrfs snapshots per `02_Btrfs_and_snapshots.md`
 3. Install packages from package lists
-4. Apply dotfiles
-5. Run maintenance scripts setup
-6. Configure firewall with `04_firewall.md`
+4. Clone this repo into `$HOME` and recreate the top-level symlinks (`.config`, `.local`, `.gitconfig`, `.fonts.conf`) described in [Dotfiles](#dotfiles) — this also brings the maintenance scripts under `~/.local/bin/` live, with no separate install step
+5. Configure firewall with `04_firewall.md`
 
 **Estimated time to reproduce**: 2-3 hours (excluding personalization)
 
