@@ -158,3 +158,6 @@ known_hosts
 .env
 .env.*
 !.env.example
+
+# Contiene email personal, no debe trackearse
+configs/home/.gitconfig
