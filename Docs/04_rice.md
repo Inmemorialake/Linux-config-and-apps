@@ -223,8 +223,6 @@ FollowsColorScheme=true
 
 A sibling variant, `Slot-Nord-Dark-Colorize-Icons`, is also present under the same directory but is **not** the active theme — `kdeglobals` points at the plain `-Icons` build, not `-Colorize-Icons`.
 
-![Icon theme](assets/rice/icon-theme.png)
-
 ---
 
 ## Cursor Theme
@@ -246,8 +244,6 @@ Comment[es]=Brisa oscuro, por KDE VDG
 ```
 
 So "Brisa oscuro" seen in System Settings is just the localized name of the stock **Breeze Dark** cursor theme, package `breeze-cursors` (official repo, confirmed via `pacman -Qo /usr/share/icons/breeze_cursors`) — not a custom cursor set. A separate `Sweet-cursors` theme is installed under `~/.icons/` but is **not** the active one; it sits unused.
-
-![Cursor theme](assets/rice/cursor-theme.png)
 
 ---
 
