@@ -1,0 +1,25 @@
+[user]
+	name = Inmemorialake
+	email = inmemorialake2@gmail.com
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[color]
+	ui = true
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	line-numbers = true
+    hyperlinks = true
+	side-by-side = true
+    syntax-theme = none
+	light = false
+
+[merge]
+    conflictStyle = zdiff3
+[init]
+	defaultBranch = main

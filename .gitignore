@@ -160,4 +160,4 @@ known_hosts
 !.env.example
 
 # Contiene email personal, no debe trackearse
-configs/home/.gitconfig
+configs/home/.gitconfigconfigs/home/.config/Raspberry Pi/
