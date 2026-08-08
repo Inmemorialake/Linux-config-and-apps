@@ -4,8 +4,9 @@ lastLoadedOutputPreset=Dolby Atmos
 
 [StreamInputs]
 inputDevice=alsa_input.pci-0000_00_1f.3.analog-stereo
+mostUsedPresets=voz_natural
 plugins=rnnoise#0,deepfilternet#0,gate#0,equalizer#0,compressor#0,deesser#0,limiter#0
-usedPresets=EasyEffects Microphone Preset: Masc NPR Voice + Noise Reduction:1
+usedPresets=voz_natural:4,EasyEffects Microphone Preset: Masc NPR Voice + Noise Reduction:1
 visiblePage=pluginsPage
 visiblePlugin=rnnoise#0
 
@@ -13,9 +14,10 @@ visiblePlugin=rnnoise#0
 mostUsedPresets=Dolby Atmos,Laptop,Perfect EQ,Boosted,Bass Enhancing + Perfect EQ
 outputDevice=alsa_output.pci-0000_00_1f.3.analog-stereo
 plugins=equalizer#0,bass_enhancer#0,stereo_tools#0,reverb#0
-usedPresets=Perfect EQ:6,Dolby Atmos:15,Advanced Auto Gain:3,Bass Boosted:2,Bass Enhancing + Perfect EQ:4,Bass Enhancing + Perfect EQ - Low Latency:3,Boosted:5,Loudness+Autogain:1,Laptop:7,Speaker Sync:2
+usedPresets=Perfect EQ:6,Dolby Atmos:18,Advanced Auto Gain:3,Bass Boosted:2,Bass Enhancing + Perfect EQ:4,Bass Enhancing + Perfect EQ - Low Latency:3,Boosted:5,Loudness+Autogain:1,Laptop:8,Speaker Sync:2
 visiblePage=pluginsPage
 visiblePlugin=equalizer#0
 
 [Window]
 autostartOnLogin=true
+visiblePage=inputPage

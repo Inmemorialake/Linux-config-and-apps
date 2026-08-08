@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Alien Swarm: Reactive Drop
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/563560
+Icon=steam_icon_563560
+Terminal=false
+Type=Application
+Categories=Game;

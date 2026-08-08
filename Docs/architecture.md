@@ -239,7 +239,7 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
 
 ### Automation
 
-**Systemd Timers/Services**
+#### Systemd Timers/Services
 
 - `snapper-cleanup.timer`: Automatic snapshot cleanup — **active**
 - `grub-btrfsd.service`: GRUB menu updates with snapshots — **active**
@@ -459,7 +459,7 @@ The system is designed to be fully reproducible:
 
 - [x] Create comprehensive README.md
 - [x] Complete `05_Terminal.md` (shell configuration)
-- [ ] Complete `04_rice.md` (visual customization)
+- [x] Complete `04_rice.md` (visual customization)
 
 ---
 

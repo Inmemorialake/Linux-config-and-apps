@@ -1,0 +1,6 @@
+{
+    "device": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+    "device-description": "Audio Interno Estéreo analógico",
+    "device-profile": "Micrófono",
+    "preset-name": "EasyEffects Microphone Preset: Masc NPR Voice + Noise Reduction"
+}

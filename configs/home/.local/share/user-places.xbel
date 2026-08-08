@@ -277,14 +277,23 @@
    </metadata>
   </info>
  </separator>
- <bookmark href="kdeconnect://c1f26ac3_be40_4671_bf06_2ee59af6fd56/">
-  <title>Infinix NOTE 30</title>
+ <separator>
+  <info>
+   <metadata owner="http://www.kde.org">
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p1</UDI>
+    <isSystemItem>true</isSystemItem>
+    <uuid>f956ad93-2102-4a88-9c3e-64e5cb6e083b</uuid>
+   </metadata>
+  </info>
+ </separator>
+ <bookmark href="">
+  <title>Carpeta del proyecto</title>
   <info>
    <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="kdeconnect"/>
+    <bookmark:icon name="folder-favorites"/>
    </metadata>
    <metadata owner="http://www.kde.org">
-    <ID>1785386768/0</ID>
+    <OnlyInApp>kdenlive</OnlyInApp>
    </metadata>
   </info>
  </bookmark>
