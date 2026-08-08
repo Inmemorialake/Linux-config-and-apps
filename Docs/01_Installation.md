@@ -532,6 +532,7 @@ In a personal note, this installation process took me several attempts to perfec
 
 ## Notes
 
-- btrfs subvolumes and snapshots setup will be covered in a separate document.
+- btrfs subvolumes and snapshots setup is covered in a separate document, see [`02_Btrfs_and_snapshots.md`](02_Btrfs_and_snapshots.md).
 - If you encounter any issues during the installation or configuration process, refer to the [Arch Wiki](https://wiki.archlinux.org/) for troubleshooting and additional information.
 - If you want to improve your battery life, consider installing `power-profiles-daemon` and configuring it according to your needs, also the KDE Powerdevil settings can help you manage power consumption effectively.
+- KDE Plasma theming and visual customization ("rice") is covered in a separate document, see [`04_rice.md`](04_rice.md).

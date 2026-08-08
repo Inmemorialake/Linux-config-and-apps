@@ -363,6 +363,13 @@ All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live 
 
 **Mechanism**: The repo lives inside `$HOME` (`~/Linux-config-and-apps/`). A handful of top-level symlinks point from `$HOME` into `configs/home/` inside the repo, so the tracked files *are* the live configuration directly — there is no separate `dotfiles/` folder and no sync/copy step.
 
+> **Exception**: SDDM and GRUB themes are the one part of the setup that
+> doesn't ride this mechanism — they install under `/usr/share/...`,
+> outside `$HOME`, so they're vendored in the repo (`configs/sddm/`,
+> `configs/grub/`) but need a manual copy step. See
+> [`04_rice.md#sddm-theme`](04_rice.md#sddm-theme) and
+> [`04_rice.md#grub-theme`](04_rice.md#grub-theme) for the exact commands.
+
 ```bash
 ~/.config      -> Linux-config-and-apps/configs/home/.config
 ~/.local       -> Linux-config-and-apps/configs/home/.local
@@ -382,7 +389,8 @@ The system is designed to be fully reproducible:
 2. Configure Btrfs snapshots per `02_Btrfs_and_snapshots.md`
 3. Install packages from package lists
 4. Clone this repo into `$HOME` and recreate the top-level symlinks (`.config`, `.local`, `.gitconfig`, `.fonts.conf`) described in [Dotfiles](#dotfiles) — this also brings the maintenance scripts under `~/.local/bin/` live, with no separate install step
-5. Configure firewall with `03_firewall.md`
+5. Vendor the SDDM and GRUB themes manually (the one step that isn't "clone and go" — see [`04_rice.md#troubleshooting`](04_rice.md#troubleshooting))
+6. Configure firewall with `03_firewall.md`
 
 **Estimated time to reproduce**: 2-3 hours (excluding personalization)
 

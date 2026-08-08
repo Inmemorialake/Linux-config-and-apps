@@ -25,7 +25,7 @@ This document covers my terminal setup: Fish shell, Starship prompt, Konsole, bt
 
 - **Fish over bash/zsh**: sane defaults out of the box (syntax highlighting, autosuggestions) without needing a plugin manager just to get there.
 - **Modern replacements over coreutils, applied narrowly**: only `ls` and `cat` are aliased over — the tools that get typed dozens of times a day. Not a wholesale coreutils replacement.
-- **A Nerd Font is a hard requirement**: Starship's icons, `eza`'s file-type glyphs, and the Konsole profile font all depend on **JetBrains Mono Nerd Font** being installed. Without it, prompts and listings render with broken/missing glyphs instead of icons.
+- **A Nerd Font is a hard requirement**: Starship's icons, `eza`'s file-type glyphs, and the Konsole profile font all depend on **JetBrains Mono Nerd Font** being installed. Without it, prompts and listings render with broken/missing glyphs instead of icons (see [`04_rice.md#font`](04_rice.md#font) for the install command).
 - **Not everything follows the Tokyo Night palette from [`04_rice.md`](04_rice.md)**: `bat` uses Catppuccin Frappe (see [Notes](#notes)) — kept as a deliberate exception, not an oversight.
 
 ---
