@@ -23,6 +23,7 @@ readonly RESET="\033[0m"
 # Variables globales
 # ─────────────────────────────────────────────────────────────
 readonly SCRIPT_NAME="$(basename "$0")"
+readonly REAL_HOME="$(getent passwd "${SUDO_USER:-$USER}" | cut -d: -f6)"
 
 # ─────────────────────────────────────────────────────────────
 # Funciones de logging
@@ -58,22 +59,22 @@ main() {
   header "Limpieza de disco" "🧹"
   
   # 1. Caché de usuario
-  info "📂 Limpiando caché de usuario (~/.cache)"
-  du -sh ~/.cache 2>/dev/null || true
-  rm -rf ~/.cache/*
+  info "📂 Limpiando caché de usuario ($REAL_HOME/.cache)"
+  du -sh "$REAL_HOME/.cache" 2>/dev/null || true
+  rm -rf "${REAL_HOME:?}/.cache"/*
   success "Caché de usuario limpiado"
   echo
-  
+
   # 2. Papelera
   info "🗑  Vaciando papelera"
-  rm -rf ~/.local/share/Trash/files/*
-  rm -rf ~/.local/share/Trash/info/*
+  rm -rf "${REAL_HOME:?}/.local/share/Trash/files"/*
+  rm -rf "${REAL_HOME:?}/.local/share/Trash/info"/*
   success "Papelera vaciada"
   echo
-  
+
   # 3. Caché de pacman
   info "📦 Limpiando caché de pacman"
-  paccache -r
+  paccache -r -k2
   success "Caché de pacman limpiado"
   
   echo

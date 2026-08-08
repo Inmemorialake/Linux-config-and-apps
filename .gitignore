@@ -161,6 +161,12 @@ known_hosts
 !.env.example
 
 # Contiene email personal, no debe trackearse
-configs/home/.gitconfigconfigs/home/.config/Raspberry Pi/
+configs/home/.gitconfig
+
 microsoft-edge*/
 configs/home/.local/share/knewstuff3/
+
+# Metadata de máquina (vault de Obsidian / vista de Dolphin), no debe trackearse
+/.obsidian/workspace.json
+/.obsidian/workspace-mobile.json
+/.directory

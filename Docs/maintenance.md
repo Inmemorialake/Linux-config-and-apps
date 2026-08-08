@@ -77,7 +77,7 @@ Used for global, non-interactive maintenance.
 
 * `paccache` is used with a defined retention policy (e.g., keep the last 2–3 versions).
 * Prevents uncontrolled cache growth.
-* **Known inconsistency**: `pkg-clean-cache` runs `paccache -r -k2` (keeps 2 versions), but `disk-cleanup` (see [Disk health and space](#disk-health-and-space)) calls bare `paccache -r` with no `-k` flag, which falls back to paccache's own default (3 versions). Both scripts touch the same cache with different retention counts — not yet unified.
+* **Fixed**: `pkg-clean-cache` and `disk-cleanup` (see [Disk health and space](#disk-health-and-space)) both now run `paccache -r -k2` (keeps 2 versions). Previously `disk-cleanup` called bare `paccache -r` with no `-k` flag, falling back to paccache's own default (3 versions), so the two scripts touched the same cache with different retention counts — now unified.
 
 ### Orphaned packages
 
@@ -103,7 +103,7 @@ Keyrings are critical to avoid signature errors during upgrades.
 * Refresh is performed in a controlled manner.
 * Integrated into full system updates.
 
-**Known duplication**: `sys-full-update` runs its own inline keyring refresh (`pacman -Sy`, `pacman -S archlinux-keyring`, `pacman-key --init/--populate`) instead of calling the standalone `keyring-update` script below — they implement the same steps independently, so a change to one (e.g. `keyring-update`'s `--dry-run`/`--yes` flags) doesn't propagate to the other. Similarly, `mirrors-update` and `sys-full-update`'s inline `reflector` call use slightly different country lists (`mirrors-update` includes `Worldwide` as a fallback, `sys-full-update` doesn't).
+**Known duplication**: `sys-full-update` runs its own inline keyring refresh (`pacman -Sy`, `pacman -S archlinux-keyring`, `pacman-key --init/--populate`) instead of calling the standalone `keyring-update` script below — they implement the same steps independently, so a change to one (e.g. `keyring-update`'s `--dry-run`/`--yes` flags) doesn't propagate to the other. **Fixed**: `mirrors-update` and `sys-full-update`'s inline `reflector` call previously used slightly different country lists (`mirrors-update` included `Worldwide` as a fallback, `sys-full-update` didn't) — both now use the same list.
 
 ### Associated scripts for keyring
 
