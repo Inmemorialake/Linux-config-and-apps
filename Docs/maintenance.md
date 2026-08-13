@@ -218,6 +218,7 @@ Linux-config-and-apps/
 * `~/.local` is a single top-level symlink pointing into `configs/home/.local/` (see `Docs/architecture.md#dotfiles`), so anything placed under `configs/home/.local/bin/` is live under `~/.local/bin/` automatically — no per-script symlink or install step needed.
 * `~/.local/bin` is included in the user `PATH`.
 * No critical script lives outside the repository.
+* New scripts start from `configs/home/.local/bin/script-template.sh`, which all current scripts derive from — it provides the standard logging functions, header, and the commented sudo self-elevation / `REAL_HOME` patterns.
 
 ---
 

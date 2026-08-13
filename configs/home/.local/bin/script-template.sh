@@ -36,6 +36,12 @@ AUTO_YES=false
 # Si el script se ejecuta con sudo, preservar el usuario real:
 # readonly REAL_USER="${SUDO_USER:-}"
 
+# Si el script se auto-eleva con sudo Y además referencia $HOME/~ después de
+# elevarse, usar esto en vez de $HOME: el env_reset de sudo hace que $HOME
+# resuelva a /root, no al home del usuario real (esta es la clase de bug
+# que tenía disk-cleanup):
+# readonly REAL_HOME="$(getent passwd "${SUDO_USER:-$USER}" | cut -d: -f6)"
+
 # ─────────────────────────────────────────────────────────────
 # Funciones de logging
 # ─────────────────────────────────────────────────────────────

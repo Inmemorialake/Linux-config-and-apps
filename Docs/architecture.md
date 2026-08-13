@@ -197,7 +197,7 @@ Dolphin, Konsole, Kate, Spectacle, KDE Connect, Gwenview, Okular, Elisa — see 
 
 ### Maintenance Scripts
 
-All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live under `~/.local/bin/` automatically via the top-level `~/.local` symlink (see [Dotfiles](#dotfiles)) — no per-script symlink needed
+All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live under `~/.local/bin/` automatically via the top-level `~/.local` symlink (see [Dotfiles](#dotfiles)) — no per-script symlink needed. All of them derive from `script-template.sh`, the shared template providing standard logging functions, header, and sudo self-elevation conventions.
 
 #### System (`sys/`)
 

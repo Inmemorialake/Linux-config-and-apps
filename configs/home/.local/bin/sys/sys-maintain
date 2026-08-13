@@ -45,59 +45,118 @@ header() {
 }
 
 # ─────────────────────────────────────────────────────────────
+# Seguimiento de fases
+# ─────────────────────────────────────────────────────────────
+PHASE_NAMES=()
+PHASE_STATUS=()
+
+record_phase() {
+  local name="$1"
+  local rc="$2"
+  if [[ "$rc" -eq 0 ]]; then
+    PHASE_NAMES+=("$name")
+    PHASE_STATUS+=("OK")
+  else
+    PHASE_NAMES+=("$name")
+    PHASE_STATUS+=("FALLÓ")
+    error "Fase '$name' falló (código $rc)"
+  fi
+}
+
+run_phase() {
+  local name="$1"
+  shift
+  local rc=0
+  "$@" || rc=$?
+  record_phase "$name" "$rc"
+}
+
+# ─────────────────────────────────────────────────────────────
 # Función principal
 # ─────────────────────────────────────────────────────────────
 main() {
   header "Mantenimiento del sistema" "🛠"
-  
+
   info "Iniciado: $(date)"
   echo
   echo
-  
+
   # ---- SYSTEMD ----
   info "🔧 Verificando servicios systemd"
-  system-health || true
+  run_phase "system-health" system-health
   echo
   echo
-  timer-audit || true
+  run_phase "timer-audit" timer-audit
   echo
   echo
-  
+
   # ---- LOGS ----
   info "📜 Estado de logs"
-  log-usage
+  run_phase "log-usage" log-usage
   echo
   echo
-  
+
   # ---- DISCO ----
   info "💽 Espacio en disco"
-  disk-space-monitor
+  run_phase "disk-space-monitor" disk-space-monitor
   echo
   echo
-  
+
   # ---- PAQUETES ----
   info "📦 Paquetes huérfanos"
-  pkg-check-orphans || true
-  echo
-  echo
-  
-  # ---- BTRFS ----
-  if findmnt -n -t btrfs / &>/dev/null; then
-    info "📊 Uso de Btrfs"
-    btrfs-disk-usage
+  local pkg_orphans_rc=0
+  pkg-check-orphans || pkg_orphans_rc=$?
+  if [[ "$pkg_orphans_rc" -eq 0 ]]; then
+    PHASE_NAMES+=("pkg-check-orphans")
+    PHASE_STATUS+=("OK")
+  elif [[ "$pkg_orphans_rc" -eq 1 ]]; then
+    # exit 1 es la señal intencional de pkg-check-orphans para "hay huérfanos",
+    # no un fallo del propio chequeo — no debe contar como fase fallida.
+    info "📦 Paquetes huérfanos encontrados — revisar"
+    PHASE_NAMES+=("pkg-check-orphans")
+    PHASE_STATUS+=("OK")
+  else
+    record_phase "pkg-check-orphans" "$pkg_orphans_rc"
   fi
   echo
   echo
-  
+
+  # ---- BTRFS ----
+  if findmnt -n -t btrfs / &>/dev/null; then
+    info "📊 Uso de Btrfs"
+    run_phase "btrfs-disk-usage" btrfs-disk-usage
+  fi
+  echo
+  echo
+
   # ---- LIMPIEZA (segura) ----
   info "🧹 Fase de limpieza"
-  pkg-clean-cache
-  disk-cleanup || true
+  run_phase "pkg-clean-cache" pkg-clean-cache
+  run_phase "disk-cleanup" disk-cleanup
   echo
   echo
-  
-  success "$SCRIPT_NAME finalizado correctamente"
+
+  # ---- RESUMEN ----
+  header "Resumen de fases" "📋"
+  local i failed=0
+  for i in "${!PHASE_NAMES[@]}"; do
+    if [[ "${PHASE_STATUS[$i]}" == "OK" ]]; then
+      success "${PHASE_NAMES[$i]}"
+    else
+      error "${PHASE_NAMES[$i]}"
+      failed=1
+    fi
+  done
+  echo
+
   info "Finalizado: $(date)"
+
+  if [[ $failed -eq 0 ]]; then
+    success "$SCRIPT_NAME finalizado correctamente"
+  else
+    warn "$SCRIPT_NAME finalizado con errores en una o más fases"
+    exit 1
+  fi
 }
 
 main
