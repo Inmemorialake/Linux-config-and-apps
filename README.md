@@ -7,7 +7,7 @@ This repository **lives inside `$HOME`** — it's not an external copy. A handfu
 ### Philosophy
 
 - **One source of truth per concern**: the color palette is read straight from the live `.colors` file, not restated by hand ([`04_rice.md#color-palette`](Docs/04_rice.md#color-palette)); the maintenance scripts live under `.local/bin/` and nowhere else ([`maintenance.md`](Docs/maintenance.md)).
-- **Precision over completeness**: every section in the docs is read directly from the live config files on this system — where something turns out to be stock/default rather than customized, that's stated explicitly instead of glossed over ([`04_rice.md#overview`](Docs/04_rice.md#overview)).
+- **Precision over completeness**: `04_rice.md`, `05_Terminal.md`, and `06_Gaming.md` are read directly from the live config files on this system — where something turns out to be stock/default rather than customized, that's stated explicitly instead of glossed over ([`04_rice.md#overview`](Docs/04_rice.md#overview)); the earlier setup guides (`01_Installation.md`, `02_Btrfs_and_snapshots.md`, `03_firewall.md`) are more general walkthroughs adapted to this machine, not verified against it line-by-line.
 - **Light-touch config, not a wholesale replacement**: the terminal setup is a 10-line Fish config and mostly-stock tool defaults, not a from-scratch rebuild of coreutils ([`05_Terminal.md#conclusion`](Docs/05_Terminal.md#conclusion)).
 - **Reproducible via symlinks, not a copy step**: clone the repo into `$HOME`, recreate the four top-level symlinks, and the live configuration is back — no sync script involved ([`architecture.md#reproducibility`](Docs/architecture.md#reproducibility)).
 
@@ -31,7 +31,7 @@ This repository **lives inside `$HOME`** — it's not an external copy. A handfu
 *The SDDM login screen (Sugar Dark theme), captured via `sddm-greeter --test-mode`. See [`04_rice.md#sddm-theme`](Docs/04_rice.md#sddm-theme).*
 
 ![pipes.sh running](Docs/assets/readme/pipes-vibes.png)
-*`pipes.sh` running idle — just for the vibe, not part of the documented CLI tool stack.*
+*`pipes.sh` running idle alongside a `cava` audio visualizer — just for the vibe, not part of the documented CLI tool stack.*
 
 ---
 
@@ -80,7 +80,7 @@ Linux-config-and-apps/
 │   ├── home/                       # = $HOME (symlinked: .config, .local, .gitconfig, .fonts.conf)
 │   │   ├── .config/                 # KDE, Fish, Konsole, btop, fastfetch, and the rest of the live app configs
 │   │   ├── .local/
-│   │   │   ├── bin/                 # sys/ pkg/ keyring/ log/ systemd/ btrfs/ disk/ — maintenance scripts (Docs/maintenance.md)
+│   │   │   ├── bin/                 # sys/ pkg/ keyring/ log/ systemd/ btrfs/ disk/ — maintenance scripts derived from script-template.sh (Docs/maintenance.md)
 │   │   │   └── share/               # aurorae, color-schemes, icons, konsole, ...
 │   │   ├── .gitconfig
 │   │   └── .fonts.conf
@@ -115,7 +115,7 @@ Of `.obsidian/`, only the vault's own config/theme files and `plugins/obsidian-g
 1. Install Arch Linux per [`01_Installation.md`](Docs/01_Installation.md).
 2. Set up Btrfs subvolumes and snapshots per [`02_Btrfs_and_snapshots.md`](Docs/02_Btrfs_and_snapshots.md).
 3. Install packages, then clone this repo into `$HOME` and recreate the four top-level symlinks (`.config`, `.local`, `.gitconfig`, `.fonts.conf`) — this also brings the maintenance scripts under `~/.local/bin/` live, with no separate install step.
-4. Vendor the SDDM and GRUB themes manually — the one step that isn't "clone and go", since both install under `/usr/share/...`, outside `$HOME` and the symlink mechanism.
+4. Vendor the SDDM and GRUB themes manually — the one step that isn't "clone and go", since both install under `/usr/share/...`, outside `$HOME` and the symlink mechanism (see [`04_rice.md#troubleshooting`](Docs/04_rice.md#troubleshooting)).
 5. Configure the firewall per [`03_firewall.md`](Docs/03_firewall.md).
 
 Full step-by-step, including the exact vendoring commands for step 4, is in [`architecture.md#reproducibility`](Docs/architecture.md#reproducibility). Estimated time: 2-3 hours, excluding personalization.
