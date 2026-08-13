@@ -170,3 +170,7 @@ configs/home/.local/share/knewstuff3/
 /.obsidian/workspace.json
 /.obsidian/workspace-mobile.json
 /.directory
+
+# Código del plugin obsidian-git (main.js/styles.css/manifest.json), solo se trackea data.json
+/.obsidian/plugins/obsidian-git/*
+!/.obsidian/plugins/obsidian-git/data.json

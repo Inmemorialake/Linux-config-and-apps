@@ -1,4 +1,4 @@
 .less-history-file:
-.mark
 .search
 "^(commit|added:|removed:|renamed:|Δ|•)
+.mark
