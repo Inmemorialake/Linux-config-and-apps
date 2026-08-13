@@ -62,8 +62,9 @@ Includes:
 
 Used for global, non-interactive maintenance.
 
-* Runs safe system checks.
-* Does not perform destructive actions without confirmation.
+* Runs safe system checks, plus the cleanup phase (`pkg-clean-cache`, `disk-cleanup`) — both run without a confirmation prompt when called this way, same as noted under [Disk health and space](#disk-health-and-space).
+* Each sub-script runs through a `run_phase()` wrapper that records pass/fail per phase without aborting the rest of the run on a single failure. `pkg-check-orphans` exiting 1 is special-cased as "orphans found", not a phase failure.
+* Ends with a phase-by-phase summary and exits non-zero overall if any real phase failed.
 
 **Script:**
 
@@ -103,7 +104,9 @@ Keyrings are critical to avoid signature errors during upgrades.
 * Refresh is performed in a controlled manner.
 * Integrated into full system updates.
 
-**Known duplication**: `sys-full-update` runs its own inline keyring refresh (`pacman -Sy`, `pacman -S archlinux-keyring`, `pacman-key --init/--populate`) instead of calling the standalone `keyring-update` script below — they implement the same steps independently, so a change to one (e.g. `keyring-update`'s `--dry-run`/`--yes` flags) doesn't propagate to the other. **Fixed**: `mirrors-update` and `sys-full-update`'s inline `reflector` call previously used slightly different country lists (`mirrors-update` included `Worldwide` as a fallback, `sys-full-update` didn't) — both now use the same list.
+**Known duplication**: `sys-full-update` runs its own inline keyring refresh (`pacman -Sy`, `pacman -S archlinux-keyring`, `pacman-key --init/--populate`) instead of calling the standalone `keyring-update` script below — they implement the same steps independently, so a change to one (e.g. `keyring-update`'s `--dry-run`/`--yes` flags) doesn't propagate to the other.
+
+**Fixed**: `mirrors-update` and `sys-full-update`'s inline `reflector` call previously used slightly different country lists (`mirrors-update` included `Worldwide` as a fallback, `sys-full-update` didn't) — both now use the same list.
 
 ### Associated scripts for keyring
 

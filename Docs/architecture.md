@@ -197,45 +197,9 @@ Dolphin, Konsole, Kate, Spectacle, KDE Connect, Gwenview, Okular, Elisa — see 
 
 ### Maintenance Scripts
 
-All scripts located in `~/Linux-config-and-apps/configs/home/.local/bin/`, live under `~/.local/bin/` automatically via the top-level `~/.local` symlink (see [Dotfiles](#dotfiles)) — no per-script symlink needed. All of them derive from `script-template.sh`, the shared template providing standard logging functions, header, and sudo self-elevation conventions.
+All scripts live under `~/Linux-config-and-apps/configs/home/.local/bin/`, live under `~/.local/bin/` automatically via the top-level `~/.local` symlink (see [Dotfiles](#dotfiles)) — no per-script symlink needed. All of them derive from `script-template.sh`, the shared template providing standard logging functions, header, and sudo self-elevation conventions.
 
-#### System (`sys/`)
-
-- `sys-update`: Standard system update (pacman -Syu)
-- `sys-full-update`: Full update (keyrings, mirrors, AUR)
-- `sys-maintain`: Periodic maintenance orchestrator
-
-#### Packages (`pkg/`)
-
-- `pkg-clean-cache`: Clean pacman cache (paccache)
-- `pkg-check-orphans`: Detect orphaned packages
-- `pkg-clean-orphans`: Remove orphaned packages
-- `mirrors-update`: Update mirror list with reflector
-
-#### Keyrings (`keyring/`)
-
-- `keyring-update`: Refresh archlinux-keyring
-
-#### Logs (`log/`)
-
-- `log-usage`: Check journald disk usage
-- `log-vacuum`: Clean old journal entries
-
-#### Systemd (`systemd/`)
-
-- `system-health`: Audit failed services
-- `timer-audit`: Review active timers
-
-#### Btrfs (`btrfs/`)
-
-- `btrfs-maintain`: Routine Btrfs maintenance (balance, defrag)
-- `btrfs-disk-usage`: Detailed space usage report
-
-#### Disk (`disk/`)
-
-- `disk-health-check`: SMART status and disk health
-- `disk-space-monitor`: Monitor disk usage thresholds
-- `disk-cleanup`: Safe cleanup (cache, trash)
+Full script-by-script breakdown, organized by category (`sys/`, `pkg/`, `keyring/`, `log/`, `systemd/`, `btrfs/`, `disk/`), is in [`maintenance.md`](maintenance.md).
 
 ### Automation
 
@@ -393,6 +357,10 @@ The system is designed to be fully reproducible:
 6. Configure firewall with `03_firewall.md`
 
 **Estimated time to reproduce**: 2-3 hours (excluding personalization)
+
+### Versioning
+
+The repository — including `.obsidian/` — is version-controlled with plain Git. Commits are made manually as configuration changes; there's no automated commit or push mechanism running against this tree.
 
 ---
 

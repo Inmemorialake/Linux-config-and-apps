@@ -88,6 +88,7 @@ Linux-config-and-apps/
 │   │   └── Particle-circle-window/  # vendored GRUB theme (Docs/04_rice.md#grub-theme)
 │   └── sddm/
 │       └── sugar-dark/              # vendored SDDM theme (Docs/04_rice.md#sddm-theme)
+├── .obsidian/                       # Obsidian vault config for this repo (theme, plugin settings)
 ├── Docs/
 │   ├── architecture.md
 │   ├── 01_Installation.md
@@ -104,6 +105,8 @@ Linux-config-and-apps/
 │       └── readme/
 └── README.md
 ```
+
+Of `.obsidian/`, only the vault's own config/theme files and `plugins/obsidian-git/data.json` are tracked — the rest of that plugin's code is intentionally untracked.
 
 ---
 
