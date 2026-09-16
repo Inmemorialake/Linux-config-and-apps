@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Terraform Vars)
+scope: source.terraform-vars
+hidden: true
+hidden_file_extensions:
+  - tfvars
+contexts:
+  main: []

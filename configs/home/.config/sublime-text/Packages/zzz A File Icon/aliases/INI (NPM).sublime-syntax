@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: INI (NPM)
+scope: source.ini.npm
+hidden: true
+hidden_file_extensions:
+  - .npmrc
+  - npmrc
+contexts:
+  main:
+    - include: scope:source.ini
+      apply_prototype: true

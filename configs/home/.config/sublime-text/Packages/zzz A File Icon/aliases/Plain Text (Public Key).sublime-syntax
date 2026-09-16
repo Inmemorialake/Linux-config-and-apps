@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Public Key)
+scope: source.pubkey
+hidden: true
+hidden_file_extensions:
+  - pub
+contexts:
+  main: []

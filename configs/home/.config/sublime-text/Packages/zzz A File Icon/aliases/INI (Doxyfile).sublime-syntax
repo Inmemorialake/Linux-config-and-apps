@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+name: INI (Doxyfile)
+scope: source.ini.doxyfile
+hidden: true
+hidden_file_extensions:
+  - Doxyfile
+  - DoxyfileTemplate
+  - Doxyfile.version
+  - Doxyfile.aliases
+  - Doxyfile.rfc
+  - Doxyfile.base
+  - Doxyfile.inc
+  - Doxyfile.include
+contexts:
+  main: []

@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+name: Plain Text (License)
+scope: text.plain.license
+hidden: true
+hidden_file_extensions:
+  - copying
+  - copyright
+  - license
+  - license.apache
+  - license.bsd
+  - license.mit
+  - license.gpl
+  - license.gpl2
+  - license.gpl3
+contexts:
+  main: []

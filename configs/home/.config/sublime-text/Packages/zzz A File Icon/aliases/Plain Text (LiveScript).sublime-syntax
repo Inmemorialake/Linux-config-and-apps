@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (LiveScript)
+scope: source.livescript
+hidden: true
+hidden_file_extensions:
+  - ls
+contexts:
+  main: []

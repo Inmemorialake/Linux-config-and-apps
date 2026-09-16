@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Mojo)
+scope: source.mojo
+hidden: true
+hidden_file_extensions:
+  - mojo
+contexts:
+  main: []

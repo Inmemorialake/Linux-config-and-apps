@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (HXML)
+scope: source.hxml
+hidden: true
+hidden_file_extensions:
+  - hxml
+contexts:
+  main: []

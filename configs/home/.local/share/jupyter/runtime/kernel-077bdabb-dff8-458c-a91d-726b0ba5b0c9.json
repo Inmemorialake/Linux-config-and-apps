@@ -1,0 +1,13 @@
+{
+  "shell_port": 40547,
+  "iopub_port": 52297,
+  "stdin_port": 60575,
+  "control_port": 33843,
+  "hb_port": 54787,
+  "ip": "127.0.0.1",
+  "key": "e84228c5-efb1e5d9cc251e927cf1f078",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "xcpp17",
+  "jupyter_session": "/home/Inmemorialake/Documents/Untitled.ipynb"
+}

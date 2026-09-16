@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (CNAME)
+scope: text.plain.cname
+hidden: true
+hidden_file_extensions:
+  - CNAME
+contexts:
+  main: []

@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (JQ)
+scope: text.jq
+hidden: true
+hidden_file_extensions:
+  - jq
+contexts:
+  main: []

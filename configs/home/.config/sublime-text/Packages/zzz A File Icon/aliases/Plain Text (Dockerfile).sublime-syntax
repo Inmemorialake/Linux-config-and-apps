@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Plain Text (Dockerfile)
+scope: source.containerfile
+hidden: true
+hidden_file_extensions:
+  - Dockerfile
+  - dockerfile
+  - .Dockerfile
+contexts:
+  main: []

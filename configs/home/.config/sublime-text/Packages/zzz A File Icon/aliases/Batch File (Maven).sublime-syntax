@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Batch File (Maven)
+scope: source.dosbatch.maven
+hidden: true
+hidden_file_extensions:
+  - mvnw.cmd
+contexts:
+  main:
+    - include: scope:source.dosbatch
+      apply_prototype: true

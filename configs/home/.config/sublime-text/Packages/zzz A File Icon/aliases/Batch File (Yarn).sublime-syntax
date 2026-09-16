@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Batch File (Yarn)
+scope: source.dosbatch.yarn
+hidden: true
+hidden_file_extensions:
+  - yarnw.cmd
+contexts:
+  main:
+    - include: scope:source.dosbatch
+      apply_prototype: true

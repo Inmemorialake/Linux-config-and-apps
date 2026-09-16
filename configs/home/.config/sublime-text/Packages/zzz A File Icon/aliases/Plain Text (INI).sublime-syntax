@@ -1,0 +1,29 @@
+%YAML 1.2
+---
+name: Plain Text (INI)
+scope: source.ini
+hidden: true
+hidden_file_extensions:
+  - .buckconfig
+  - .coveragerc
+  - .flake8
+  - .flowconfig
+  - .hgrc
+  - .pycodestyle
+  - .pylintrc
+  - .style.yapf
+  - avpreset
+  - cfg
+  - conf
+  - desktop
+  - ffpreset
+  - inf
+  - ini
+  - lektorproject
+  - lng
+  - pycodestyle
+  - pylintrc
+  - url
+  - vlcrc
+contexts:
+  main: []

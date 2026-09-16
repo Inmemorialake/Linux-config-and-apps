@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Plain Text (Tailwind CSS)
+scope: source.css.tailwind
+hidden: true
+hidden_file_extensions:
+  - tailwind.css
+  - tailwind.pcss
+  - tailwind.postcss
+contexts:
+  main: []

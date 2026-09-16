@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (Pkl)
+scope: source.pkl
+hidden: true
+hidden_file_extensions:
+  - pkl
+  - pcf
+contexts:
+  main: []

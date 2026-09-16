@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (Authorized Keys)
+scope: source.authorized_keys
+hidden: true
+hidden_file_extensions:
+  - authorized_keys
+  - authorized_keys2
+contexts:
+  main: []

@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (HCL)
+scope: source.hcl
+hidden: true
+hidden_file_extensions:
+  - hcl
+contexts:
+  main: []

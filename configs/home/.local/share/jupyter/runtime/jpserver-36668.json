@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 36668,
+  "port": 8888,
+  "root_dir": "/home/Inmemorialake",
+  "secure": false,
+  "sock": "",
+  "token": "bd46fa9334468964ff402f7a226737949ac815a5d5eceba8",
+  "url": "http://localhost:8888/",
+  "version": "2.21.0"
+}

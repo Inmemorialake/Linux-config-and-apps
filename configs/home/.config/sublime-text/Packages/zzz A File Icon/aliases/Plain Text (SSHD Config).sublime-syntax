@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (SSHD Config)
+scope: source.sshd_config
+hidden: true
+hidden_file_extensions:
+  - sshd_config
+contexts:
+  main: []

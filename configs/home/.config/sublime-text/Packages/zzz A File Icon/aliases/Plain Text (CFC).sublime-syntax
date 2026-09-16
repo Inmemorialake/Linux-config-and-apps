@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (CFC)
+scope: embedding.cfml
+hidden: true
+hidden_file_extensions:
+  - cfc
+contexts:
+  main: []

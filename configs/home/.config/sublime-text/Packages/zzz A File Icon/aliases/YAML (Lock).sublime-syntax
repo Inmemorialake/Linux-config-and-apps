@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: YAML (Lock)
+scope: source.yaml.lock
+hidden: true
+hidden_file_extensions:
+  - pubspec.lock
+  - yarn.lock
+contexts:
+  main:
+    - include: scope:source.yaml
+      apply_prototype: true

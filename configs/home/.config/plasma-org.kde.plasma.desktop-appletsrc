@@ -23,7 +23,7 @@ DialogWidth=1920
 [Containments][101][General]
 changedPositions={"desktop:/demo":["1920x1080","0","16"],"desktop:/heroic.desktop":["1920x1080","0","1"],"desktop:/poblar-tareas.sh":["1920x1080","1","16"],"desktop:/steam.desktop":["1920x1080","0","0"]}
 lastResolution=1920x1080
-positions={"1920x1080":["1","17","desktop:/heroic.desktop","0","1","desktop:/poblar-tareas.sh","1","16","desktop:/demo","0","16","desktop:/steam.desktop","0","0"]}
+positions={"1920x1080":["1","17","desktop:/poblar-tareas.sh","1","16","desktop:/steam.desktop","0","0","desktop:/demo","0","16","desktop:/heroic.desktop","0","1"]}
 sortMode=-1
 
 [Containments][101][Wallpaper][org.kde.image][General]
@@ -43,8 +43,12 @@ wallpaperplugin=org.kde.image
 immutability=1
 plugin=org.kde.plasma.icontasks
 
+[Containments][102][Applets][105][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][102][Applets][105][Configuration][General]
-launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser,applications:code.desktop,applications:tidal-hifi.desktop,applications:whatsdesk.desktop,applications:discord.desktop,applications:obsidian.desktop
+launchers=applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser,applications:code.desktop,applications:sublime_text.desktop,applications:tidal-hifi.desktop,applications:discord.desktop,applications:whatsdesk.desktop,applications:obsidian.desktop
 
 [Containments][102][General]
 AppletOrder=105
@@ -324,11 +328,11 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][182][ConfigDialog]
-DialogHeight=1021
-DialogWidth=1916
+DialogHeight=1048
+DialogWidth=1920
 
 [Containments][182][Wallpaper][org.kde.image][General]
-Image=/home/Inmemorialake/Downloads/tokyo-night23CATP.jpg
+Image=file:///home/Inmemorialake/GDrive/Fondos de Pantalla PC/sushi_colors_upscayl_realesrgan-x4plus_x3.jpg
 SlidePaths=/home/Inmemorialake/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][183]

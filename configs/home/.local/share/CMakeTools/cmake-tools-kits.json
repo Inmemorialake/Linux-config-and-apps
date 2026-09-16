@@ -22,5 +22,13 @@
       "CXX": "/usr/bin/g++"
     },
     "isTrusted": true
+  },
+  {
+    "name": "GCC 16.2.1 x86_64-pc-linux-gnu",
+    "compilers": {
+      "C": "/usr/bin/gcc",
+      "CXX": "/usr/bin/g++"
+    },
+    "isTrusted": true
   }
 ]

@@ -1,0 +1,24 @@
+{
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "theme": "Enki-Theme.sublime-theme",
+    "color_scheme": "Tokyo Night Storm.sublime-color-scheme",
+    "font_face": "JetBrains Mono",
+    "font_size": 10,
+    "font_options": ["subpixel_antialias", "gray_antialias"],
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "caret_style": "smooth",
+    "draw_indent_guides": true,
+    "indent_guide_options": ["draw_normal", "draw_active"],
+    "highlight_line": true,
+    "bold_folder_labels": true,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "adaptive_dividers": true,
+    "overlay_scroll_bars": "enabled",
+    "scroll_past_end": true,
+    "index_files": true,
+}

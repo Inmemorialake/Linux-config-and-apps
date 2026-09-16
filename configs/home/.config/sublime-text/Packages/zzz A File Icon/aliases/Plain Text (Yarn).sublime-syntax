@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (Yarn)
+scope: text.plain.yarn
+hidden: true
+hidden_file_extensions:
+  - .yarnclean
+  - .yarnrc
+contexts:
+  main: []

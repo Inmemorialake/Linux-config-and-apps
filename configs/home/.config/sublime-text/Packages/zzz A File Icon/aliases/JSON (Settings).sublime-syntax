@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+name: JSON (Settings)
+scope: source.json.settings
+hidden: true
+hidden_file_extensions:
+  - .csslintrc
+  - .htmlhintrc
+  - .jsbeautifyrc
+  - .jscsrc
+  - .jshintrc
+  - .markdownlintrc
+  - .prettierrc
+  - .releaserc
+contexts:
+  main:
+    - include: scope:source.json
+      apply_prototype: true

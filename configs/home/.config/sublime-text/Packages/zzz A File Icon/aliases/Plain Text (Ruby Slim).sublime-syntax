@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (Ruby Slim)
+scope: text.slim
+hidden: true
+hidden_file_extensions:
+  - slim
+  - skim
+contexts:
+  main: []

@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (PureBasic)
+scope: source.purebasic
+hidden: true
+hidden_file_extensions:
+  - pb
+  - pbi
+contexts:
+  main: []

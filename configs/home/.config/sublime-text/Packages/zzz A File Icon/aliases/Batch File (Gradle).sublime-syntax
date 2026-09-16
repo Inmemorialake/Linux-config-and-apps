@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Batch File (Gradle)
+scope: source.dosbatch.gradle
+hidden: true
+hidden_file_extensions:
+  - gradlew.bat
+contexts:
+  main:
+    - include: scope:source.dosbatch
+      apply_prototype: true

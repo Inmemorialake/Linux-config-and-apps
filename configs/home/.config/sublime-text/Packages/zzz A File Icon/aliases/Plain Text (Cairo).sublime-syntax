@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Cairo)
+scope: source.cairo
+hidden: true
+hidden_file_extensions:
+  - cairo
+contexts:
+  main: []

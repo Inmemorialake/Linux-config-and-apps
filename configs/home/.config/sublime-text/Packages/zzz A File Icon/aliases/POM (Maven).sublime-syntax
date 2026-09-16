@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: POM (Maven)
+scope: text.xml.maven
+hidden: true
+hidden_file_extensions:
+  - .flattened-pom.xml
+  - pom.xml
+contexts:
+  main:
+    - include: scope:text.xml
+      apply_prototype: true

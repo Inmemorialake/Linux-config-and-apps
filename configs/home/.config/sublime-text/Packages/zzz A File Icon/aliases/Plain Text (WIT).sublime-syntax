@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (WIT)
+scope: source.wit
+hidden: true
+hidden_file_extensions:
+  - wit
+contexts:
+  main: []

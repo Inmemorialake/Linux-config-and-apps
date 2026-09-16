@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (Known Hosts)
+scope: source.known_hosts
+hidden: true
+hidden_file_extensions:
+  - known_hosts
+  - known_hosts.old
+contexts:
+  main: []

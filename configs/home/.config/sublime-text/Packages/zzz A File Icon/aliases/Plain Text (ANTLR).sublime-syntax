@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (ANTLR)
+scope: source.antlr
+hidden: true
+hidden_file_extensions:
+  - g
+  - g4
+contexts:
+  main: []

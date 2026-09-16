@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Plain Text (SystemVerilog)
+scope: source.systemverilog
+hidden: true
+hidden_file_extensions:
+  - sv
+  - svh
+  - vh
+contexts:
+  main: []

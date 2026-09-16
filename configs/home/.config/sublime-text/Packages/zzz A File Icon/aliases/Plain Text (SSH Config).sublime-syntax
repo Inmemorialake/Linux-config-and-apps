@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (SSH Config)
+scope: source.ssh_config
+hidden: true
+hidden_file_extensions:
+  - ssh_config
+contexts:
+  main: []

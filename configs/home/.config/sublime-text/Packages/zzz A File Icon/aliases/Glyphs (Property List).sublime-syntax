@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Glyphs (Property List)
+scope: source.plist.glyphs
+hidden: true
+hidden_file_extensions:
+  - glyphs
+contexts:
+  main:
+    - include: scope:source.plist
+      apply_prototype: true

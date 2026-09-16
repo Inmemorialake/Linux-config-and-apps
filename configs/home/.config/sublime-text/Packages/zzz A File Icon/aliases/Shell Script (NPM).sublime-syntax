@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Shell Script (NPM)
+scope: source.shell.npm
+hidden: true
+hidden_file_extensions:
+  - .npmignore
+contexts:
+  main:
+    - include: scope:source.shell
+      apply_prototype: true

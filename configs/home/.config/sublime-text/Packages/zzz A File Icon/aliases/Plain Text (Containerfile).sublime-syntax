@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Containerfile)
+scope: source.containerfile
+hidden: true
+hidden_file_extensions:
+  - Containerfile
+contexts:
+  main: []

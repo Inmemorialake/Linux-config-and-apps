@@ -1,0 +1,104 @@
+{
+    "name": "Tokyo Night Storm",
+    "author": "Port for Sublime Text based on Enkia's VSCode theme",
+    "globals": {
+        "background": "#24283b",
+        "foreground": "#a9b1d6",
+        "caret": "#c0caf5",
+        "line_highlight": "#292e42",
+        "selection": "#6f7bb640",
+        "selection_border": "#6f7bb640",
+        "inactive_selection": "#6f7bb615",
+        "guide": "#292e42",
+        "active_guide": "#3b4261",
+        "gutter": "#24283b",
+        "gutter_foreground": "#3b4261",
+        "find_highlight": "#3d59a166",
+        "misspelling": "#db4b4b"
+    },
+    "rules": [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "#5f6996",
+            "font_style": "italic"
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "foreground": "#9ece6a"
+        },
+        {
+            "name": "Number, Boolean, Constant",
+            "scope": "constant.numeric, constant.language, constant.character, constant.other",
+            "foreground": "#ff9e64"
+        },
+        {
+            "name": "Keyword",
+            "scope": "keyword, keyword.control",
+            "foreground": "#bb9af7"
+        },
+        {
+            "name": "Storage (type, modifier)",
+            "scope": "storage.type, storage.modifier",
+            "foreground": "#9d7cd8"
+        },
+        {
+            "name": "Function",
+            "scope": "entity.name.function, support.function, meta.function-call",
+            "foreground": "#7aa2f7"
+        },
+        {
+            "name": "Function Parameter",
+            "scope": "variable.parameter",
+            "foreground": "#e0af68"
+        },
+        {
+            "name": "Class, Type, Support",
+            "scope": "entity.name.class, entity.name.type, support.type, support.class",
+            "foreground": "#2ac3de"
+        },
+        {
+            "name": "Tag",
+            "scope": "entity.name.tag",
+            "foreground": "#f7768e"
+        },
+        {
+            "name": "Tag Punctuation",
+            "scope": "punctuation.definition.tag",
+            "foreground": "#89ddff"
+        },
+        {
+            "name": "Attribute",
+            "scope": "entity.other.attribute-name",
+            "foreground": "#bb9af7"
+        },
+        {
+            "name": "Variable",
+            "scope": "variable, variable.other",
+            "foreground": "#c0caf5"
+        },
+        {
+            "name": "Object / Dict Key",
+            "scope": "meta.object-literal.key, string.unquoted.label",
+            "foreground": "#73daca"
+        },
+        {
+            "name": "Operator, Punctuation",
+            "scope": "keyword.operator, punctuation",
+            "foreground": "#89ddff"
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid, invalid.illegal",
+            "foreground": "#ffffff",
+            "background": "#db4b4b"
+        },
+        { "scope": "region.indent.0", "foreground": "rgba(61, 89, 161, 0.5)" },   /* azul */
+        { "scope": "region.indent.1", "foreground": "rgba(122, 162, 247, 0.5)" }, /* azul claro */
+        { "scope": "region.indent.2", "foreground": "rgba(187, 154, 247, 0.5)" }, /* morado */
+        { "scope": "region.indent.3", "foreground": "rgba(157, 124, 216, 0.5)" }, /* morado oscuro */
+        { "scope": "region.indent.4", "foreground": "rgba(65, 166, 181, 0.5)" },  /* cian */
+        { "scope": "region.indent.5", "foreground": "rgba(115, 218, 202, 0.5)" }  /* verde-agua */
+    ]
+}

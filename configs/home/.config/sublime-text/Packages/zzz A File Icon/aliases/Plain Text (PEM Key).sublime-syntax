@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+name: Plain Text (PEM Key)
+scope: source.pem
+hidden: true
+hidden_file_extensions:
+  - pem
+  - asc
+  - cer
+  - cert
+  - crt
+  - id_dsa
+  - id_ed25519
+  - id_ed448
+  - id_eddsa
+  - id_rsa
+contexts:
+  main: []

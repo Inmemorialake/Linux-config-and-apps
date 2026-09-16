@@ -1,0 +1,13 @@
+%YAML 1.2
+---
+name: XSL
+scope: text.xml.xsl
+hidden: true
+hidden_file_extensions:
+  - xsd
+  - xsl
+  - xslt
+contexts:
+  main:
+    - include: scope:text.xml
+      apply_prototype: true

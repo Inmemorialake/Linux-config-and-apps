@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Terraform)
+scope: source.terraform
+hidden: true
+hidden_file_extensions:
+  - tf
+contexts:
+  main: []

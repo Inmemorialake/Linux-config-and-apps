@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Gleam)
+scope: source.gleam
+hidden: true
+hidden_file_extensions:
+  - gleam
+contexts:
+  main: []

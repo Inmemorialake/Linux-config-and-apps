@@ -1,12 +1,12 @@
 [Annotations]
-annotationToolType=1
+annotationToolType=3
 
 [General]
 ocrLanguages=afr
 
 [ImageSave]
-lastImageSaveAsLocation=file:///home/Inmemorialake/Downloads/Mapa Porteria 2 - B13.png
-lastImageSaveLocation=file:///home/Inmemorialake/Pictures/Screenshots/Captura de pantalla_20260721_125225.png
+lastImageSaveAsLocation=
+lastImageSaveLocation=file:///home/Inmemorialake/GDrive/IEEE/XTREME/Task 3/CODE PART 3.png
 translatedScreenshotsFolder=Screenshots
 
 [VideoSave]

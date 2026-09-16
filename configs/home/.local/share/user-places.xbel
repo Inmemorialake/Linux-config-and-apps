@@ -155,6 +155,28 @@
    </metadata>
   </info>
  </bookmark>
+ <bookmark href="file:///home/Inmemorialake/Web-IEEE-Univalle">
+  <title>Web-IEEE-Univalle</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="webpage-symbolic"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1786748633/1</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/Inmemorialake/Tangara-Hackaton-Ecobytes-">
+  <title>Tangara-Hackaton-Ecobytes-</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1786748630/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
  <bookmark href="file:///home/Inmemorialake/Linux-config-and-apps">
   <title>Linux-config-and-apps</title>
   <info>
@@ -163,6 +185,28 @@
    </metadata>
    <metadata owner="http://www.kde.org">
     <ID>1770051947/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/Inmemorialake/ACADEMIA-STEAMS">
+  <title>ACADEMIA-STEAMS</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="webpage-symbolic"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1788891768/0</ID>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/Inmemorialake/Sudoku%20for%20Val">
+  <title>Sudoku for Val</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1789446928/0</ID>
    </metadata>
   </info>
  </bookmark>
@@ -226,7 +270,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p2</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p2</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>4e463197-e487-40a7-b9a6-75a347535970</uuid>
    </metadata>
@@ -280,7 +324,7 @@
  <separator>
   <info>
    <metadata owner="http://www.kde.org">
-    <UDI>/org/freedesktop/UDisks2/block_devices/nvme1n1p1</UDI>
+    <UDI>/org/freedesktop/UDisks2/block_devices/nvme0n1p1</UDI>
     <isSystemItem>true</isSystemItem>
     <uuid>f956ad93-2102-4a88-9c3e-64e5cb6e083b</uuid>
    </metadata>

@@ -1,0 +1,14 @@
+{
+    "debounce": 0.2,
+    "level_colors": [
+        "region.indent.0",
+        "region.indent.1",
+        "region.indent.2",
+        "region.indent.3",
+        "region.indent.4",
+        "region.indent.5"
+    ],
+    "level_style": "line",
+    "enabled_selector": "source | text | embedding",
+    "file_size_limit": 10485760
+}

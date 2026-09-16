@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: JSON (Yarn)
+scope: source.json.yarn
+hidden: true
+hidden_file_extensions:
+  - .yarn-integrity
+  - .yarn-metadata.json
+contexts:
+  main:
+    - include: scope:source.json
+      apply_prototype: true

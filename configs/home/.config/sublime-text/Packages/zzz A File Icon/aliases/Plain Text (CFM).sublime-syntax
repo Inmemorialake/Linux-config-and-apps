@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Plain Text (CFM)
+scope: embedding.cfml
+hidden: true
+hidden_file_extensions:
+  - cfm
+  - cfml
+contexts:
+  main: []

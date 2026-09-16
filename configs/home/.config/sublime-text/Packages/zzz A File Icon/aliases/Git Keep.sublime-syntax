@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Git Keep
+scope: text.git.keep
+hidden: true
+hidden_file_extensions:
+  - .gitkeep
+contexts:
+  main: []

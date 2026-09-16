@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: YAML (Yarn)
+scope: source.yaml.yarn
+hidden: true
+hidden_file_extensions:
+  - .yarnrc.yaml
+  - .yarnrc.yml
+contexts:
+  main:
+    - include: scope:source.yaml
+      apply_prototype: true

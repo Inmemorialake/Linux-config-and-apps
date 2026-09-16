@@ -1,0 +1,9 @@
+%YAML 1.2
+---
+name: Plain Text (Typst)
+scope: text.typst
+hidden: true
+hidden_file_extensions:
+  - typ
+contexts:
+  main: []

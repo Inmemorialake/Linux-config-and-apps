@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: JSON (Haxelib)
+scope: source.json.haxelib
+hidden: true
+hidden_file_extensions:
+  - haxelib.json
+contexts:
+  main:
+    - include: scope:source.json
+      apply_prototype: true

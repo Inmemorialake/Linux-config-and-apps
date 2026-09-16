@@ -1,0 +1,10 @@
+%YAML 1.2
+---
+name: Text Plain (Lock)
+scope: text.plain.lock
+hidden: true
+hidden_file_extensions:
+  - Gemfile.lock
+  - Berksfile.lock
+contexts:
+  main: []

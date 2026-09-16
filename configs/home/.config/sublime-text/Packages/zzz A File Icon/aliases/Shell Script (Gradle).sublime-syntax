@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: Shell Script (Gradle)
+scope: source.shell.gradle
+hidden: true
+hidden_file_extensions:
+  - gradlew
+contexts:
+  main:
+    - include: scope:source.shell
+      apply_prototype: true
