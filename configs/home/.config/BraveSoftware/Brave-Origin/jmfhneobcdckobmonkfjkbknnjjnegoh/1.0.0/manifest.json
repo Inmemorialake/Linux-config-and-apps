@@ -1,0 +1,7 @@
+{
+  "description": "Brave Ad Block Updater extension",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0zuiHebZ7KOlcYxLb6eYLJQ0vi5LA+IpPggyIL05wy8jK8BHWJmusm8mwGZotXSxA1Wr5z45Nsiw39kY+JuExZqaQ1ysk2Gng+8qq36YcYo9HkmUPkJ5RO5xf/uVNK6Dh3B8tCuYGVph8NsTYS6woIgsST+qQysK1PeQDYzEisyhULZWL9ox5axJL3DJrsu+EKAGu1LcQpsSGF03V7HQPVOeo/W0wBYNAah5YT/gdXykXpV7CO2SdFDhtiPuzzVlkACWnBYSsQr983H25WRMdTexhMJiLrLOaBRnXia5XzQ/4XtKFuakEq5QqmVF0yo/FYcl3hoHPFIq8NGFGuCthQIDAQAB",
+  "manifest_version": 2,
+  "name": "Brave Ad Block Updater (Allow Facebook Embeds (plaintext))",
+  "version": "1.0.0"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Brave Ad Block Updater extension",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA12jyY9RXzkqxGRJc/VPsqub2MsRFv5fJPNQSuoPYAWzJ3PntVqLDgM9iVuHD7dx7qx84160CG9BXmExFtyW0Qv/5Rqg6QOpqquxXvHu1LpWiFrU5uZzsW3c3q7PTn8iQ464uHitPVWEh18jT1Joh/uAuGCzgr79eJ80VafzLZXEAjBV76F7GXV23BjThjhW8A0BXPffZK9oW4mhSX+bYNMgh76J2/uIMd8btq65XiXp9JIjEGF6aukd1Uc+nYBvrbGCYs59xkzcQpVW2Wy3y//NOc7LMCu0jerF1tK14tav9dDwcCIdJzNcQ+sd4msH7Fz8HlYjUKcvAreNM5fhCoQIDAQAB",
+  "manifest_version": 2,
+  "name": "Brave Ad Block Updater (Allow X/Twitter Embeds (plaintext))",
+  "version": "1.0.0"
+}

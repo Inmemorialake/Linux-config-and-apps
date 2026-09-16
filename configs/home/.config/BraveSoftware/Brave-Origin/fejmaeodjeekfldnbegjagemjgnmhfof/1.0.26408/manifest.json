@@ -1,0 +1,7 @@
+{
+  "description": "Brave Ad Block Updater extension",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv7yIqlQQ/fK5DkO90mULt6tdYXm4sdROKgLMd9PGxuXkTMWt2gI2VgnOIMKXenr6yQ35kx859rr7dcV8bOUPPCVZsu3zU3mxJoPt6+wOZH00na1n6XVS/jHFULOeqKA7fj/2GYyTvdaSpLL2B7u/limqbZ/IQSBoc0GdEfsjEghKFvFhWmZw6g0UAp0ZiJzm13t+ta2FjCDTfrnXJFt1VY/hd4Ip2i4KmBKByR0gfv4ksqY0rSVJhXjcbrXHqBZvRUr/vw6bBmnFVCJlQKS44S/5QLDsmxm2E2kIp2LmSMLjoYPqTZnthCX9/svwCp08LRwvDHtVSS3c5MsgRzwMkwIDAQAB",
+  "manifest_version": 2,
+  "name": "Brave Ad Block Updater (Spanish website ad blocker (plaintext))",
+  "version": "1.0.26408"
+}
