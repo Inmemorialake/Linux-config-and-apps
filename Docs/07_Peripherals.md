@@ -40,10 +40,12 @@ Built from the GUI, exported profile (`Perfil de Teclado 1`):
 Translated to the documented CLI syntax (`set -e <effect> -c <r,g,b,...> -b <1|2>`):
 
 ```bash
-legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b 2
+legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b High
 ```
 
 Binary location: `/usr/bin/legion-kb-rgb`.
+
+> The README documents `-b` as taking `1`/`2` (low/high), but the installed build actually expects the text values `Low`/`High` — confirmed via `legion-kb-rgb set --help` on this system after the numeric value failed with `error: invalid value '2' for '--brightness <BR...>'`. Check `--help` on your own install before trusting the README literally.
 
 ### Autostart via systemd
 
@@ -57,7 +59,7 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b 2
+ExecStart=/usr/bin/legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b High
 RemainAfterExit=yes
 
 [Install]
@@ -67,6 +69,8 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable --now legion-kb-profile.service
 ```
+
+> **fish shell note:** `tee ... << 'EOF'` is bash heredoc syntax and fails in fish (`Se esperaba a string, pero se encontró a redirection`). Either write the unit file with `nano`/your editor directly, or use fish's own syntax — see the `printf '%s\n' ... | sudo tee` pattern already used for `zram-generator.conf` in [`06_Gaming.md`](06_Gaming.md#zram).
 
 > If `legion-kb-rgb` requires `sudo` to talk to the keyboard (no udev rule installed), this service needs to run as root — which it does by default, since it's a system (not user) unit.
 
@@ -178,7 +182,7 @@ ls ~/.local/share/easyeffects/input/
 
 ```bash
 # Reapply keyboard profile manually
-legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b 2
+legion-kb-rgb set -e Static -c 0,18,255,0,18,255,0,18,255,57,0,255 -b High
 
 # Check/set power profile manually (normally automatic via Powerdevil)
 powerprofilesctl get
