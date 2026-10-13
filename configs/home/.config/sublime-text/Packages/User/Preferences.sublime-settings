@@ -21,4 +21,5 @@
     "overlay_scroll_bars": "enabled",
     "scroll_past_end": true,
     "index_files": true,
+    "file_icon_theme": "",
 }

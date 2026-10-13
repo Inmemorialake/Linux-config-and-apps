@@ -61,6 +61,15 @@
 /configs/home/.config/tidal-hifi
 /configs/home/.config/whatsdesk
 /configs/home/.config/yay
+/configs/home/.config/BraveSoftware/
+/configs/home/.config/Upscayl/
+/configs/home/.config/chromium/
+/configs/home/.config/discoverrc
+/configs/home/.config/github-copilot/intellij/customizations/
+/configs/home/.config/github-copilot/intellij/plugins/
+/configs/home/.config/github-copilot/jetbrains-terminal/
+/configs/home/.config/nextjs-nodejs/
+/configs/home/.config/sublime-text
 /configs/home/.local/share/akonadi*
 /configs/home/.local/share/baloo
 /configs/home/.local/share/contacts

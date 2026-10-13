@@ -1,9 +1,0 @@
-%YAML 1.2
----
-name: Plain Text (MCNP)
-scope: source.mcnp
-hidden: true
-hidden_file_extensions:
-  - mcnp
-contexts:
-  main: []
